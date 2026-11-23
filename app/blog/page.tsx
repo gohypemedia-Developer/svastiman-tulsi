@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { CartProvider } from "@/context/CartContext";
 import {
   BookOpen,
@@ -159,11 +160,11 @@ export default function BlogPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#111111]">
         <Navbar />
 
-        <main className="flex-1 pt-6 sm:pt-8 pb-24 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <main className="flex-1 pt-6 sm:pt-8 pb-20 sm:pb-24 px-3.5 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
           {/* Category Filter Pills & Search */}
-          <div className="border-b border-[#E8E2D5] pb-6 mb-10">
+          <div className="border-b border-[#E8E2D5] pb-6 mb-8 sm:mb-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none no-scrollbar">
                 {[
                   { id: "all", label: "All Chronicles" },
                   { id: "rudraksha", label: "Rudraksha Science" },
@@ -186,7 +187,7 @@ export default function BlogPage() {
               </div>
 
               {/* Search Box */}
-              <div className="relative min-w-[260px] self-start md:self-auto">
+              <div className="relative w-full sm:w-auto min-w-0 sm:min-w-[260px] self-start md:self-auto">
                 <Search className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
@@ -449,6 +450,7 @@ export default function BlogPage() {
 
         <Footer />
         <CartDrawer />
+        <BottomNav />
       </div>
     </CartProvider>
   );

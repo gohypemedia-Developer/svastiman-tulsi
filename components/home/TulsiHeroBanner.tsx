@@ -13,7 +13,7 @@ export function TulsiHeroBanner() {
   };
 
   return (
-    <section className="relative w-full min-h-[580px] sm:min-h-[640px] md:min-h-[700px] lg:min-h-[760px] xl:min-h-[820px] flex items-center justify-center overflow-hidden bg-[#FAF8F5] select-none">
+    <section className="relative w-full min-h-[520px] sm:min-h-[640px] md:min-h-[700px] lg:min-h-[760px] xl:min-h-[820px] flex items-center justify-center overflow-hidden bg-[#FAF8F5] select-none">
       {/* Background Hero Image - User Uploaded Banner (2.5K Ultra-Sharp, Adjusted Framing) */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -30,11 +30,11 @@ export function TulsiHeroBanner() {
       </div>
 
       {/* Centered Editorial Content matching AXELS Hierarchy */}
-      <div className="relative z-20 w-full max-w-4xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center justify-center pt-28 sm:pt-36 md:pt-40 lg:pt-44 pb-16 sm:pb-24">
+      <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center justify-center pt-24 sm:pt-36 md:pt-40 lg:pt-44 pb-12 sm:pb-24">
 
         {/* Massive Centered Serif Headline */}
         <h1
-          className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[74px] font-normal tracking-[0.06em] sm:tracking-[0.08em] text-white uppercase text-center leading-[1.12] sm:leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] mb-3 sm:mb-4 max-w-3xl"
+          className="font-serif text-2xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[74px] font-normal tracking-[0.05em] sm:tracking-[0.08em] text-white uppercase text-center leading-[1.14] sm:leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] mb-3 sm:mb-4 max-w-3xl"
           style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
         >
           Tulsi Kanthi Mala
@@ -49,7 +49,7 @@ export function TulsiHeroBanner() {
         <div>
           <button
             onClick={scrollToProduct}
-            className="inline-flex items-center justify-center bg-white hover:bg-[#F7F5F0] text-[#122E46] text-[11px] sm:text-xs font-sans font-medium tracking-[0.25em] uppercase px-8 sm:px-10 py-3 sm:py-3.5 rounded-none shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-300 cursor-pointer active:scale-[0.98]"
+            className="inline-flex items-center justify-center bg-white hover:bg-[#F7F5F0] text-[#122E46] text-[10px] sm:text-xs font-sans font-medium tracking-[0.2em] sm:tracking-[0.25em] uppercase px-7 sm:px-10 py-3 sm:py-3.5 rounded-none shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-300 cursor-pointer active:scale-[0.98]"
             aria-label="Shop Tulsi Mala T01 Now"
           >
             SHOP NOW

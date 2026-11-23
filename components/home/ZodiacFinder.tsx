@@ -208,19 +208,19 @@ export function ZodiacFinder() {
   };
 
   return (
-    <section id="zodiac-finder" className="py-20 bg-[#122E46] text-[#ECEADE] relative overflow-hidden">
+    <section id="zodiac-finder" className="py-12 sm:py-20 bg-[#122E46] text-[#ECEADE] relative overflow-hidden">
       <div className="absolute inset-0 bg-celestial-pattern opacity-20 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECEADE]/10 border border-[#C5A880]/30 text-xs uppercase tracking-widest text-[#C5A880]">
             <Compass className="w-3.5 h-3.5" />
             <span>Astrological Energy Mapping</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#ECEADE]">
+          <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#ECEADE]">
             Reveal Your Zodiac Energy Match
           </h2>
-          <p className="text-sm sm:text-base text-[#ECEADE]/75 font-light">
+          <p className="text-xs sm:text-base text-[#ECEADE]/75 font-light">
             Select your sun or rising sign to discover the Vedic consecrated stones aligned with
             your planetary blueprint.
           </p>
@@ -304,24 +304,24 @@ export function ZodiacFinder() {
               </div>
 
               {/* Price & Add to Cart */}
-              <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-[#ECEADE]/10">
+              <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-t border-[#ECEADE]/10">
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-serif text-3xl font-bold text-[#ECEADE]">
+                    <span className="font-serif text-2xl sm:text-3xl font-bold text-[#ECEADE]">
                       ₹{selectedSign.price}
                     </span>
                     <span className="text-sm text-[#ECEADE]/50 line-through">
                       ₹{selectedSign.originalPrice}
                     </span>
                   </div>
-                  <span className="text-[11px] text-[#C5A880]">
+                  <span className="text-[10.5px] sm:text-[11px] text-[#C5A880] block">
                     Includes Authenticity Certificate and Energization Ritual
                   </span>
                 </div>
 
                 <button
                   onClick={handleAdd}
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#C5A880] hover:bg-[#D4AF37] text-[#111111] font-semibold text-sm transition-all shadow-lg flex items-center justify-center gap-2 active:scale-95"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#C5A880] hover:bg-[#D4AF37] text-[#111111] font-semibold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
                 >
                   <ShoppingBag className="w-4 h-4 text-[#111111]" />
                   <span>Claim {selectedSign.sign} Talisman</span>

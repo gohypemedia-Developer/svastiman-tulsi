@@ -54,13 +54,13 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 1: FREQUENTLY ASKED QUESTIONS (Matching Image 1 Reference)        */}
       {/* ========================================================================= */}
-      <section id="faq-section" className="w-full py-16 sm:py-24 bg-[#FAF8F5]">
+      <section id="faq-section" className="w-full py-12 sm:py-24 bg-[#FAF8F5]">
         <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-8 sm:p-12 lg:p-16 border border-[#E8E2D5] shadow-xs space-y-8">
+          <div className="bg-white p-5 sm:p-10 lg:p-16 border border-[#E8E2D5] shadow-xs space-y-6 sm:space-y-8">
             {/* Title */}
             <div className="text-center">
               <h2
-                className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#122E46]"
+                className="text-xl sm:text-3xl lg:text-4xl font-normal text-[#122E46]"
                 style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
               >
                 Frequently Asked Questions
@@ -79,7 +79,7 @@ export function TulsiFaqAndProvenance({
                     <button
                       type="button"
                       onClick={() => toggleFaq(item.id)}
-                      className="w-full px-5 py-4 flex items-center gap-4 text-left cursor-pointer hover:bg-[#FAF8F5]/80 transition-colors"
+                      className="w-full px-4 sm:px-5 py-3.5 sm:py-4 flex items-center gap-3 sm:gap-4 text-left cursor-pointer hover:bg-[#FAF8F5]/80 transition-colors"
                       aria-expanded={isOpen}
                     >
                       <span className="text-[#C5A880] flex items-center justify-center w-4 h-4 shrink-0 font-light text-lg">
@@ -91,7 +91,7 @@ export function TulsiFaqAndProvenance({
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 pb-5 pl-13 pt-1 text-xs sm:text-sm font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 pl-10 sm:pl-12 pt-1 text-xs sm:text-sm font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
                         {item.answer}
                       </div>
                     )}
@@ -106,9 +106,9 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 2: THE FOUR PILLARS OF TULSI SACRED ORIGIN                        */}
       {/* ========================================================================= */}
-      <section id="authenticity" className="w-full py-16 sm:py-24 bg-[#FAF8F5]">
+      <section id="authenticity" className="w-full py-12 sm:py-24 bg-[#FAF8F5]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
+          <div className="text-center max-w-2xl mx-auto space-y-2 mb-8 sm:mb-10">
             <h2
               className="text-2xl sm:text-3xl font-normal text-[#122E46]"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
@@ -120,9 +120,9 @@ export function TulsiFaqAndProvenance({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Pillar 1 */}
-            <div className="p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
               <h3 className="font-serif text-base font-semibold text-[#122E46]">
                 100% Natural Tulsi Wood
               </h3>
@@ -132,7 +132,7 @@ export function TulsiFaqAndProvenance({
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
               <h3 className="font-serif text-base font-semibold text-[#122E46]">
                 Origin: Vrindavan, Braj
               </h3>
@@ -142,7 +142,7 @@ export function TulsiFaqAndProvenance({
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
               <h3 className="font-serif text-base font-semibold text-[#122E46]">
                 Associated Deity: Shri Krishna
               </h3>
@@ -152,7 +152,7 @@ export function TulsiFaqAndProvenance({
             </div>
 
             {/* Pillar 4 */}
-            <div className="p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
               <h3 className="font-serif text-base font-semibold text-[#122E46]">
                 Authenticity Lab Certificate
               </h3>
@@ -167,12 +167,12 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 3: EDITORIAL BANNER: ROOTED IN SOURCE (Matching Image 2 Reference)*/}
       {/* ========================================================================= */}
-      <section className="w-full py-14 sm:py-20 bg-[#FAF8F5]">
+      <section className="w-full py-10 sm:py-20 bg-[#FAF8F5]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
           {onAcquireClick ? (
             <div
               onClick={onAcquireClick}
-              className="group relative overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[380px] sm:min-h-[440px] flex items-center justify-end border border-[#E8E2D5] cursor-pointer"
+              className="group relative overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] flex items-center justify-end border border-[#E8E2D5] cursor-pointer"
             >
               <Image
                 src="/images/products/tulsi/t01_model_wear.jpg"
@@ -182,15 +182,15 @@ export function TulsiFaqAndProvenance({
                 sizes="(max-width: 1024px) 100vw, 1240px"
               />
               {/* Directional vignette preserving collarbone wear on left, contrast on right */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/50 to-black/85 z-1 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 sm:bg-gradient-to-r sm:from-black/25 sm:via-black/50 sm:to-black/85 z-1 pointer-events-none" />
 
               {/* Bottom Left "COLLECTION" Tag (Matching Image 2) */}
-              <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-10 z-10 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.28em] text-white/80 select-none">
+              <div className="absolute top-4 sm:top-auto sm:bottom-8 left-5 sm:left-10 z-10 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.28em] text-white/80 select-none">
                 COLLECTION
               </div>
 
               {/* Right Aligned Editorial Content (Matching Image 2) */}
-              <div className="relative z-10 p-6 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8">
+              <div className="relative z-10 p-5 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8 mt-12 sm:mt-0">
                 <h3
                   className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-tight text-white tracking-tight"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
@@ -212,9 +212,9 @@ export function TulsiFaqAndProvenance({
           ) : (
             <Link
               href={`/products/tulsi/${productSku.toLowerCase()}`}
-              className="group relative block overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[380px] sm:min-h-[440px] border border-[#E8E2D5] cursor-pointer"
+              className="group relative block overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] border border-[#E8E2D5] cursor-pointer"
             >
-              <div className="w-full h-full min-h-[380px] sm:min-h-[440px] flex items-center justify-end">
+              <div className="w-full h-full min-h-[360px] sm:min-h-[440px] flex items-center justify-end">
                 <Image
                   src="/images/products/tulsi/t01_model_wear.jpg"
                   alt="Devotee wearing genuine Vrindavan Tulsi Kanthi Mala"
@@ -223,15 +223,15 @@ export function TulsiFaqAndProvenance({
                   sizes="(max-width: 1024px) 100vw, 1240px"
                 />
                 {/* Directional vignette preserving collarbone wear on left, contrast on right */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-black/50 to-black/85 z-1 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 sm:bg-gradient-to-r sm:from-black/25 sm:via-black/50 sm:to-black/85 z-1 pointer-events-none" />
 
                 {/* Bottom Left "COLLECTION" Tag (Matching Image 2) */}
-                <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-10 z-10 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.28em] text-white/80 select-none">
+                <div className="absolute top-4 sm:top-auto sm:bottom-8 left-5 sm:left-10 z-10 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.28em] text-white/80 select-none">
                   COLLECTION
                 </div>
 
                 {/* Right Aligned Editorial Content (Matching Image 2) */}
-                <div className="relative z-10 p-6 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8">
+                <div className="relative z-10 p-5 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8 mt-12 sm:mt-0">
                   <h3
                     className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-tight text-white tracking-tight"
                     style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}

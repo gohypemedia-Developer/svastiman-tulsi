@@ -180,7 +180,7 @@ export function TulsiCategoryView({
         </div>
 
         {/* Primary Round / Type Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none no-scrollbar">
           {[
             { id: "ALL", label: "All Tulsi (32)" },
             { id: "PENDANTS", label: "1-Round with Pendants (7)" },
@@ -192,11 +192,10 @@ export function TulsiCategoryView({
             <button
               key={tab.id}
               onClick={() => setRoundFilter(tab.id)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer whitespace-nowrap ${
-                roundFilter === tab.id
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-200 cursor-pointer whitespace-nowrap ${roundFilter === tab.id
                   ? "bg-[#1A1815] text-[#FAF8F5] shadow-xs"
                   : "bg-stone-100 hover:bg-stone-200/80 text-stone-700"
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -204,7 +203,7 @@ export function TulsiCategoryView({
         </div>
 
         {/* Secondary Bead Shape Filter Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pt-1 pb-1 scrollbar-none border-t border-stone-100 text-xs">
+        <div className="flex items-center gap-2 overflow-x-auto pt-1 pb-1 scrollbar-none no-scrollbar border-t border-stone-100 text-xs">
           <span className="text-[11px] font-mono uppercase text-stone-400 shrink-0 mr-1">
             Bead Shape:
           </span>
@@ -212,11 +211,10 @@ export function TulsiCategoryView({
             <button
               key={shape}
               onClick={() => setShapeFilter(shape)}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-mono tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
-                shapeFilter === shape
+              className={`px-2.5 py-1 rounded-md text-[11px] font-mono tracking-wider transition-colors cursor-pointer whitespace-nowrap ${shapeFilter === shape
                   ? "bg-[#C5A880] text-[#122E46] font-bold"
                   : "bg-stone-50 text-stone-600 hover:bg-stone-100"
-              }`}
+                }`}
             >
               {shape}
             </button>
@@ -229,11 +227,10 @@ export function TulsiCategoryView({
             <button
               key={k}
               onClick={() => setKnotFilter(k)}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-mono tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
-                knotFilter === k
+              className={`px-2.5 py-1 rounded-md text-[11px] font-mono tracking-wider transition-colors cursor-pointer whitespace-nowrap ${knotFilter === k
                   ? "bg-[#122E46] text-white font-bold"
                   : "bg-stone-50 text-stone-600 hover:bg-stone-100"
-              }`}
+                }`}
             >
               {k}
             </button>
@@ -259,7 +256,7 @@ export function TulsiCategoryView({
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5 w-full">
           {filteredProducts.map((prod, idx) => {
             const isSaved = isInWishlist(prod.id);
             const isAdded = addedId === prod.id;
@@ -294,9 +291,8 @@ export function TulsiCategoryView({
                       aria-label="Save to Wishlist"
                     >
                       <Bookmark
-                        className={`w-4 h-4 ${
-                          isSaved ? "fill-[#1A1815] text-[#1A1815]" : ""
-                        }`}
+                        className={`w-4 h-4 ${isSaved ? "fill-[#1A1815] text-[#1A1815]" : ""
+                          }`}
                       />
                     </button>
                   </div>
@@ -358,7 +354,7 @@ export function TulsiCategoryView({
       )}
 
       {/* 3. SACRED PROVENANCE HERO BANNER (Image 1 Box 1 - Positioned below products) */}
-      <div className="relative rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-[#E8E2D5] p-6 sm:p-10 lg:p-12 overflow-hidden shadow-xs mt-12 sm:mt-16 w-full">
+      <div className="relative rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-[#E8E2D5] p-5 sm:p-8 lg:p-12 overflow-hidden shadow-xs mt-10 sm:mt-16 w-full">
         {/* Subtle Watermark Texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.07] pointer-events-none" />
 
@@ -378,7 +374,7 @@ export function TulsiCategoryView({
 
           {/* Heading */}
           <div className="space-y-2">
-            <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#1A1815] leading-[1.15] tracking-tight">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#1A1815] leading-[1.18] tracking-tight">
               Vrindavan Tulsi Collection
             </h2>
             <p className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#7A6242]">
@@ -392,7 +388,7 @@ export function TulsiCategoryView({
           </p>
 
           {/* Provenance Key Attributes Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 pt-2 text-xs">
             <div className="p-4 rounded-xl bg-white border border-[#E8E2D5] space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block">
                 Source & Soil
@@ -446,11 +442,10 @@ export function TulsiCategoryView({
             return (
               <div
                 key={guide.id}
-                className={`rounded-xl border transition-all duration-300 overflow-hidden ${
-                  isOpen
+                className={`rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
                     ? "bg-[#FAF8F5] border-[#C5A880] shadow-md"
                     : "bg-white border-[#E8E2D5] hover:border-stone-400"
-                }`}
+                  }`}
               >
                 <button
                   onClick={() => setActiveGuideId(isOpen ? null : guide.id)}

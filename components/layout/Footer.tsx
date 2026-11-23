@@ -63,7 +63,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center text-center mb-6 sm:mb-8">
           <Link href="/" className="inline-block group">
             <h3
-              className="text-3xl sm:text-4xl md:text-[44px] font-normal tracking-[0.20em] sm:tracking-[0.25em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
+              className="text-2xl sm:text-4xl md:text-[44px] font-normal tracking-[0.16em] sm:tracking-[0.25em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
               style={{ fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif" }}
             >
               SVASTIMĀN
@@ -76,7 +76,7 @@ export function Footer() {
         {/* ========================================================================= */}
         <div className="w-full flex items-center justify-center my-6 sm:my-10 lg:my-12 px-2 overflow-visible">
           <h2
-            className="font-serif text-[clamp(1.65rem,4.2vw,4.75rem)] font-normal tracking-tight leading-[1.25] py-2 sm:py-3 select-none text-center sm:whitespace-nowrap animate-shine-travel"
+            className="font-serif text-[clamp(1.35rem,3.8vw,4.75rem)] font-normal tracking-tight leading-[1.25] py-2 sm:py-3 select-none text-center lg:whitespace-nowrap animate-shine-travel break-words"
             style={{
               fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif",
               filter: "drop-shadow(0 1px 2px rgba(18, 46, 70, 0.08)) drop-shadow(0 2px 6px rgba(197, 168, 128, 0.18))",
@@ -295,7 +295,7 @@ export function Footer() {
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-3 pt-1">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                   <input
                     type="email"
                     value={email}
@@ -306,7 +306,7 @@ export function Footer() {
                   />
                   <button
                     type="submit"
-                    className="bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs font-semibold px-4 py-2 rounded-md transition-colors cursor-pointer shrink-0 shadow-xs"
+                    className="bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs font-semibold px-4 py-2 rounded-md transition-colors cursor-pointer shrink-0 shadow-xs text-center"
                   >
                     Subscribe
                   </button>
@@ -339,7 +339,7 @@ export function Footer() {
       {/* ========================================================================= */}
       {/* 4. BOTTOM SUB-FOOTER BAR DIVIDED BY LINE                                  */}
       {/* ========================================================================= */}
-      <div className="w-full bg-[#F4F1EA] border-t border-[#E0D8CB] relative z-10">
+      <div className="w-full bg-[#F4F1EA] border-t border-[#E0D8CB] relative z-10 pb-20 sm:pb-20 lg:pb-0">
         <div className="w-full max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-stone-600">
           <p className="tracking-tight text-center sm:text-left font-serif text-[11px] sm:text-xs">
             &copy; 2026 <strong className="font-semibold text-[#122E46]">Svastimān</strong>. All Rights Reserved.

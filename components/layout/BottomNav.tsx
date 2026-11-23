@@ -24,13 +24,13 @@ export function BottomNav() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md border-t border-[#E0D8CB] flex items-center justify-around py-1.5 px-2 lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.06)] select-none">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md border-t border-[#E0D8CB] flex items-center justify-around pt-1.5 pb-[max(0.375rem,env(safe-area-inset-bottom,0px))] px-1 sm:px-2 lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.06)] select-none">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = item.href ? pathname === item.href : false;
 
         const content = (
-          <div className="flex flex-col items-center justify-center relative py-1 px-2.5 text-center min-w-[54px] select-none">
+          <div className="flex flex-col items-center justify-center relative py-1 px-1 sm:px-2.5 text-center min-w-[48px] sm:min-w-[54px] select-none">
             <div className="relative">
               <Icon
                 className={`w-5 h-5 transition-colors ${
@@ -44,7 +44,7 @@ export function BottomNav() {
               ) : null}
             </div>
             <span
-              className={`text-[10px] tracking-wide mt-1 transition-colors ${
+              className={`text-[9.5px] sm:text-[10px] tracking-wide mt-1 transition-colors ${
                 isActive ? "text-[#122E46] font-semibold" : "text-stone-600 font-medium"
               }`}
             >

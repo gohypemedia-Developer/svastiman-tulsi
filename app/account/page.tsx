@@ -396,7 +396,7 @@ export default function AccountPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#111111]">
         <Navbar />
 
-        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-12 pb-20 lg:pb-12">
           {!isSignedIn ? (
             /* Direct redirect to Login page */
             <div className="py-20 text-center space-y-4">
@@ -421,8 +421,8 @@ export default function AccountPage() {
                   {/* Avatar & User Details */}
                   <div className="flex items-center gap-4 sm:gap-6">
                     <div className="relative shrink-0">
-                      <div className="w-18 h-18 sm:w-22 sm:h-22 rounded-full p-1 bg-gradient-to-br from-[#DFCAAB] via-[#C5A880] to-[#7A6242] shadow-xl">
-                        <div className="w-full h-full rounded-full bg-[#0A1B2A] flex items-center justify-center text-xl sm:text-2xl font-serif text-[#DFCAAB] font-medium border border-[#C5A880]/40">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-br from-[#DFCAAB] via-[#C5A880] to-[#7A6242] shadow-xl">
+                        <div className="w-full h-full rounded-full bg-[#0A1B2A] flex items-center justify-center text-lg sm:text-2xl font-serif text-[#DFCAAB] font-medium border border-[#C5A880]/40">
                           {userName
                             .split(" ")
                             .map((n) => n[0])
@@ -436,14 +436,14 @@ export default function AccountPage() {
                       </span>
                     </div>
 
-                    <div className="space-y-1.5">
+                    <div className="space-y-1.5 min-w-0">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#FAF8F5] font-normal tracking-wide">
+                        <h1 className="font-serif text-xl sm:text-3xl lg:text-4xl text-[#FAF8F5] font-normal tracking-wide break-words">
                           {userName}
                         </h1>
                       </div>
                       <p className="text-xs sm:text-sm text-[#ECEADE]/75 font-light flex flex-wrap items-center gap-2">
-                        <span>{userEmail}</span>
+                        <span className="break-all">{userEmail}</span>
                         <span>•</span>
                         <span>{userPhone}</span>
                       </p>
@@ -473,47 +473,47 @@ export default function AccountPage() {
                 </div>
 
                 {/* Dashboard Quick Stats Bar (Clean Frosted Metric Cards) */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 pt-6 border-t border-white/15">
-                  <div className="p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 mt-8 pt-6 border-t border-white/15">
+                  <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
                     <div className="flex items-center justify-between text-[#DFCAAB] mb-1">
                       <Package className="w-4 h-4" />
                       <span className="text-[10px] font-sans font-semibold tracking-wider text-emerald-300 uppercase">1 Active</span>
                     </div>
-                    <span className="block text-2xl font-serif font-normal text-white">3</span>
-                    <span className="text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
+                    <span className="block text-xl sm:text-2xl font-serif font-normal text-white">3</span>
+                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
                       Your Orders
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
+                  <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
                     <div className="flex items-center justify-between text-[#DFCAAB] mb-1">
                       <Sun className="w-4 h-4 text-[#DFCAAB]" />
                       <span className="text-[10px] font-sans font-semibold tracking-wider text-[#DFCAAB] uppercase">Sun Sign</span>
                     </div>
-                    <span className="block text-2xl font-serif font-normal text-white">Leo ♌</span>
-                    <span className="text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
+                    <span className="block text-xl sm:text-2xl font-serif font-normal text-white">Leo ♌</span>
+                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
                       Zodiac Profile
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
+                  <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
                     <div className="flex items-center justify-between text-[#DFCAAB] mb-1">
                       <FileCheck2 className="w-4 h-4 text-emerald-400" />
                       <span className="text-[10px] font-sans font-semibold tracking-wider text-emerald-300 uppercase">Verified</span>
                     </div>
-                    <span className="block text-2xl font-serif font-normal text-white">2</span>
-                    <span className="text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
+                    <span className="block text-xl sm:text-2xl font-serif font-normal text-white">2</span>
+                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
                       Lab Certificates
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
+                  <div className="p-2.5 sm:p-3.5 rounded-2xl bg-white/[0.07] backdrop-blur-sm border border-white/10 hover:border-[#C5A880]/40 transition-colors">
                     <div className="flex items-center justify-between text-[#DFCAAB] mb-1">
                       <Truck className="w-4 h-4 text-[#DFCAAB]" />
                       <span className="text-[10px] font-sans font-semibold tracking-wider text-emerald-300 uppercase animate-pulse">Out for Delivery</span>
                     </div>
-                    <span className="block text-2xl font-serif font-normal text-white">Today</span>
-                    <span className="text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
+                    <span className="block text-xl sm:text-2xl font-serif font-normal text-white">Today</span>
+                    <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-wider text-[#ECEADE]/80">
                       Order Tracking
                     </span>
                   </div>
@@ -524,7 +524,7 @@ export default function AccountPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
                 
                 {/* Left Column: Navigation Sidebar */}
-                <div className="lg:col-span-4 xl:col-span-4 bg-white rounded-2xl border border-[#E2DEC9] p-2.5 sm:p-3 shadow-sm flex lg:flex-col overflow-x-auto lg:overflow-visible gap-1.5 lg:gap-1 scrollbar-none max-w-full">
+                <div className="lg:col-span-4 xl:col-span-4 bg-white rounded-2xl border border-[#E2DEC9] p-2.5 sm:p-3 shadow-sm flex lg:flex-col overflow-x-auto lg:overflow-visible gap-1.5 lg:gap-1 scrollbar-none no-scrollbar max-w-full">
                   {[
                     { id: "orders", label: "Your Orders", icon: Package, badge: "1 Active" },
                     { id: "spiritual", label: "Spiritual Profile", icon: Compass },
@@ -613,7 +613,7 @@ export default function AccountPage() {
 
                         <form
                           onSubmit={(e) => e.preventDefault()}
-                          className="flex items-center gap-2 w-full sm:w-auto"
+                          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto"
                         >
                           <div className="relative flex-1 sm:w-64 md:w-72">
                             <Search className="w-4 h-4 text-[#7A6242]/70 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -645,7 +645,7 @@ export default function AccountPage() {
                       </div>
 
                       {/* Navigation Sub-Tabs Styled with Website Elegance */}
-                      <div className="flex items-center gap-5 sm:gap-6 border-b border-[#E2DEC9] text-xs sm:text-sm overflow-x-auto scrollbar-none pt-1">
+                      <div className="flex items-center gap-4 sm:gap-6 border-b border-[#E2DEC9] text-xs sm:text-sm overflow-x-auto scrollbar-none no-scrollbar pt-1">
                         {[
                           { id: "orders", label: "All Orders" },
                           { id: "buy_again", label: "Buy Again" },
@@ -742,8 +742,8 @@ export default function AccountPage() {
                                 className="rounded-2xl border border-[#E2DEC9] overflow-hidden bg-white shadow-xs hover:border-[#C5A880]/70 transition-colors"
                               >
                                 {/* Card Header Strip: Warm Sacred Linen Theme */}
-                                <div className="bg-[#FAF8F5] border-b border-[#E2DEC9] px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-y-2 text-xs">
-                                  <div className="flex flex-wrap items-center gap-x-6 sm:gap-x-10 gap-y-1">
+                                <div className="bg-[#FAF8F5] border-b border-[#E2DEC9] px-3.5 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-y-2 text-xs">
+                                  <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-10 gap-y-1">
                                     <div>
                                       <span className="block uppercase text-[10px] font-sans font-semibold tracking-wider text-[#7A6242]">
                                         ORDER PLACED
@@ -1163,8 +1163,8 @@ export default function AccountPage() {
 
                       {/* Interactive Tracking Modal in Website Theme */}
                       {trackingModalOrder && (
-                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-6 sm:p-7 space-y-5 animate-in fade-in zoom-in-95 duration-150">
+                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-4 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
                             <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                               <div>
                                 <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">
@@ -1235,8 +1235,8 @@ export default function AccountPage() {
 
                       {/* Order Details Modal in Website Theme */}
                       {orderDetailsModal && (
-                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-xl w-full p-6 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
+                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-xl w-full p-4 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
                             <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                               <div>
                                 <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">Order Summary</h3>
@@ -1318,8 +1318,8 @@ export default function AccountPage() {
 
                       {/* Write a Product Review Modal in Website Theme */}
                       {reviewModalItem && (
-                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-6 sm:p-7 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+                        <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+                          <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-4 sm:p-7 space-y-4 animate-in fade-in zoom-in-95 duration-150">
                             <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                               <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">Write Product Review</h3>
                               <button
@@ -1404,7 +1404,7 @@ export default function AccountPage() {
 
                       {/* Toast Notification in Website Navy & Gold */}
                       {toastMessage && (
-                        <div className="fixed bottom-6 right-6 z-50 bg-[#122E46] text-[#FAF8F5] border border-[#C5A880]/40 px-4 py-3 rounded-xl shadow-xl text-xs flex items-center gap-2 animate-in slide-in-from-bottom-4 duration-200">
+                        <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 bg-[#122E46] text-[#FAF8F5] border border-[#C5A880]/40 px-4 py-3 rounded-xl shadow-xl text-xs flex items-center gap-2 animate-in slide-in-from-bottom-4 duration-200">
                           <Check className="w-4 h-4 text-[#C5A880] shrink-0" />
                           <span>{toastMessage}</span>
                         </div>
@@ -1563,8 +1563,8 @@ export default function AccountPage() {
 
                       {/* Modal for adding address */}
                       {showAddressModal && (
-                        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-                          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-[#E2DEC9] shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
+                        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+                          <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 max-w-lg w-full border border-[#E2DEC9] shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
                             <div className="flex items-center justify-between border-b border-[#E8E2D5] pb-3">
                               <h3 className="font-serif text-xl text-[#122E46]">Add Delivery Address</h3>
                               <button
@@ -1604,7 +1604,7 @@ export default function AccountPage() {
                                 />
                               </div>
 
-                              <div className="grid grid-cols-2 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
                                   <label className="block text-[11px] font-sans font-medium uppercase text-stone-600 mb-1">
                                     City
@@ -1633,7 +1633,7 @@ export default function AccountPage() {
                                 </div>
                               </div>
 
-                              <div className="grid grid-cols-2 gap-3">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
                                   <label className="block text-[11px] font-sans font-medium uppercase text-stone-600 mb-1">
                                     PIN Code

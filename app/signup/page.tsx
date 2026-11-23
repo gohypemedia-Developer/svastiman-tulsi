@@ -115,11 +115,11 @@ export default function SignUpPage() {
         <Navbar />
 
         {/* 2-Column Split Screen Matching Reference Image */}
-        <main className="flex-1 w-full bg-white border-t border-[#E2DEC9] flex flex-col">
+        <main className="flex-1 w-full bg-white border-t border-[#E2DEC9] flex flex-col pb-16 lg:pb-0">
           <div className="w-full flex-1 grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-80px)]">
             
             {/* Left Column: Authentic Svastimān Flagship Sacred Photography (Matching Login Page) */}
-            <div className="lg:col-span-6 relative w-full h-[360px] sm:h-[460px] lg:h-full min-h-[360px] bg-[#0A1B2A] overflow-hidden">
+            <div className="lg:col-span-6 relative w-full h-[220px] sm:h-[340px] lg:h-full min-h-[220px] bg-[#0A1B2A] overflow-hidden">
               <Image
                 src="/images/origin/stage9_svastiman.jpg"
                 alt="Authentic Svastimān Handcrafted Sacred Rudraksha and Vrindavan Tulsi"
@@ -151,12 +151,12 @@ export default function SignUpPage() {
             </div>
 
             {/* Right Column: Clean Form Layout Matching Reference Image Exactly */}
-            <div className="lg:col-span-6 p-6 sm:p-10 md:p-14 lg:p-12 xl:p-16 flex flex-col justify-center bg-white lg:overflow-y-auto">
-              <div className="w-full max-w-lg mx-auto space-y-7">
+            <div className="lg:col-span-6 p-4 sm:p-10 md:p-14 lg:p-12 xl:p-16 flex flex-col justify-center bg-white lg:overflow-y-auto">
+              <div className="w-full max-w-lg mx-auto space-y-6 sm:space-y-7">
 
                 {/* Title & Subtitle Matching Reference Image */}
                 <div className="flex flex-col items-center justify-center pt-1 text-center">
-                  <h1 className="font-serif text-3xl sm:text-4xl font-normal text-[#1A1A1A] tracking-tight">
+                  <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#1A1A1A] tracking-tight">
                     Welcome to Your Sanctuary
                   </h1>
                   <p className="font-sans text-xs sm:text-sm text-stone-500 max-w-sm mx-auto mt-2 leading-relaxed">
@@ -352,7 +352,7 @@ export default function SignUpPage() {
                     </div>
 
                     <form onSubmit={handleVerifyOtp} className="space-y-6">
-                      <div className="flex justify-start gap-3 max-w-xs">
+                      <div className="flex justify-start gap-2.5 sm:gap-3 max-w-xs">
                         {otp.map((digit, idx) => (
                           <input
                             key={idx}
@@ -362,7 +362,7 @@ export default function SignUpPage() {
                             maxLength={1}
                             value={digit}
                             onChange={(e) => handleOtpChange(idx, e.target.value)}
-                            className="w-12 h-14 text-center text-xl font-mono font-bold rounded-lg border border-[#D8D2C2] bg-[#FAF8F5] text-[#122E46] focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46] outline-none transition-all"
+                            className="w-11 h-13 sm:w-12 sm:h-14 text-center text-xl font-mono font-bold rounded-lg border border-[#D8D2C2] bg-[#FAF8F5] text-[#122E46] focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46] outline-none transition-all"
                           />
                         ))}
                       </div>

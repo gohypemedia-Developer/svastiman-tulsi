@@ -460,7 +460,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
               </div>
 
               {/* Exact 4 Square Thumbnails Row Directly Below */}
-              <div className="grid grid-cols-4 gap-3">
+              <div className="grid grid-cols-4 gap-2 sm:gap-3">
                 {product.gallery.map((view, idx) => {
                   const isActive = selectedIdx === idx;
                   return (
@@ -488,12 +488,12 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
             </div>
 
             {/* RIGHT COLUMN: PRODUCT INFO & LUXURY HIERARCHY */}
-            <div className="flex flex-col space-y-6 pt-1 lg:pt-2">
+            <div className="flex flex-col space-y-5 sm:space-y-6 pt-1 lg:pt-2">
 
               {/* 1. TITLE & WISHLIST HEART */}
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start justify-between gap-3">
                 <h1
-                  className="text-2xl sm:text-3xl font-normal tracking-[0.06em] text-[#122E46] uppercase leading-snug"
+                  className="text-xl sm:text-2xl lg:text-3xl font-normal tracking-[0.04em] sm:tracking-[0.06em] text-[#122E46] uppercase leading-snug"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   {product.name}
@@ -510,7 +510,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                       image: product.image,
                     })
                   }
-                  className={`p-1.5 transition-colors cursor-pointer ${isSaved ? "text-rose-600" : "text-stone-400 hover:text-[#122E46]"
+                  className={`p-2 min-h-[40px] min-w-[40px] flex items-center justify-center transition-colors cursor-pointer ${isSaved ? "text-rose-600" : "text-stone-400 hover:text-[#122E46]"
                     }`}
                   title={isSaved ? "Remove from Wishlist" : "Add to Wishlist"}
                   aria-label="Wishlist"
@@ -640,7 +640,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                 </button>
 
                 {detailsOpen && (
-                  <div className="pt-4 grid grid-cols-3 gap-y-5 gap-x-4 text-xs font-sans">
+                  <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-y-4 sm:gap-y-5 gap-x-3 sm:gap-x-4 text-xs font-sans">
                     {/* Row 1 */}
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block mb-1 font-normal">

@@ -134,15 +134,15 @@ export function DiscoverOurProductsSection() {
   };
 
   return (
-    <section id="discover-our-products" className="w-full py-16 sm:py-20 lg:py-24 bg-[#FAF8F5]">
+    <section id="discover-our-products" className="w-full py-12 sm:py-20 lg:py-24 bg-[#FAF8F5]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ========================================================================= */}
         {/* HEADER: Title Matching Image 1 Reference                                  */}
         {/* ========================================================================= */}
-        <div className="text-center mb-10 sm:mb-14">
+        <div className="text-center mb-8 sm:mb-14">
           <h2
-            className="text-3xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight leading-none"
+            className="text-2xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
           >
             Discover Our Products
@@ -152,7 +152,7 @@ export function DiscoverOurProductsSection() {
         {/* ========================================================================= */}
         {/* PRODUCT GRID: 3 Columns x 3 Rows (Matching Image 1 & Image 2)             */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 lg:gap-12">
           {DISCOVER_PRODUCTS.map((prod) => (
             <Link
               key={prod.id}

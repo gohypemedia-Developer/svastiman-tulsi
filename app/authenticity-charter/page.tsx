@@ -17,16 +17,16 @@ export default function AuthenticityCharterPage() {
 
         <main className="flex-1">
           {/* Top Banner - Warm Sand/Beige Header without any logo */}
-          <section className="w-full bg-[#F2E6D4] border-b border-[#E3D6C1] py-14 sm:py-20 md:py-24 px-4 text-center">
+          <section className="w-full bg-[#F2E6D4] border-b border-[#E3D6C1] py-10 sm:py-16 md:py-20 px-4 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-[44px] text-[#1A1815] font-normal tracking-tight">
+              <h1 className="font-serif text-2xl sm:text-4xl md:text-[44px] text-[#1A1815] font-normal tracking-tight">
                 Authenticity Charter
               </h1>
             </div>
           </section>
 
           {/* Main Content Area - Clean, focused reading column */}
-          <article className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-10 py-14 sm:py-20 md:py-24 space-y-10 sm:space-y-12">
+          <article className="max-w-3xl mx-auto px-4 sm:px-8 lg:px-10 py-10 sm:py-16 md:py-24 space-y-8 sm:space-y-12 pb-20 lg:pb-24">
             {/* Opening Manifesto */}
             <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
               At Svastimān, authenticity is not a marketing term — it is our primary

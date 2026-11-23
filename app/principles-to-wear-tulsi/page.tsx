@@ -20,26 +20,26 @@ export default function PrinciplesToWearTulsiPage() {
         {/* Navigation Bar */}
         <Navbar />
 
-        <main className="flex-1 w-full py-16 sm:py-24">
+        <main className="flex-1 w-full py-10 sm:py-20 lg:py-24 pb-20 lg:pb-24">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
               <h1
-                className="text-3xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight"
+                className="text-2xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight leading-tight"
                 style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
               >
                 Principles to wear Tulsi
               </h1>
             </div>
 
-            <div className="space-y-12 sm:space-y-16">
+            <div className="space-y-8 sm:space-y-16">
 
               {/* PRINCIPLE 1: Initial Purification & Sanctification */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-6 sm:p-10 lg:p-12 border border-[#E8E2D5] shadow-xs">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center bg-white p-5 sm:p-8 lg:p-12 border border-[#E8E2D5] shadow-xs">
 
                 {/* Sacred Image: Temple Steps & Gangajal Kalash */}
-                <div className="lg:col-span-5 relative aspect-[4/3] sm:aspect-square lg:aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
+                <div className="lg:col-span-5 relative aspect-[16/10] sm:aspect-square lg:aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
                   <Image
                     src="/images/origin/trust_sacred_temple.jpg"
                     alt="Sacred Gangajal Kalash and temple steps in Vrindavan"
@@ -55,13 +55,13 @@ export default function PrinciplesToWearTulsiPage() {
                 </div>
 
                 {/* Text Content */}
-                <div className="lg:col-span-7 space-y-5">
+                <div className="lg:col-span-7 space-y-4 sm:space-y-5">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46]">
+                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46] shrink-0">
                       1
                     </span>
                     <h2
-                      className="font-serif text-2xl sm:text-3xl text-[#122E46] font-normal leading-tight"
+                      className="font-serif text-xl sm:text-2xl lg:text-3xl text-[#122E46] font-normal leading-tight"
                       style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                     >
                       Initial Purification & Sanctification
@@ -105,16 +105,16 @@ export default function PrinciplesToWearTulsiPage() {
               </div>
 
               {/* PRINCIPLE 2: Proper Placement & Continuous Wear */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-6 sm:p-10 lg:p-12 border border-[#E8E2D5] shadow-xs">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center bg-white p-5 sm:p-8 lg:p-12 border border-[#E8E2D5] shadow-xs">
 
                 {/* Text Content */}
-                <div className="lg:col-span-7 space-y-5 order-2 lg:order-1">
+                <div className="lg:col-span-7 space-y-4 sm:space-y-5 order-2 lg:order-1">
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46]">
+                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46] shrink-0">
                       2
                     </span>
                     <h2
-                      className="font-serif text-2xl sm:text-3xl text-[#122E46] font-normal leading-tight"
+                      className="font-serif text-xl sm:text-2xl lg:text-3xl text-[#122E46] font-normal leading-tight"
                       style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                     >
                       Proper Placement & Continuous Wear
@@ -147,7 +147,7 @@ export default function PrinciplesToWearTulsiPage() {
                 </div>
 
                 {/* Sacred Image: Devotee Wearing Kanthi Mala Close to Throat */}
-                <div className="lg:col-span-5 relative aspect-[4/3] sm:aspect-square lg:aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5] order-1 lg:order-2">
+                <div className="lg:col-span-5 relative aspect-[16/10] sm:aspect-square lg:aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5] order-1 lg:order-2">
                   <Image
                     src="/images/products/tulsi/t01_model_wear.jpg"
                     alt="Devotee wearing sanctified Tulsi Kanthi Mala in direct contact with skin"
@@ -166,10 +166,10 @@ export default function PrinciplesToWearTulsiPage() {
             </div>
 
             {/* Bottom Navigation CTA Link */}
-            <div className="pt-16 text-center">
+            <div className="pt-12 sm:pt-16 text-center">
               <Link
                 href="/products/tulsi/t-01"
-                className="inline-block px-8 py-3.5 bg-[#122E46] text-[#FAF8F5] text-xs font-mono uppercase tracking-[0.2em] hover:bg-[#C5A880] hover:text-[#111111] transition-colors shadow-md"
+                className="inline-block px-6 sm:px-8 py-3.5 bg-[#122E46] text-[#FAF8F5] text-xs font-mono uppercase tracking-[0.16em] sm:tracking-[0.2em] hover:bg-[#C5A880] hover:text-[#111111] transition-colors shadow-md text-center max-w-full"
               >
                 Acquire Sacred Tulsi Kanthi Mala • ₹399
               </Link>

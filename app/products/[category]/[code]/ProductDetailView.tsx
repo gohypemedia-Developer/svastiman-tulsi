@@ -48,7 +48,7 @@ export function ProductDetailView({ product }: ProductDetailViewProps) {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 pb-20 lg:pb-12">
       {/* Top Breadcrumb & Navigation Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8 text-xs font-sans">
         <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-stone-500">
@@ -289,7 +289,7 @@ export function ProductDetailView({ product }: ProductDetailViewProps) {
           </div>
 
           {/* Trust Guarantees */}
-          <div className="grid grid-cols-2 gap-3 pt-4 border-t border-[#E8E2D5] text-[11px] text-stone-600 font-sans">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-4 border-t border-[#E8E2D5] text-[11px] text-stone-600 font-sans">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#7A6242] shrink-0" />
               <span>100% Provenance Certified</span>

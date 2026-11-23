@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { CartProvider } from "@/context/CartContext";
 import {
   Search,
@@ -247,7 +249,7 @@ export default function OrdersPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#122E46]">
         <Navbar />
 
-        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 font-sans space-y-6">
+        <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-10 pb-20 lg:pb-10 font-sans space-y-6">
           {/* Breadcrumb */}
           <div className="flex items-center gap-1.5 text-xs text-[#7A6242]">
             <Link href="/account" className="hover:text-[#122E46] hover:underline cursor-pointer transition-colors">
@@ -270,7 +272,7 @@ export default function OrdersPage() {
 
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex items-center gap-2 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto"
             >
               <div className="relative flex-1 sm:w-64 md:w-72">
                 <Search className="w-4 h-4 text-[#7A6242]/70 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -302,7 +304,7 @@ export default function OrdersPage() {
           </div>
 
           {/* Navigation Sub-Tabs Styled with Website Elegance */}
-          <div className="flex items-center gap-5 sm:gap-6 border-b border-[#E2DEC9] text-xs sm:text-sm overflow-x-auto scrollbar-none pt-1">
+          <div className="flex items-center gap-4 sm:gap-6 border-b border-[#E2DEC9] text-xs sm:text-sm overflow-x-auto scrollbar-none no-scrollbar pt-1">
             {[
               { id: "orders", label: "All Orders" },
               { id: "buy_again", label: "Buy Again" },
@@ -399,8 +401,8 @@ export default function OrdersPage() {
                     className="rounded-2xl border border-[#E2DEC9] overflow-hidden bg-white shadow-xs hover:border-[#C5A880]/70 transition-colors"
                   >
                     {/* Card Header Strip: Warm Sacred Linen Theme */}
-                    <div className="bg-[#FAF8F5] border-b border-[#E2DEC9] px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-y-2 text-xs">
-                      <div className="flex flex-wrap items-center gap-x-6 sm:gap-x-10 gap-y-1">
+                    <div className="bg-[#FAF8F5] border-b border-[#E2DEC9] px-3.5 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-y-2 text-xs">
+                      <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-10 gap-y-1">
                         <div>
                           <span className="block uppercase text-[10px] font-sans font-semibold tracking-wider text-[#7A6242]">
                             ORDER PLACED
@@ -780,8 +782,8 @@ export default function OrdersPage() {
 
           {/* Interactive Tracking Modal in Website Theme */}
           {trackingModalOrder && (
-            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-6 sm:p-7 space-y-5 animate-in fade-in zoom-in-95 duration-150">
+            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-4 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
                 <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                   <div>
                     <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">
@@ -852,8 +854,8 @@ export default function OrdersPage() {
 
           {/* Order Details Modal in Website Theme */}
           {orderDetailsModal && (
-            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-xl w-full p-6 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
+            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-xl w-full p-4 sm:p-7 space-y-4 max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
                 <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                   <div>
                     <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">Order Summary</h3>
@@ -935,8 +937,8 @@ export default function OrdersPage() {
 
           {/* Write a Product Review Modal in Website Theme */}
           {reviewModalItem && (
-            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-4">
-              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-6 sm:p-7 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+            <div className="fixed inset-0 z-50 bg-[#0A1B2A]/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+              <div className="bg-white rounded-2xl shadow-2xl border border-[#E2DEC9] max-w-lg w-full p-4 sm:p-7 space-y-4 animate-in fade-in zoom-in-95 duration-150">
                 <div className="flex items-center justify-between pb-3 border-b border-[#E8E2D5]">
                   <h3 className="font-serif font-normal text-lg sm:text-xl text-[#122E46]">Write Product Review</h3>
                   <button
@@ -1021,7 +1023,7 @@ export default function OrdersPage() {
 
           {/* Toast Notification */}
           {toastMessage && (
-            <div className="fixed bottom-6 right-6 z-50 bg-[#122E46] text-[#FAF8F5] border border-[#C5A880]/40 px-4 py-3 rounded-xl shadow-xl text-xs flex items-center gap-2 animate-in slide-in-from-bottom-4 duration-200">
+            <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 bg-[#122E46] text-[#FAF8F5] border border-[#C5A880]/40 px-4 py-3 rounded-xl shadow-xl text-xs flex items-center gap-2 animate-in slide-in-from-bottom-4 duration-200">
               <Check className="w-4 h-4 text-[#C5A880] shrink-0" />
               <span>{toastMessage}</span>
             </div>
@@ -1029,6 +1031,8 @@ export default function OrdersPage() {
         </main>
 
         <Footer />
+        <CartDrawer />
+        <BottomNav />
       </div>
     </CartProvider>
   );

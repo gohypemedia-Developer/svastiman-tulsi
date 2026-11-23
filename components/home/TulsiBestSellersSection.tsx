@@ -230,11 +230,13 @@ export function TulsiBestSellersSection() {
         {/* ROW 1: 5 VERTICAL EDITORIAL CARDS (Directly matching AXELS reference)   */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
-          {EDITORIAL_STORIES.map((story) => (
+          {EDITORIAL_STORIES.map((story, idx) => (
             <Link
               key={story.id}
               href="/products/tulsi/t01"
-              className="group relative aspect-[9/15] sm:aspect-[3/5] rounded-none overflow-hidden bg-[#FAF8F5] cursor-pointer shadow-xs select-none block"
+              className={`group relative aspect-[9/15] sm:aspect-[3/5] rounded-none overflow-hidden bg-[#FAF8F5] cursor-pointer shadow-xs select-none block ${
+                idx === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 aspect-[16/10] sm:aspect-[3/5]" : ""
+              }`}
             >
               <Image
                 src={story.image}
@@ -245,7 +247,7 @@ export function TulsiBestSellersSection() {
               />
 
               {/* Minimalist gradient vignette on hover with only clean title */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
                 <h4 className="text-xs sm:text-[13px] font-sans font-medium text-white tracking-wide">
                   {story.title}
                 </h4>
@@ -257,10 +259,10 @@ export function TulsiBestSellersSection() {
         {/* ========================================================================= */}
         {/* ROW 2: BEST SELLER PRODUCTS HEADER                                        */}
         {/* ========================================================================= */}
-        <div className="mt-14 sm:mt-18 lg:mt-24 mb-8 sm:mb-10 flex items-baseline justify-between">
+        <div className="mt-12 sm:mt-18 lg:mt-24 mb-6 sm:mb-10 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 sm:gap-0">
           <div>
             <h2
-              className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-[#122E46] tracking-tight leading-none"
+              className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-[#122E46] tracking-tight leading-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Best Seller Products
@@ -269,7 +271,7 @@ export function TulsiBestSellersSection() {
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-sans font-medium text-stone-600 hover:text-[#122E46] transition-colors group"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-sans font-medium text-stone-600 hover:text-[#122E46] transition-colors group self-start sm:self-auto"
           >
             <span>View All Best Seller</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

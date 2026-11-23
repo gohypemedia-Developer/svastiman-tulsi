@@ -472,11 +472,11 @@ export function CrystalCalculator() {
   };
 
   return (
-    <div className="w-full bg-[#F9F8F5] text-[#122E46] py-12 px-4 sm:px-6 lg:px-8 selection:bg-[#122E46] selection:text-[#FFF6E7]">
-      <div className="max-w-6xl mx-auto space-y-10">
+    <div className="w-full bg-[#F9F8F5] text-[#122E46] py-8 sm:py-12 px-3 sm:px-6 lg:px-8 selection:bg-[#122E46] selection:text-[#FFF6E7]">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
         {/* Hero Header */}
-        <div className="text-center space-y-3.5">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#122E46] font-medium tracking-tight">
+        <div className="text-center space-y-3">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-[#122E46] font-medium tracking-tight">
             Find Your <span className="italic text-[#8C6D3B] font-normal">Personal Power</span> Crystal
           </h1>
 
@@ -490,7 +490,7 @@ export function CrystalCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Form Card (Ivory Container) */}
           <div className="lg:col-span-5 space-y-3">
-            <div className="bg-white text-[#1A1815] p-6 sm:p-8 rounded-2xl shadow-xl border border-[#E2DEC9] space-y-5">
+            <div className="bg-white text-[#1A1815] p-4 sm:p-8 rounded-2xl shadow-xl border border-[#E2DEC9] space-y-5">
               <div>
                 <span className="text-[11px] font-sans font-bold uppercase tracking-[0.16em] text-[#8C6D3B]">
                   YOUR DETAILS
@@ -505,7 +505,7 @@ export function CrystalCalculator() {
 
               <div className="space-y-4 text-xs">
                 {/* DOB Grid - 3 individual labeled boxes: DAY, MONTH, YEAR */}
-                <div className="grid grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-2.5">
                   <div>
                     <label className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">
                       DAY
@@ -518,7 +518,7 @@ export function CrystalCalculator() {
                       max="31"
                       value={day}
                       onChange={(e) => setDay(e.target.value)}
-                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400"
+                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-2 sm:px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400 text-xs sm:text-sm"
                     />
                   </div>
                   <div>
@@ -533,7 +533,7 @@ export function CrystalCalculator() {
                       max="12"
                       value={month}
                       onChange={(e) => setMonth(e.target.value)}
-                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400"
+                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-2 sm:px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400 text-xs sm:text-sm"
                     />
                   </div>
                   <div>
@@ -548,7 +548,7 @@ export function CrystalCalculator() {
                       max="2099"
                       value={year}
                       onChange={(e) => setYear(e.target.value)}
-                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400"
+                      className="w-full bg-[#FAF8F5] border border-[#D5CDBC] rounded-lg px-2 sm:px-3 py-2 text-stone-900 focus:outline-none focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] text-center font-medium placeholder:text-stone-400 text-xs sm:text-sm"
                     />
                   </div>
                 </div>
@@ -857,7 +857,7 @@ export function CrystalCalculator() {
         {results && (
           <div id="crystal-results-view" className="space-y-8 pt-8 border-t border-[#E2DEC9] animate-in fade-in duration-500">
             {/* Core Summary Banner */}
-            <div className="bg-white text-[#1A1815] p-6 sm:p-8 rounded-2xl border border-[#E2DEC9] shadow-xl space-y-6">
+            <div className="bg-white text-[#1A1815] p-4 sm:p-8 rounded-2xl border border-[#E2DEC9] shadow-xl space-y-6">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
                 <div>
                   <span className="text-[11px] font-sans font-bold uppercase tracking-[0.16em] text-[#8C6D3B]">
@@ -879,7 +879,7 @@ export function CrystalCalculator() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-2.5 rounded-full bg-[#25D366] text-white font-medium text-xs tracking-wider uppercase flex items-center gap-2 hover:bg-[#20ba59] transition-colors shadow-sm"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#25D366] text-white font-medium text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:bg-[#20ba59] transition-colors shadow-sm"
                 >
                   <Share2 className="w-4 h-4" />
                   <span>Send Report on WhatsApp</span>
@@ -891,39 +891,39 @@ export function CrystalCalculator() {
               </p>
 
               {/* 4 Mini Summary Metrics */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="bg-[#FAF7F0] p-4 rounded-xl border border-[#E2DEC9] text-center">
-                  <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
+                <div className="bg-[#FAF7F0] p-3 sm:p-4 rounded-xl border border-[#E2DEC9] text-center">
+                  <span className="block text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-stone-500">
                     LIFE PATH NUMBER
                   </span>
-                  <strong className="text-2xl font-serif text-[#122E46] mt-0.5 block">
+                  <strong className="text-xl sm:text-2xl font-serif text-[#122E46] mt-0.5 block">
                     {results.lifePath}
                   </strong>
                 </div>
 
-                <div className="bg-[#FAF7F0] p-4 rounded-xl border border-[#E2DEC9] text-center">
-                  <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                <div className="bg-[#FAF7F0] p-3 sm:p-4 rounded-xl border border-[#E2DEC9] text-center">
+                  <span className="block text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-stone-500">
                     KUA NUMBER
                   </span>
-                  <strong className="text-2xl font-serif text-[#122E46] mt-0.5 block">
+                  <strong className="text-xl sm:text-2xl font-serif text-[#122E46] mt-0.5 block">
                     {results.kua}
                   </strong>
                 </div>
 
-                <div className="bg-[#FAF7F0] p-4 rounded-xl border border-[#E2DEC9] text-center">
-                  <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                <div className="bg-[#FAF7F0] p-3 sm:p-4 rounded-xl border border-[#E2DEC9] text-center">
+                  <span className="block text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-stone-500">
                     PRIMARY ELEMENT
                   </span>
-                  <strong className="text-xl font-serif text-[#8C6D3B] mt-0.5 block">
+                  <strong className="text-lg sm:text-xl font-serif text-[#8C6D3B] mt-0.5 block">
                     {results.primaryElement}
                   </strong>
                 </div>
 
-                <div className="bg-[#FAF7F0] p-4 rounded-xl border border-[#E2DEC9] text-center">
-                  <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500">
+                <div className="bg-[#FAF7F0] p-3 sm:p-4 rounded-xl border border-[#E2DEC9] text-center">
+                  <span className="block text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-stone-500">
                     BEST DIRECTION
                   </span>
-                  <strong className="text-sm font-semibold text-[#122E46] mt-1.5 block">
+                  <strong className="text-xs sm:text-sm font-semibold text-[#122E46] mt-1.5 block">
                     {results.bestDirection}
                   </strong>
                 </div>
@@ -933,7 +933,7 @@ export function CrystalCalculator() {
             {/* Lo Shu Grid + Elemental Balance */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Lo Shu Grid */}
-              <div className="lg:col-span-5 bg-white border border-[#E2DEC9] shadow-md p-6 rounded-2xl space-y-4">
+              <div className="lg:col-span-5 bg-white border border-[#E2DEC9] shadow-md p-4 sm:p-6 rounded-2xl space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6D3B]">
@@ -945,21 +945,21 @@ export function CrystalCalculator() {
                 </div>
 
                 {/* 3x3 Grid */}
-                <div className="grid grid-cols-3 gap-2.5 max-w-[280px] mx-auto py-2">
+                <div className="grid grid-cols-3 gap-2 sm:gap-2.5 max-w-[260px] sm:max-w-[280px] mx-auto py-2">
                   {[4, 9, 2, 3, 5, 7, 8, 1, 6].map((num) => {
                     const count = Math.floor(results.loShuCounts[num] || 0);
                     const isPresent = count > 0;
                     return (
                       <div
                         key={num}
-                        className={`h-20 rounded-xl flex flex-col items-center justify-center border transition-all ${
+                        className={`h-16 sm:h-20 rounded-xl flex flex-col items-center justify-center border transition-all ${
                           isPresent
                             ? "bg-[#DFCAAB]/25 border-[#C5A880] text-[#122E46] font-bold shadow-inner"
                             : "bg-[#FAF8F5] border-[#E2DEC9] text-stone-400"
                         }`}
                       >
-                        <span className="text-2xl font-serif font-bold">{num}</span>
-                        <span className="text-[10px] tracking-wide font-medium mt-0.5">
+                        <span className="text-xl sm:text-2xl font-serif font-bold">{num}</span>
+                        <span className="text-[9.5px] sm:text-[10px] tracking-wide font-medium mt-0.5">
                           {isPresent ? `${count}x Active` : "Missing"}
                         </span>
                       </div>

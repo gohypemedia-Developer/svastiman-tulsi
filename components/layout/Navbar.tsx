@@ -191,13 +191,13 @@ export function Navbar() {
               : "bg-white/95 backdrop-blur-md text-[#122E46] border-b border-[#EBE7DE] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.08)]"
           }`}
         >
-          <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16 h-[78px] sm:h-[80px] flex items-center justify-between">
+          <div className="w-full px-3.5 sm:px-6 lg:px-12 xl:px-16 h-[72px] sm:h-[80px] flex items-center justify-between">
             {/* Left: Navigation Links matching AXELS reference layout */}
-            <div className="flex-1 flex items-center justify-start gap-4 sm:gap-6">
+            <div className="flex-1 flex items-center justify-start gap-2 sm:gap-6">
               {/* Mobile Menu Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`lg:hidden p-1.5 -ml-1 transition-colors focus:outline-none ${
+                className={`lg:hidden p-2 -ml-1 transition-colors focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -264,14 +264,14 @@ export function Navbar() {
             </div>
 
             {/* Center: Brand Logo in Svastiman's signature Playfair Display font */}
-            <div className="shrink-0 flex items-center justify-center px-4">
+            <div className="shrink-0 flex items-center justify-center px-1 sm:px-4">
               <Link
                 href="/"
                 className="group flex items-center justify-center select-none"
                 aria-label="Svastimān Home"
               >
                 <span
-                  className={`font-serif text-2xl lg:text-[28px] font-normal tracking-[0.22em] uppercase transition-colors ${
+                  className={`font-serif text-xl sm:text-2xl lg:text-[28px] font-normal tracking-[0.16em] sm:tracking-[0.22em] uppercase transition-colors ${
                     isTransparent ? "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]" : "text-[#122E46]"
                   }`}
                 >
@@ -282,14 +282,14 @@ export function Navbar() {
 
             {/* Right: Actions (Search, Account, Cart) matching AXELS reference typography & icons */}
             <div
-              className={`flex-1 flex items-center justify-end gap-5 sm:gap-7 lg:gap-8 xl:gap-9 transition-colors ${
+              className={`flex-1 flex items-center justify-end gap-1.5 sm:gap-6 lg:gap-8 xl:gap-9 transition-colors ${
                 isTransparent ? "text-white" : "text-[#122E46]"
               }`}
             >
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className={`flex items-center gap-1.5 p-1 transition-colors focus:outline-none cursor-pointer group ${
+                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -306,7 +306,7 @@ export function Navbar() {
               {/* Account */}
               <Link
                 href="/account"
-                className={`flex items-center gap-1.5 p-1 transition-colors group ${
+                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -323,7 +323,7 @@ export function Navbar() {
               {/* Cart */}
               <button
                 onClick={openCart}
-                className={`flex items-center gap-1.5 p-1 transition-colors focus:outline-none cursor-pointer group ${
+                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
