@@ -20,7 +20,7 @@ export function BottomNav() {
     { label: "Shop", href: "/products", icon: LayoutGrid },
     { label: "Wishlist", href: "/wishlist", icon: Heart, badge: wishlistCount },
     { label: "Cart", onClick: openCart, icon: ShoppingBag, badge: totalCount },
-    { label: "Account", href: "/account", icon: User },
+    { label: "Account", href: "/login", icon: User },
   ];
 
   return (
@@ -33,9 +33,8 @@ export function BottomNav() {
           <div className="flex flex-col items-center justify-center relative py-1 px-1 sm:px-2.5 text-center min-w-[48px] sm:min-w-[54px] select-none">
             <div className="relative">
               <Icon
-                className={`w-5 h-5 transition-colors ${
-                  isActive ? "text-[#122E46] stroke-[2.2]" : "text-stone-600 stroke-[1.6]"
-                }`}
+                className={`w-5 h-5 transition-colors ${isActive ? "text-[#122E46] stroke-[2.2]" : "text-stone-600 stroke-[1.6]"
+                  }`}
               />
               {mounted && typeof item.badge === "number" && item.badge > 0 ? (
                 <span className="absolute -top-1.5 -right-2 bg-[#122E46] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
@@ -44,9 +43,8 @@ export function BottomNav() {
               ) : null}
             </div>
             <span
-              className={`text-[9.5px] sm:text-[10px] tracking-wide mt-1 transition-colors ${
-                isActive ? "text-[#122E46] font-semibold" : "text-stone-600 font-medium"
-              }`}
+              className={`text-[9.5px] sm:text-[10px] tracking-wide mt-1 transition-colors ${isActive ? "text-[#122E46] font-semibold" : "text-stone-600 font-medium"
+                }`}
             >
               {item.label}
             </span>

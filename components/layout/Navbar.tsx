@@ -305,14 +305,14 @@ export function Navbar() {
 
               {/* Account */}
               <Link
-                href="/account"
+                href="/login"
                 className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
                 }`}
-                title="My Account"
-                aria-label="My Account"
+                title="Account"
+                aria-label="Account"
               >
                 <User className="w-[18px] h-[18px] stroke-[1.8] group-hover:scale-105 transition-transform" />
                 <span className="hidden sm:inline text-[14px] font-sans font-medium tracking-wide">
@@ -406,12 +406,12 @@ export function Navbar() {
 
             <div className="pt-2 flex flex-col gap-2.5 border-t border-[#E2DEC9]/60">
               <Link
-                href="/account"
+                href="/login"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2.5 text-sm font-medium text-[#122E46] hover:text-[#C5A880] py-1"
               >
                 <User className="w-4 h-4 text-[#122E46]" />
-                <span>My Account</span>
+                <span>Account</span>
               </Link>
               <Link
                 href="/wishlist"

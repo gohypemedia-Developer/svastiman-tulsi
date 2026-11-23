@@ -9,7 +9,7 @@ import { CartDrawer } from "@/components/cart/CartDrawer";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { CartProvider } from "@/context/CartContext";
 import { CountryCodeDropdown } from "@/components/common/CountryCodeDropdown";
-import { ChevronDown, ShieldCheck } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -115,16 +115,7 @@ export default function LoginPage() {
     }, 500);
   };
 
-  const handleDemoLogin = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      if (typeof window !== "undefined") {
-        localStorage.setItem("svastiman_logged_in", "true");
-        localStorage.setItem("svastiman_user_name", "Ayush Sharma");
-      }
-      router.push("/account");
-    }, 400);
-  };
+
 
 
   return (
@@ -137,35 +128,16 @@ export default function LoginPage() {
           <div className="w-full flex-1 grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-80px)]">
 
             {/* Left Column: Authentic Svastimān Flagship Sacred Photography */}
-            <div className="lg:col-span-6 relative w-full h-[220px] sm:h-[340px] lg:h-full min-h-[220px] bg-[#0A1B2A] overflow-hidden">
+            <div className="lg:col-span-6 relative w-full h-[220px] sm:h-[340px] lg:h-full min-h-[220px] bg-[#FAF8F5] overflow-hidden">
+              {/* Svastimān Flagship Sacred Tulsi Photography */}
               <Image
-                src="/images/origin/stage9_svastiman.jpg"
-                alt="Authentic Svastimān Handcrafted Sacred Rudraksha and Vrindavan Tulsi"
+                src="/images/products/tulsi/t01_lifestyle.jpg"
+                alt="Authentic Handcrafted Vrindavan Tulsi Kanthi Mala with Sacred Radha Krishna Medallion"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
-                className="object-cover object-center brightness-[0.88] contrast-[1.05]"
+                className="object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1B2A]/85 via-transparent to-black/20 pointer-events-none" />
-
-              {/* Svastimān Sacred Content Overlay */}
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#0A1B2A]/80 backdrop-blur-md border border-[#C5A880]/30 text-white hidden sm:block max-w-sm shadow-xl">
-                <span className="text-[9px] font-sans text-[#DFCAAB] tracking-[0.22em] uppercase font-semibold block mb-1">
-                  House of Sacred Indian Materials
-                </span>
-                <p className="font-serif italic text-xs leading-relaxed text-[#ECEADE] mb-2">
-                  &ldquo;Before it was a mala, it was a fruit — nature precedes ritual.&rdquo;
-                </p>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] text-[#DFCAAB]/80 font-sans border-t border-white/10 pt-2">
-                  <span className="flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3 text-[#C5A880]" /> 100% Nepali and Indonesian Rudraksha
-                  </span>
-                  <span>•</span>
-                  <span>Kashi Temple Energized</span>
-                  <span>•</span>
-                  <span>X-Ray Tested</span>
-                </div>
-              </div>
             </div>
 
             {/* Right Column: Clean Form Layout Matching Reference Image Exactly */}
@@ -370,17 +342,7 @@ export default function LoginPage() {
                       </Link>
                     </div>
 
-                    {/* Simple Button for Demo */}
-                    <div className="pt-2">
-                      <button
-                        type="button"
-                        onClick={handleDemoLogin}
-                        disabled={isLoading}
-                        className="w-full py-2.5 rounded-md border border-[#D6D0C4] hover:border-[#122E46] bg-[#FAF8F5] hover:bg-white text-[#122E46] font-sans text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer disabled:opacity-50"
-                      >
-                        Demo Account
-                      </button>
-                    </div>
+
 
                   </form>
                 ) : (
