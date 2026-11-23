@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShoppingBag, Plus, Bookmark, Check, X, ShieldCheck, MapPin } from "lucide-react";
+import { ArrowRight, ShoppingBag, Plus, Bookmark, Check, X, ShieldCheck, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 // 5 Vertical Editorial Lookbook Cards (Directly below Hero, matching AXELS reference)
@@ -194,6 +194,28 @@ const BEST_SELLER_PRODUCTS: BestSellerProduct[] = [
 export function TulsiBestSellersSection() {
   const { addToCart, openCart, isInWishlist, toggleWishlist } = useCart();
   const [addedSku, setAddedSku] = useState<string | null>(null);
+  const sliderRef = React.useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeStoryId, setActiveStoryId] = useState<string | null>(null);
+
+  const handleScroll = () => {
+    if (sliderRef.current) {
+      const scrollLeft = sliderRef.current.scrollLeft;
+      const cardWidth = sliderRef.current.clientWidth * 0.72;
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveSlide(Math.min(Math.max(0, index), EDITORIAL_STORIES.length - 1));
+    }
+  };
+
+  const scrollToSlide = (direction: "left" | "right") => {
+    if (sliderRef.current) {
+      const scrollAmount = sliderRef.current.clientWidth * 0.74;
+      sliderRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleQuickAdd = (prod: BestSellerProduct, e: React.MouseEvent) => {
     e.preventDefault();
@@ -227,33 +249,84 @@ export function TulsiBestSellersSection() {
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* ========================================================================= */}
-        {/* ROW 1: 5 VERTICAL EDITORIAL CARDS (Directly matching AXELS reference)   */}
+        {/* ROW 1: 5 VERTICAL EDITORIAL CARDS (Mobile Carousel Slider / Desktop Grid) */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
-          {EDITORIAL_STORIES.map((story, idx) => (
-            <Link
-              key={story.id}
-              href="/products/tulsi/t01"
-              className={`group relative aspect-[9/15] sm:aspect-[3/5] rounded-none overflow-hidden bg-[#FAF8F5] cursor-pointer shadow-xs select-none block ${
-                idx === 4 ? "col-span-2 sm:col-span-1 md:col-span-1 aspect-[16/10] sm:aspect-[3/5]" : ""
-              }`}
-            >
-              <Image
-                src={story.image}
-                alt={story.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
+        <div className="relative">
+          {/* Mobile Left Arrow Button matching Image 2 */}
+          <button
+            type="button"
+            onClick={() => scrollToSlide("left")}
+            aria-label="Previous slide"
+            className="sm:hidden absolute left-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs border border-stone-200/80 shadow-md flex items-center justify-center text-stone-800 hover:bg-white active:scale-95 transition-all cursor-pointer"
+          >
+            <ChevronLeft className="w-4 h-4 stroke-[2.2]" />
+          </button>
 
-              {/* Minimalist gradient vignette on hover with only clean title */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
-                <h4 className="text-xs sm:text-[13px] font-sans font-medium text-white tracking-wide">
-                  {story.title}
-                </h4>
-              </div>
-            </Link>
-          ))}
+          {/* Mobile Right Arrow Button matching Image 2 */}
+          <button
+            type="button"
+            onClick={() => scrollToSlide("right")}
+            aria-label="Next slide"
+            className="sm:hidden absolute right-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs border border-stone-200/80 shadow-md flex items-center justify-center text-stone-800 hover:bg-white active:scale-95 transition-all cursor-pointer"
+          >
+            <ChevronRight className="w-4 h-4 stroke-[2.2]" />
+          </button>
+
+          {/* Slider Row: Snap Carousel on Mobile, 5-col Grid on Desktop */}
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none gap-3.5 sm:gap-4 lg:gap-5 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar scroll-smooth sm:grid-cols-3 md:grid-cols-5 py-1"
+          >
+            {EDITORIAL_STORIES.map((story) => (
+              <Link
+                key={story.id}
+                href="/products/tulsi/t01"
+                onMouseEnter={() => setActiveStoryId(story.id)}
+                onMouseLeave={() => setActiveStoryId(null)}
+                onClick={(e) => {
+                  if (activeStoryId !== story.id) {
+                    e.preventDefault();
+                    setActiveStoryId(story.id);
+                  }
+                }}
+                className="group relative w-[70vw] max-w-[280px] shrink-0 sm:w-auto sm:shrink sm:max-w-none snap-center aspect-[3/5] rounded-none overflow-hidden bg-[#FAF8F5] cursor-pointer shadow-xs select-none block"
+              >
+                <Image
+                  src={story.image}
+                  alt={story.alt}
+                  fill
+                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 33vw, 20vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+
+                {/* Minimalist gradient vignette with title - visible on hover/tap */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 flex flex-col justify-end p-3.5 sm:p-4 pointer-events-none ${
+                    activeStoryId === story.id
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
+                >
+                  <h4 className="text-xs sm:text-[13px] font-sans font-medium text-white tracking-wide drop-shadow-sm">
+                    {story.title}
+                  </h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Dot Indicators */}
+          <div className="flex sm:hidden items-center justify-center gap-1.5 mt-3.5">
+            {EDITORIAL_STORIES.map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  activeSlide === i ? "w-5 bg-[#122E46]" : "w-1.5 bg-[#122E46]/25"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* ========================================================================= */}

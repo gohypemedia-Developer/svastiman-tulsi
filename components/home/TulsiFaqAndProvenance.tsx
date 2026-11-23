@@ -43,7 +43,7 @@ export function TulsiFaqAndProvenance({
   productSku = "T01",
   onAcquireClick,
 }: TulsiFaqAndProvenanceProps) {
-  const [openFaqId, setOpenFaqId] = useState<string | null>("faq-1");
+  const [openFaqId, setOpenFaqId] = useState<string | null>(null);
 
   const toggleFaq = (id: string) => {
     setOpenFaqId((prev) => (prev === id ? null : id));
@@ -74,6 +74,8 @@ export function TulsiFaqAndProvenance({
                 return (
                   <div
                     key={item.id}
+                    onMouseEnter={() => setOpenFaqId(item.id)}
+                    onMouseLeave={() => setOpenFaqId(null)}
                     className="border border-[#E5DEC8] bg-white transition-colors"
                   >
                     <button
@@ -90,11 +92,17 @@ export function TulsiFaqAndProvenance({
                       </span>
                     </button>
 
-                    {isOpen && (
-                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 pl-10 sm:pl-12 pt-1 text-xs sm:text-sm font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
-                        {item.answer}
+                    <div
+                      className={`grid transition-all duration-300 ease-out overflow-hidden ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pl-10 sm:pl-12 pt-2 text-xs sm:text-sm font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
+                          {item.answer}
+                        </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}

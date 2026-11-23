@@ -13,7 +13,7 @@ export function TulsiHeroBanner() {
   };
 
   return (
-    <section className="relative w-full min-h-[520px] sm:min-h-[640px] md:min-h-[700px] lg:min-h-[760px] xl:min-h-[820px] flex items-center justify-center overflow-hidden bg-[#FAF8F5] select-none">
+    <section className="relative w-full h-[100svh] h-[100dvh] min-h-[100svh] min-h-[100dvh] sm:h-auto sm:min-h-[640px] md:min-h-[700px] lg:min-h-[760px] xl:min-h-[820px] flex items-center justify-center overflow-hidden bg-[#FAF8F5] select-none">
       {/* Background Hero Image - User Uploaded Banner (2.5K Ultra-Sharp, Adjusted Framing) */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,18 +23,18 @@ export function TulsiHeroBanner() {
           priority
           unoptimized
           sizes="100vw"
-          className="object-cover object-[center_36%] sm:object-[center_34%]"
+          className="object-cover object-[center_38%] sm:object-[center_34%]"
         />
         {/* Soft edge vignettes: Subtle top shadow for transparent navbar legibility, clear center, grounded bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/50 z-10 pointer-events-none" />
       </div>
 
       {/* Centered Editorial Content matching AXELS Hierarchy */}
-      <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center justify-center pt-24 sm:pt-36 md:pt-40 lg:pt-44 pb-12 sm:pb-24">
+      <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center justify-center pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-24">
 
         {/* Massive Centered Serif Headline */}
         <h1
-          className="font-serif text-2xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[74px] font-normal tracking-[0.05em] sm:tracking-[0.08em] text-white uppercase text-center leading-[1.14] sm:leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] mb-3 sm:mb-4 max-w-3xl"
+          className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[74px] font-normal tracking-[0.05em] sm:tracking-[0.08em] text-white uppercase text-center leading-[1.14] sm:leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] mb-3 sm:mb-4 max-w-3xl"
           style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
         >
           Tulsi Kanthi Mala

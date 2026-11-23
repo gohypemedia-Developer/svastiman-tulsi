@@ -60,43 +60,52 @@ export function Footer() {
         {/* ========================================================================= */}
         {/* 1. TOP CENTER BRAND WORDMARK                                              */}
         {/* ========================================================================= */}
-        <div className="flex flex-col items-center justify-center text-center mb-6 sm:mb-8">
-          <Link href="/" className="inline-block group">
+        <div className="flex flex-col items-center justify-center text-center mb-6 sm:mb-10">
+          <Link href="/" className="inline-block group select-none">
             <h3
-              className="text-2xl sm:text-4xl md:text-[44px] font-normal tracking-[0.16em] sm:tracking-[0.25em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
+              className="text-2xl sm:text-4xl md:text-[44px] font-normal tracking-[0.18em] sm:tracking-[0.25em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
               style={{ fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif" }}
             >
               SVASTIMĀN
             </h3>
           </Link>
+
+          {/* Golden Tagline */}
+          <div className="mt-2 sm:mt-3 px-2">
+            <h2
+              className="font-serif text-sm sm:text-xl lg:text-[clamp(1.35rem,3.8vw,4.75rem)] font-normal tracking-wide sm:tracking-tight text-white select-none text-center animate-shine-travel break-words"
+              style={{
+                fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif",
+                filter:
+                  "drop-shadow(0 1px 2px rgba(18, 46, 70, 0.12)) drop-shadow(0 2px 6px rgba(197, 168, 128, 0.18))",
+              }}
+            >
+              Touch The Sacred #UntouchedOrigins
+            </h2>
+          </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* 2. MASSIVE STATEMENT HEADLINE (Traveling Shine Effect as per Video)       */}
+        {/* 2. MAIN 2-COLUMN (MOBILE) / 4-COLUMN (DESKTOP) FOOTER CONTENT GRID       */}
         {/* ========================================================================= */}
-        <div className="w-full flex items-center justify-center my-6 sm:my-10 lg:my-12 px-2 overflow-visible">
-          <h2
-            className="font-serif text-[clamp(1.35rem,3.8vw,4.75rem)] font-normal tracking-tight leading-[1.25] py-2 sm:py-3 select-none text-center lg:whitespace-nowrap animate-shine-travel break-words"
-            style={{
-              fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif",
-              filter: "drop-shadow(0 1px 2px rgba(18, 46, 70, 0.08)) drop-shadow(0 2px 6px rgba(197, 168, 128, 0.18))",
-            }}
-          >
-            Touch The Sacred #UntouchedOrigins
-          </h2>
-        </div>
-
-        {/* ========================================================================= */}
-        {/* 3. MAIN 4-COLUMN FOOTER CONTENT GRID                                      */}
-        {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pt-6 sm:pt-10 pb-12 sm:pb-16 text-sm">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 sm:gap-x-8 lg:gap-x-10 gap-y-7 sm:gap-y-10 pt-4 sm:pt-8 pb-12 sm:pb-16 text-sm">
           
-          {/* COLUMN 1: FINE PRINT */}
-          <div className="space-y-3.5">
-            <h4 className="font-serif text-[15px] sm:text-base font-semibold text-[#122E46] tracking-tight">
-              FINE PRINT
+          {/* COLUMN 1: CUSTOMER SERVICE */}
+          <div className="space-y-3 sm:space-y-3.5">
+            <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+              Customer Service
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-[13px] text-stone-700">
+            <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-[13px] text-stone-700">
+              <li>
+                <a href="mailto:concierge@svastiman.com" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <Link href="/authenticity-charter" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
+                  Return / Exchange
+                </Link>
+              </li>
               <li>
                 <Link href="/privacy-policy" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
                   Privacy Policy
@@ -109,17 +118,12 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/terms-of-reverence" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
-                  Terms of Service
+                  Terms &amp; Conditions
                 </Link>
               </li>
-              <li>
-                <Link href="/authenticity-charter" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
-                  Refund Policy
-                </Link>
-              </li>
-              <li className="pt-2">
-                <div className="flex items-center gap-2 text-[11px] sm:text-xs text-[#7A6242] font-medium">
-                  <ShieldCheck className="w-4 h-4 text-[#8C6D46] shrink-0" />
+              <li className="pt-1.5 hidden sm:block">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-[#7A6242] font-medium">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#8C6D46] shrink-0" />
                   <span>100% Traceable Indian Heritage</span>
                 </div>
               </li>
@@ -127,12 +131,12 @@ export function Footer() {
           </div>
 
           {/* COLUMN 2: COMPANY & SECURE PAYMENT */}
-          <div className="space-y-6">
-            <div className="space-y-3.5">
-              <h4 className="font-serif text-[15px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+          <div className="space-y-5 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-3.5">
+              <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
                 Company
               </h4>
-              <ul className="space-y-2.5 text-xs sm:text-[13px] text-stone-700">
+              <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-[13px] text-stone-700">
                 <li>
                   <Link href="/about" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
                     About Us
@@ -149,6 +153,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/orders" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
+                    Track Your Order
+                  </Link>
+                </li>
+                <li>
                   <Link href="/blog" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
                     Blogs
                   </Link>
@@ -156,8 +165,8 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* SECURE PAYMENT SUBSECTION */}
-            <div className="space-y-2.5 pt-1">
+            {/* SECURE PAYMENT SUBSECTION (Preserved on Desktop) */}
+            <div className="space-y-2.5 pt-1 hidden lg:block">
               <h5 className="font-serif text-[13px] sm:text-sm font-semibold text-[#122E46] tracking-tight">
                 Secure Payment
               </h5>
@@ -196,22 +205,23 @@ export function Footer() {
           </div>
 
           {/* COLUMN 3: FOLLOW US & OFFICE ADDRESS */}
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             {/* FOLLOW US */}
-            <div className="space-y-3.5">
-              <h4 className="font-serif text-[15px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+            <div className="space-y-2.5 sm:space-y-3">
+              <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
                 Follow Us
               </h4>
-              <div className="flex items-center gap-3 text-[#122E46]">
+              {/* Circular Social Buttons Matching Image 2 */}
+              <div className="flex items-center gap-2 sm:gap-2.5">
                 {/* Instagram */}
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#7A6242] hover:scale-110 transition-all duration-200"
+                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="Instagram"
                 >
-                  <svg className="w-5 h-5 fill-none stroke-current stroke-[1.9]" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -223,24 +233,11 @@ export function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#7A6242] hover:scale-110 transition-all duration-200"
+                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="Facebook"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-
-                {/* Twitter (X) */}
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#7A6242] hover:scale-110 transition-all duration-200"
-                  aria-label="Twitter"
-                >
-                  <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
 
@@ -249,10 +246,10 @@ export function Footer() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:text-[#7A6242] hover:scale-110 transition-all duration-200"
+                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="YouTube"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
                     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#FAF8F5" />
                   </svg>
@@ -260,10 +257,10 @@ export function Footer() {
               </div>
             </div>
 
-            {/* OFFICE AND SACRED ORIGIN */}
+            {/* OFFICE ADDRESS */}
             <div className="space-y-1.5 pt-1">
-              <h5 className="font-serif text-[14px] sm:text-[15px] font-semibold text-[#122E46] tracking-tight">
-                Office and Sacred Origin
+              <h5 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+                Office Address
               </h5>
               <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed font-light">
                 Himalayan Cloud Belts and Vrindavan Groves, India
@@ -271,7 +268,7 @@ export function Footer() {
               <div className="pt-0.5">
                 <a
                   href="mailto:concierge@svastiman.com"
-                  className="block text-xs sm:text-[13px] text-[#7A6242] hover:text-[#122E46] transition-colors underline underline-offset-2 font-medium"
+                  className="block text-xs sm:text-[13px] text-[#7A6242] hover:text-[#122E46] transition-colors underline underline-offset-2 font-medium break-all"
                 >
                   concierge@svastiman.com
                 </a>
@@ -280,12 +277,12 @@ export function Footer() {
           </div>
 
           {/* COLUMN 4: JOIN OUR NEWSLETTER */}
-          <div className="space-y-3.5">
-            <h4 className="font-serif text-[15px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+          <div className="space-y-3 sm:space-y-3.5">
+            <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
               Join Our Newsletter
             </h4>
             <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed font-light">
-              Be the first to know about new sacred drops, rare harvests and authentic monographs.
+              Get drops, tips &amp; members-only offers. No spam.
             </p>
 
             {subscribed ? (
@@ -294,34 +291,34 @@ export function Footer() {
                 <span>You are subscribed to the Svastimān archive.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-3 pt-1">
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <form onSubmit={handleSubscribe} className="space-y-2 pt-0.5">
+                <div className="flex flex-col gap-2">
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="e.g. name@example.com"
-                    className="flex-1 min-w-0 bg-white border border-[#D5CDBF] rounded-md px-3 py-2 text-xs text-[#122E46] placeholder:text-stone-400 focus:outline-none focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46]/10 transition-colors"
+                    className="w-full bg-white border border-[#D5CDBF] rounded-lg px-3 py-2 text-xs text-[#122E46] placeholder:text-stone-400 focus:outline-none focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46]/10 transition-colors shadow-xs"
                   />
                   <button
                     type="submit"
-                    className="bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs font-semibold px-4 py-2 rounded-md transition-colors cursor-pointer shrink-0 shadow-xs text-center"
+                    className="w-full bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs font-semibold py-2.5 rounded-lg transition-colors cursor-pointer shadow-xs text-center"
                   >
                     Subscribe
                   </button>
                 </div>
 
                 {/* AGREEMENT CHECKBOX */}
-                <label className="flex items-start gap-2 text-[11px] text-stone-600 cursor-pointer pt-0.5 select-none leading-tight font-light">
+                <label className="flex items-start gap-1.5 text-[10px] sm:text-[11px] text-stone-500 cursor-pointer pt-1 select-none leading-tight font-light">
                   <input
                     type="checkbox"
                     checked={agree}
                     onChange={(e) => setAgree(e.target.checked)}
-                    className="mt-0.5 w-3.5 h-3.5 rounded border-[#D5CDBF] accent-[#122E46] cursor-pointer shrink-0"
+                    className="mt-0.5 w-3 h-3 rounded border-[#D5CDBF] accent-[#122E46] cursor-pointer shrink-0"
                   />
                   <span>
-                    I agree to receive monographs from Svastimān. Read our{" "}
+                    I agree to receive monographs. Read{" "}
                     <Link href="/privacy-policy" className="underline hover:text-[#7A6242] transition-colors">
                       Privacy Policy
                     </Link>
