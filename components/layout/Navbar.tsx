@@ -161,7 +161,7 @@ export function Navbar() {
     <>
       {/* Spacer to preserve document layout height on non-home pages */}
       {!isHomePage && (
-        <div className="w-full h-[106px] sm:h-[108px] pointer-events-none" aria-hidden="true" />
+        <div className="w-full h-[106px] sm:h-[108px] 3xl:h-[120px] 4k:h-[136px] pointer-events-none" aria-hidden="true" />
       )}
 
       {/* Main Fixed Header */}
@@ -172,8 +172,8 @@ export function Navbar() {
       >
         {/* Top Announcement Bar (Shown on non-home pages, or hidden on home hero to match AXELS reference) */}
         {!isHomePage && (
-          <div className="w-full bg-[#FFEDE2] border-b border-[#E8DEC8]/60 text-[#122E46] h-7 sm:h-[28px] flex items-center overflow-hidden select-none">
-            <div className="animate-marquee flex items-center gap-12 text-[11px] sm:text-xs font-medium tracking-wide">
+          <div className="w-full bg-[#FFEDE2] border-b border-[#E8DEC8]/60 text-[#122E46] h-7 sm:h-[28px] 4k:h-9 flex items-center overflow-hidden select-none">
+            <div className="animate-marquee flex items-center gap-12 text-[11px] sm:text-xs 4k:text-sm font-medium tracking-wide">
               {[...ANNOUNCEMENTS, ...ANNOUNCEMENTS].map((item, idx) => (
                 <span key={idx} className="flex items-center gap-2 whitespace-nowrap">
                   <span>{item}</span>
@@ -191,7 +191,7 @@ export function Navbar() {
               : "bg-white/95 backdrop-blur-md text-[#122E46] border-b border-[#EBE7DE] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.08)]"
           }`}
         >
-          <div className="w-full px-3.5 sm:px-6 lg:px-12 xl:px-16 h-[72px] sm:h-[80px] flex items-center justify-between">
+          <div className="w-full px-3.5 sm:px-6 lg:px-12 xl:px-16 3xl:px-20 4k:px-28 h-[72px] sm:h-[80px] 3xl:h-[90px] 4k:h-[100px] flex items-center justify-between">
             {/* Left: Navigation Links matching AXELS reference layout */}
             <div className="flex-1 flex items-center justify-start gap-2 sm:gap-6">
               {/* Mobile Menu Hamburger Button */}
@@ -208,10 +208,10 @@ export function Navbar() {
               </button>
 
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
+              <nav className="hidden lg:flex items-center gap-8 xl:gap-10 3xl:gap-12 4k:gap-14">
                 <Link
                   href="/"
-                  className={`text-[14px] font-sans font-medium tracking-wide transition-colors ${
+                  className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${
                     isTransparent
                       ? "text-white hover:text-white/80"
                       : "text-[#122E46] hover:text-[#C5A880]"
@@ -224,24 +224,24 @@ export function Navbar() {
                 <div className="relative group">
                   <Link
                     href="/products"
-                    className={`flex items-center gap-1.5 text-[14px] font-sans font-medium tracking-wide transition-colors py-2 ${
+                    className={`flex items-center gap-1.5 text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors py-2 ${
                       isTransparent
                         ? "text-white hover:text-white/80"
                         : "text-[#122E46] hover:text-[#C5A880]"
                     }`}
                   >
                     <span>Shop</span>
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
+                    <ChevronDown className="w-3.5 h-3.5 4k:w-4 4k:h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
                   </Link>
 
                   {/* Dropdown Menu */}
-                  <div className="absolute top-full left-0 mt-0.5 w-64 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
-                    <div className="py-2">
+                  <div className="absolute top-full left-0 mt-0.5 w-64 4k:w-80 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
+                    <div className="py-2 4k:py-3">
                       {shopCategories.map((cat) => (
                         <Link
                           key={cat.name}
                           href={cat.href}
-                          className="block px-4 py-2.5 text-[13px] font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
+                          className="block px-4 4k:px-6 py-2.5 4k:py-3.5 text-[13px] 4k:text-base font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
                         >
                           {cat.name}
                         </Link>
@@ -252,7 +252,7 @@ export function Navbar() {
 
                 <Link
                   href="/about"
-                  className={`text-[14px] font-sans font-medium tracking-wide transition-colors ${
+                  className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${
                     isTransparent
                       ? "text-white hover:text-white/80"
                       : "text-[#122E46] hover:text-[#C5A880]"
@@ -271,7 +271,7 @@ export function Navbar() {
                 aria-label="Svastimān Home"
               >
                 <span
-                  className={`font-serif text-xl sm:text-2xl lg:text-[28px] font-normal tracking-[0.16em] sm:tracking-[0.22em] uppercase transition-colors ${
+                  className={`font-serif text-xl sm:text-2xl lg:text-[28px] 3xl:text-[32px] 4k:text-[38px] font-normal tracking-[0.16em] sm:tracking-[0.22em] 4k:tracking-[0.24em] uppercase transition-colors ${
                     isTransparent ? "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]" : "text-[#122E46]"
                   }`}
                 >
@@ -282,14 +282,14 @@ export function Navbar() {
 
             {/* Right: Actions (Search, Account, Cart) matching AXELS reference typography & icons */}
             <div
-              className={`flex-1 flex items-center justify-end gap-1.5 sm:gap-6 lg:gap-8 xl:gap-9 transition-colors ${
+              className={`flex-1 flex items-center justify-end gap-1.5 sm:gap-6 lg:gap-8 xl:gap-9 3xl:gap-11 4k:gap-12 transition-colors ${
                 isTransparent ? "text-white" : "text-[#122E46]"
               }`}
             >
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -297,8 +297,8 @@ export function Navbar() {
                 title="Search sacred collections"
                 aria-label="Search"
               >
-                <Search className="w-[18px] h-[18px] stroke-[1.8] group-hover:scale-105 transition-transform" />
-                <span className="hidden sm:inline text-[14px] font-sans font-medium tracking-wide">
+                <Search className="w-[18px] h-[18px] 3xl:w-5 3xl:h-5 4k:w-6 4k:h-6 stroke-[1.8] group-hover:scale-105 transition-transform" />
+                <span className="hidden sm:inline text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide">
                   Search
                 </span>
               </button>
@@ -306,7 +306,7 @@ export function Navbar() {
               {/* Account */}
               <Link
                 href="/login"
-                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -314,8 +314,8 @@ export function Navbar() {
                 title="Account"
                 aria-label="Account"
               >
-                <User className="w-[18px] h-[18px] stroke-[1.8] group-hover:scale-105 transition-transform" />
-                <span className="hidden sm:inline text-[14px] font-sans font-medium tracking-wide">
+                <User className="w-[18px] h-[18px] 3xl:w-5 3xl:h-5 4k:w-6 4k:h-6 stroke-[1.8] group-hover:scale-105 transition-transform" />
+                <span className="hidden sm:inline text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide">
                   Account
                 </span>
               </Link>
@@ -323,7 +323,7 @@ export function Navbar() {
               {/* Cart */}
               <button
                 onClick={openCart}
-                className={`flex items-center gap-1.5 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
                   isTransparent
                     ? "text-white hover:text-white/80"
                     : "text-[#122E46] hover:text-[#C5A880]"
@@ -332,7 +332,7 @@ export function Navbar() {
                 aria-label="Shopping Bag"
               >
                 <div className="relative flex items-center">
-                  <ShoppingBag className="w-[18px] h-[18px] stroke-[1.8] group-hover:scale-105 transition-transform" />
+                  <ShoppingBag className="w-[18px] h-[18px] 3xl:w-5 3xl:h-5 4k:w-6 4k:h-6 stroke-[1.8] group-hover:scale-105 transition-transform" />
                   {mounted && totalCount > 0 && (
                     <span
                       className={`sm:hidden absolute -top-1.5 -right-2 text-[10px] font-bold leading-none w-3.5 h-3.5 rounded-full flex items-center justify-center ${
@@ -343,11 +343,11 @@ export function Navbar() {
                     </span>
                   )}
                 </div>
-                <span className="hidden sm:inline text-[14px] font-sans font-medium tracking-wide">
+                <span className="hidden sm:inline text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide">
                   Cart
                   {mounted && totalCount > 0 && (
                     <span
-                      className={`ml-1 text-[12px] font-semibold ${
+                      className={`ml-1 text-[12px] 4k:text-sm font-semibold ${
                         isTransparent ? "text-white" : "text-[#122E46]"
                       }`}
                     >
@@ -446,30 +446,30 @@ export function Navbar() {
             searchOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <div className="max-w-6xl mx-auto px-5 sm:px-10 lg:px-12 pt-7 pb-10 sm:pb-12">
+          <div className="max-w-6xl 3xl:max-w-7xl 4k:max-w-[1800px] mx-auto px-5 sm:px-10 lg:px-12 4k:px-16 pt-7 pb-10 sm:pb-12 4k:pt-10 4k:pb-16">
             {/* Header: Title and Close button */}
             <div className="flex items-center justify-between pb-3">
-              <h2 className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-[#1A1815] uppercase">
+              <h2 className="font-sans text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl font-bold tracking-tight text-[#1A1815] uppercase">
                 Search
               </h2>
               <button
                 type="button"
                 onClick={() => setSearchOpen(false)}
-                className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-stone-500 hover:text-[#1A1815] transition-colors cursor-pointer py-1 px-2"
+                className="text-xs 4k:text-sm font-sans font-semibold uppercase tracking-[0.18em] text-stone-500 hover:text-[#1A1815] transition-colors cursor-pointer py-1 px-2"
               >
                 Close
               </button>
             </div>
 
             {/* Search Form Input */}
-            <form onSubmit={handleSearchSubmit} className="mt-3 mb-8 relative">
+            <form onSubmit={handleSearchSubmit} className="mt-3 mb-8 4k:mb-12 relative">
               <input
                 ref={searchInputRef}
                 type="text"
                 placeholder="SEARCH FOR PRODUCTS..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-transparent border-b border-[#1A1815] pb-3 text-sm sm:text-base md:text-lg font-sans uppercase tracking-wider text-[#1A1815] placeholder:text-stone-400 focus:outline-none"
+                className="w-full bg-transparent border-b border-[#1A1815] pb-3 text-sm sm:text-base md:text-lg 3xl:text-xl 4k:text-2xl font-sans uppercase tracking-wider text-[#1A1815] placeholder:text-stone-400 focus:outline-none"
               />
               {searchQuery && (
                 <button
@@ -477,19 +477,19 @@ export function Navbar() {
                   onClick={() => setSearchQuery("")}
                   className="absolute right-0 top-1/2 -translate-y-1/2 p-1 text-stone-400 hover:text-stone-700 cursor-pointer"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4 4k:w-6 4k:h-6" />
                 </button>
               )}
             </form>
 
             {/* Two Column Layout: Suggestions & Products */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 3xl:gap-16 4k:gap-20">
               {/* Suggestions Column */}
               <div className="md:col-span-5 lg:col-span-5">
-                <span className="block text-[11px] font-sans font-bold uppercase tracking-[0.18em] text-stone-400 mb-4">
+                <span className="block text-[11px] 4k:text-xs font-sans font-bold uppercase tracking-[0.18em] text-stone-400 mb-4">
                   Suggestions
                 </span>
-                <div className="flex flex-col space-y-3.5">
+                <div className="flex flex-col space-y-3.5 4k:space-y-4">
                   {suggestions.map((item, idx) => (
                     <button
                       key={idx}
@@ -499,7 +499,7 @@ export function Navbar() {
                         router.push(`/products?search=${encodeURIComponent(item)}`);
                         setSearchOpen(false);
                       }}
-                      className="text-left text-xs sm:text-[13px] font-sans font-medium uppercase tracking-wide text-stone-700 hover:text-[#C5A880] transition-colors cursor-pointer truncate"
+                      className="text-left text-xs sm:text-[13px] 3xl:text-sm 4k:text-base font-sans font-medium uppercase tracking-wide text-stone-700 hover:text-[#C5A880] transition-colors cursor-pointer truncate"
                     >
                       {item}
                     </button>
@@ -509,31 +509,31 @@ export function Navbar() {
 
               {/* Products Column */}
               <div className="md:col-span-7 lg:col-span-7">
-                <span className="block text-[11px] font-sans font-bold uppercase tracking-[0.18em] text-stone-400 mb-4">
+                <span className="block text-[11px] 4k:text-xs font-sans font-bold uppercase tracking-[0.18em] text-stone-400 mb-4">
                   Products
                 </span>
-                <div className="flex flex-col space-y-3 max-h-[360px] overflow-y-auto pr-1" data-lenis-prevent>
+                <div className="flex flex-col space-y-3 4k:space-y-4 max-h-[360px] 3xl:max-h-[460px] 4k:max-h-[560px] overflow-y-auto pr-1" data-lenis-prevent>
                   {filteredProducts.map((prod) => (
                     <Link
                       key={prod.id}
                       href={prod.href}
                       onClick={() => setSearchOpen(false)}
-                      className="flex items-center gap-3.5 p-1.5 rounded-lg hover:bg-[#F9F8F5] transition-colors group"
+                      className="flex items-center gap-3.5 4k:gap-5 p-1.5 4k:p-2.5 rounded-lg hover:bg-[#F9F8F5] transition-colors group"
                     >
-                      <div className="relative w-12 h-14 sm:w-14 sm:h-16 rounded-md overflow-hidden bg-[#FAF8F5] border border-stone-200 shrink-0">
+                      <div className="relative w-12 h-14 sm:w-14 sm:h-16 4k:w-16 4k:h-20 rounded-md overflow-hidden bg-[#FAF8F5] border border-stone-200 shrink-0">
                         <Image
                           src={prod.image}
                           alt={prod.name}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          sizes="64px"
+                          sizes="80px"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-xs sm:text-[13px] font-sans font-medium uppercase tracking-wide text-stone-800 group-hover:text-[#C5A880] transition-colors truncate">
+                        <h4 className="text-xs sm:text-[13px] 3xl:text-sm 4k:text-base font-sans font-medium uppercase tracking-wide text-stone-800 group-hover:text-[#C5A880] transition-colors truncate">
                           {prod.name}
                         </h4>
-                        <p className="text-xs font-sans text-stone-500 mt-0.5 font-semibold">
+                        <p className="text-xs 4k:text-sm font-sans text-stone-500 mt-0.5 font-semibold">
                           ₹{prod.price.toLocaleString("en-IN")}
                         </p>
                       </div>

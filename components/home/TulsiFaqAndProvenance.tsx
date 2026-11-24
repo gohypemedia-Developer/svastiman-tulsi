@@ -54,13 +54,13 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 1: FREQUENTLY ASKED QUESTIONS (Matching Image 1 Reference)        */}
       {/* ========================================================================= */}
-      <section id="faq-section" className="w-full py-12 sm:py-24 bg-[#FAF8F5]">
-        <div className="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-5 sm:p-10 lg:p-16 border border-[#E8E2D5] shadow-xs space-y-6 sm:space-y-8">
+      <section id="faq-section" className="w-full py-12 sm:py-24 3xl:py-28 4k:py-36 bg-[#FAF8F5]">
+        <div className="max-w-[960px] 3xl:max-w-[1280px] 4k:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 4k:px-16">
+          <div className="bg-white p-5 sm:p-10 lg:p-16 3xl:p-20 4k:p-24 border border-[#E8E2D5] shadow-xs space-y-6 sm:space-y-8 4k:space-y-12">
             {/* Title */}
             <div className="text-center">
               <h2
-                className="text-xl sm:text-3xl lg:text-4xl font-normal text-[#122E46]"
+                className="text-xl sm:text-3xl lg:text-4xl 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46]"
                 style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
               >
                 Frequently Asked Questions
@@ -81,13 +81,13 @@ export function TulsiFaqAndProvenance({
                     <button
                       type="button"
                       onClick={() => toggleFaq(item.id)}
-                      className="w-full px-4 sm:px-5 py-3.5 sm:py-4 flex items-center gap-3 sm:gap-4 text-left cursor-pointer hover:bg-[#FAF8F5]/80 transition-colors"
+                      className="w-full px-4 sm:px-5 4k:px-7 py-3.5 sm:py-4 4k:py-5 flex items-center gap-3 sm:gap-4 4k:gap-5 text-left cursor-pointer hover:bg-[#FAF8F5]/80 transition-colors"
                       aria-expanded={isOpen}
                     >
                       <span className="text-[#C5A880] flex items-center justify-center w-4 h-4 shrink-0 font-light text-lg">
                         {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                       </span>
-                      <span className="font-sans text-xs sm:text-sm font-medium text-[#122E46] leading-snug">
+                      <span className="font-sans text-xs sm:text-sm 3xl:text-base 4k:text-xl font-medium text-[#122E46] leading-snug">
                         {item.question}
                       </span>
                     </button>
@@ -98,7 +98,7 @@ export function TulsiFaqAndProvenance({
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pl-10 sm:pl-12 pt-2 text-xs sm:text-sm font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
+                        <div className="px-4 sm:px-5 4k:px-7 pb-4 sm:pb-5 4k:pb-6 pl-10 sm:pl-12 4k:pl-14 pt-2 4k:pt-3 text-xs sm:text-sm 3xl:text-base 4k:text-lg font-sans text-stone-600 leading-relaxed border-t border-[#E5DEC8]/50">
                           {item.answer}
                         </div>
                       </div>
@@ -114,57 +114,57 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 2: THE FOUR PILLARS OF TULSI SACRED ORIGIN                        */}
       {/* ========================================================================= */}
-      <section id="authenticity" className="w-full py-12 sm:py-24 bg-[#FAF8F5]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2 mb-8 sm:mb-10">
+      <section id="authenticity" className="w-full py-12 sm:py-24 3xl:py-28 4k:py-36 bg-[#FAF8F5]">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
+          <div className="text-center max-w-2xl 3xl:max-w-3xl 4k:max-w-4xl mx-auto space-y-2 4k:space-y-3.5 mb-8 sm:mb-10 4k:mb-14">
             <h2
-              className="text-2xl sm:text-3xl font-normal text-[#122E46]"
+              className="text-2xl sm:text-3xl 3xl:text-4xl 4k:text-5xl font-normal text-[#122E46]"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               The Four Pillars of Tulsi Sacred Origin
             </h2>
-            <p className="text-xs sm:text-sm text-stone-600 font-sans">
+            <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-600 font-sans">
               Commitment to botanical purity, sacred lineage, and certification.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 3xl:gap-8 4k:gap-10">
             {/* Pillar 1 */}
-            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
                 100% Natural Tulsi Wood
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
                 Carved from sacred holy basil heartwood. 100% pure and untreated.
               </p>
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
                 Origin: Vrindavan, Braj
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
                 Sourced from holy Braj Dham, hand-turned by generational artisans.
               </p>
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
                 Associated Deity: Shri Krishna
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
                 Consecrated with devotion to Shri Krishna for daily sadhana.
               </p>
             </div>
 
             {/* Pillar 4 */}
-            <div className="p-5 sm:p-6 bg-white border border-[#E8E2D5] space-y-2.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
                 Authenticity Lab Certificate
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
                 Includes physical lab certificate verifying wood density and purity.
               </p>
             </div>
@@ -175,12 +175,12 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       {/* SECTION 3: EDITORIAL BANNER: ROOTED IN SOURCE (Matching Image 2 Reference)*/}
       {/* ========================================================================= */}
-      <section className="w-full py-10 sm:py-20 bg-[#FAF8F5]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full py-10 sm:py-20 3xl:py-24 4k:py-32 bg-[#FAF8F5]">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
           {onAcquireClick ? (
             <div
               onClick={onAcquireClick}
-              className="group relative overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] flex items-center justify-end border border-[#E8E2D5] cursor-pointer"
+              className="group relative overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] 3xl:min-h-[500px] 4k:min-h-[580px] flex items-center justify-end border border-[#E8E2D5] cursor-pointer"
             >
               <Image
                 src="/images/products/tulsi/t01_model_wear.jpg"
@@ -198,20 +198,20 @@ export function TulsiFaqAndProvenance({
               </div>
 
               {/* Right Aligned Editorial Content (Matching Image 2) */}
-              <div className="relative z-10 p-5 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8 mt-12 sm:mt-0">
+              <div className="relative z-10 p-5 sm:p-10 lg:p-14 3xl:p-16 4k:p-20 max-w-md sm:max-w-lg lg:max-w-xl 3xl:max-w-2xl 4k:max-w-3xl space-y-3 sm:space-y-4 4k:space-y-6 text-left mr-0 sm:mr-4 lg:mr-8 4k:mr-12 mt-12 sm:mt-0">
                 <h3
-                  className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-tight text-white tracking-tight"
+                  className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl 4k:text-6xl font-normal leading-tight text-white tracking-tight"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   Rooted in Source.
                   <br />
                   Honored by Hand.
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-200/90 font-sans leading-relaxed">
+                <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-200/90 font-sans leading-relaxed">
                   Handcrafted genuine Vrindavan Tulsi, preserving sacred purity and daily devotional grace.
                 </p>
                 <div className="pt-2 sm:pt-3">
-                  <span className="inline-block border border-white text-white text-[11px] font-mono tracking-[0.24em] uppercase px-6 py-2.5 transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                  <span className="inline-block border border-white text-white text-[11px] 3xl:text-xs 4k:text-sm font-mono tracking-[0.24em] uppercase px-6 sm:px-8 4k:px-10 py-2.5 sm:py-3 4k:py-4 transition-all duration-300 group-hover:bg-white group-hover:text-black">
                     SHOP NOW
                   </span>
                 </div>
@@ -220,7 +220,7 @@ export function TulsiFaqAndProvenance({
           ) : (
             <Link
               href={`/products/tulsi/${productSku.toLowerCase()}`}
-              className="group relative block overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] border border-[#E8E2D5] cursor-pointer"
+              className="group relative block overflow-hidden bg-stone-900 text-[#FAF8F5] min-h-[360px] sm:min-h-[440px] 3xl:min-h-[500px] 4k:min-h-[580px] border border-[#E8E2D5] cursor-pointer"
             >
               <div className="w-full h-full min-h-[360px] sm:min-h-[440px] flex items-center justify-end">
                 <Image
@@ -239,20 +239,20 @@ export function TulsiFaqAndProvenance({
                 </div>
 
                 {/* Right Aligned Editorial Content (Matching Image 2) */}
-                <div className="relative z-10 p-5 sm:p-10 lg:p-14 max-w-md sm:max-w-lg lg:max-w-xl space-y-3 sm:space-y-4 text-left mr-0 sm:mr-4 lg:mr-8 mt-12 sm:mt-0">
+                <div className="relative z-10 p-5 sm:p-10 lg:p-14 3xl:p-16 4k:p-20 max-w-md sm:max-w-lg lg:max-w-xl 3xl:max-w-2xl 4k:max-w-3xl space-y-3 sm:space-y-4 4k:space-y-6 text-left mr-0 sm:mr-4 lg:mr-8 4k:mr-12 mt-12 sm:mt-0">
                   <h3
-                    className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-tight text-white tracking-tight"
+                    className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl 4k:text-6xl font-normal leading-tight text-white tracking-tight"
                     style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                   >
                     Rooted in Source.
                     <br />
                     Honored by Hand.
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-200/90 font-sans leading-relaxed">
+                  <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-200/90 font-sans leading-relaxed">
                     Handcrafted genuine Vrindavan Tulsi, preserving sacred purity and daily devotional grace.
                   </p>
                   <div className="pt-2 sm:pt-3">
-                    <span className="inline-block border border-white text-white text-[11px] font-mono tracking-[0.24em] uppercase px-6 py-2.5 transition-all duration-300 group-hover:bg-white group-hover:text-black">
+                    <span className="inline-block border border-white text-white text-[11px] 3xl:text-xs 4k:text-sm font-mono tracking-[0.24em] uppercase px-6 sm:px-8 4k:px-10 py-2.5 sm:py-3 4k:py-4 transition-all duration-300 group-hover:bg-white group-hover:text-black">
                       SHOP NOW
                     </span>
                   </div>

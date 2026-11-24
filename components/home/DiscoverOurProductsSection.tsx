@@ -134,15 +134,15 @@ export function DiscoverOurProductsSection() {
   };
 
   return (
-    <section id="discover-our-products" className="w-full py-12 sm:py-20 lg:py-24 bg-[#FAF8F5]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="discover-our-products" className="w-full py-12 sm:py-20 lg:py-24 3xl:py-28 4k:py-36 bg-[#FAF8F5]">
+      <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
         {/* ========================================================================= */}
         {/* HEADER: Title Matching Image 1 Reference                                  */}
         {/* ========================================================================= */}
-        <div className="text-center mb-8 sm:mb-14">
+        <div className="text-center mb-8 sm:mb-14 3xl:mb-16 4k:mb-20">
           <h2
-            className="text-2xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight leading-tight"
+            className="text-2xl sm:text-4xl lg:text-[42px] 3xl:text-[48px] 4k:text-[56px] font-normal text-[#122E46] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
           >
             Discover Our Products
@@ -152,7 +152,7 @@ export function DiscoverOurProductsSection() {
         {/* ========================================================================= */}
         {/* PRODUCT GRID: 3 Columns x 3 Rows (Matching Image 1 & Image 2)             */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 lg:gap-12 3xl:gap-14 4k:gap-16">
           {DISCOVER_PRODUCTS.map((prod) => (
             <Link
               key={prod.id}
@@ -173,7 +173,7 @@ export function DiscoverOurProductsSection() {
                 <button
                   type="button"
                   onClick={(e) => handleToggleSave(prod, e)}
-                  className="absolute top-3.5 right-3.5 z-10 w-8 h-8 rounded-full bg-white/95 backdrop-blur-xs border border-stone-200/80 flex items-center justify-center text-stone-700 hover:text-black transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
+                  className="absolute top-3.5 right-3.5 4k:top-5 4k:right-5 z-10 w-8 h-8 4k:w-11 4k:h-11 rounded-full bg-white/95 backdrop-blur-xs border border-stone-200/80 flex items-center justify-center text-stone-700 hover:text-black transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
                   aria-label="Save to Wishlist"
                   title="Save to Wishlist"
                 >
@@ -189,7 +189,7 @@ export function DiscoverOurProductsSection() {
                 <button
                   type="button"
                   onClick={(e) => handleQuickAdd(prod, e)}
-                  className="absolute bottom-3.5 right-3.5 z-10 w-8 h-8 rounded-full bg-[#122E46] hover:bg-black text-white flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer opacity-90 group-hover:opacity-100"
+                  className="absolute bottom-3.5 right-3.5 4k:bottom-5 4k:right-5 z-10 w-8 h-8 4k:w-11 4k:h-11 rounded-full bg-[#122E46] hover:bg-black text-white flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer opacity-90 group-hover:opacity-100"
                   aria-label="Add to cart"
                   title="Add to cart"
                 >
@@ -202,13 +202,13 @@ export function DiscoverOurProductsSection() {
               </div>
 
               {/* Minimalist Centered Typography Matching Image 1 & 2 */}
-              <div className="pt-4 text-center flex flex-col items-center space-y-1">
+              <div className="pt-4 4k:pt-5 text-center flex flex-col items-center space-y-1 4k:space-y-1.5">
                 <h3
-                  className="text-xs sm:text-sm font-sans font-medium text-[#122E46] tracking-wide text-center group-hover:text-[#7A6242] transition-colors line-clamp-1"
+                  className="text-xs sm:text-sm 3xl:text-base 4k:text-[17px] font-sans font-medium text-[#122E46] tracking-wide text-center group-hover:text-[#7A6242] transition-colors line-clamp-1"
                 >
                   {prod.name}
                 </h3>
-                <p className="text-xs sm:text-[13px] font-sans text-stone-500 font-normal tracking-wider">
+                <p className="text-xs sm:text-[13px] 3xl:text-sm 4k:text-base font-sans text-stone-500 font-normal tracking-wider">
                   ₹ {prod.price}.00 INR
                 </p>
               </div>

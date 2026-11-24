@@ -54,11 +54,11 @@ function WishlistContent() {
   };
 
   return (
-    <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-12 pb-20 lg:pb-12">
+    <main className="flex-1 w-full max-w-7xl 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-3.5 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 py-6 sm:py-12 3xl:py-16 4k:py-20 pb-20 lg:pb-12">
       {/* Page Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 mb-6 sm:mb-8 border-b border-[#E8E2D5]">
         <div>
-          <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#1A1815] tracking-tight">
+          <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl 3xl:text-6xl 4k:text-7xl font-normal text-[#1A1815] tracking-tight">
             Sacred Wishlist
           </h1>
           <p className="text-xs sm:text-sm text-stone-500 font-light mt-1.5 max-w-xl">
@@ -190,11 +190,10 @@ function WishlistContent() {
                     <button
                       onClick={() => handleMoveToCart(item)}
                       disabled={movedId === item.id}
-                      className={`w-full py-2 sm:py-3 px-2 sm:px-4 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 shadow-md cursor-pointer ${
-                        movedId === item.id
-                          ? "bg-emerald-700 text-white"
-                          : "bg-[#122E46] hover:bg-[#C5A880] text-white"
-                      }`}
+                      className={`w-full py-2 sm:py-3 px-2 sm:px-4 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 shadow-md cursor-pointer ${movedId === item.id
+                        ? "bg-emerald-700 text-white"
+                        : "bg-[#122E46] hover:bg-[#C5A880] text-white"
+                        }`}
                     >
                       {movedId === item.id ? (
                         <>

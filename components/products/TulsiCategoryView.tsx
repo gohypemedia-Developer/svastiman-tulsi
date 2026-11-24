@@ -156,7 +156,7 @@ export function TulsiCategoryView({
   return (
     <div className="space-y-10 sm:space-y-14 w-full">
       {/* 1. TULSI SUBCATEGORY & SHAPE FILTERS (Positioned above product grid) */}
-      <div className="space-y-4 bg-white p-4 sm:p-5 rounded-2xl border border-[#E8E2D5] shadow-xs w-full">
+      <div className="space-y-4 bg-white p-4 sm:p-5 3xl:p-6 4k:p-8 rounded-2xl border border-[#E8E2D5] shadow-xs w-full">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <SlidersHorizontal className="w-4 h-4 text-[#7A6242]" />
@@ -256,7 +256,7 @@ export function TulsiCategoryView({
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5 3xl:gap-6 4k:gap-8 w-full">
           {filteredProducts.map((prod, idx) => {
             const isSaved = isInWishlist(prod.id);
             const isAdded = addedId === prod.id;
@@ -354,7 +354,7 @@ export function TulsiCategoryView({
       )}
 
       {/* 3. SACRED PROVENANCE HERO BANNER (Image 1 Box 1 - Positioned below products) */}
-      <div className="relative rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-[#E8E2D5] p-5 sm:p-8 lg:p-12 overflow-hidden shadow-xs mt-10 sm:mt-16 w-full">
+      <div className="relative rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-[#E8E2D5] p-5 sm:p-8 lg:p-12 3xl:p-16 4k:p-20 overflow-hidden shadow-xs mt-10 sm:mt-16 4k:mt-24 w-full">
         {/* Subtle Watermark Texture */}
         <div className="absolute inset-0 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.07] pointer-events-none" />
 
@@ -374,7 +374,7 @@ export function TulsiCategoryView({
 
           {/* Heading */}
           <div className="space-y-2">
-            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal text-[#1A1815] leading-[1.18] tracking-tight">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl 3xl:text-6xl 4k:text-7xl font-normal text-[#1A1815] leading-[1.18] tracking-tight">
               Vrindavan Tulsi Collection
             </h2>
             <p className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[#7A6242]">
@@ -383,7 +383,7 @@ export function TulsiCategoryView({
           </div>
 
           {/* Exact Client Description from PDF */}
-          <p className="text-sm sm:text-base leading-relaxed text-stone-700 font-sans max-w-4xl border-l-2 border-[#C5A880] pl-4 py-2 italic bg-[#F2EDE2]/40 rounded-r-lg">
+          <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl leading-relaxed text-stone-700 font-sans max-w-4xl 4k:max-w-6xl border-l-2 border-[#C5A880] pl-4 py-2 italic bg-[#F2EDE2]/40 rounded-r-lg">
             &ldquo;Revered as Vrinda Devi, Tulsi Ji holds a special place in Vaishnava tradition and is deeply cherished by devotees of Lord Krishna. Wearing a Tulsi Mala is a symbol of devotion, purity, humility and surrender. More than a sacred ornament, it serves as a gentle reminder to stay connected with Krishna and walk the path of Bhakti in everyday life.&rdquo;
           </p>
 
@@ -418,23 +418,23 @@ export function TulsiCategoryView({
       </div>
 
       {/* 4. SACRED PRACTICE & GUIDES ACCORDION (Image 1 Box 2 - Positioned below products) */}
-      <div className="rounded-2xl bg-white border border-[#E8E2D5] p-5 sm:p-8 shadow-xs space-y-6 w-full">
+      <div className="rounded-2xl bg-white border border-[#E8E2D5] p-5 sm:p-8 3xl:p-12 4k:p-16 shadow-xs space-y-6 4k:space-y-10 w-full">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#E8E2D5]">
           <div>
-            <span className="text-[10px] font-mono uppercase tracking-widest text-[#7A6242] font-semibold block">
+            <span className="text-[10px] 4k:text-xs font-mono uppercase tracking-widest text-[#7A6242] font-semibold block">
               SACRED KNOWLEDGE & SCRIPTURAL TENETS
             </span>
-            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#1A1815] mt-1">
+            <h3 className="font-serif text-2xl sm:text-3xl 3xl:text-4xl 4k:text-5xl font-normal text-[#1A1815] mt-1">
               Which Round To Choose ? & Devotional Guides
             </h3>
           </div>
-          <span className="text-xs text-stone-500 font-sans">
+          <span className="text-xs 4k:text-sm text-stone-500 font-sans">
             Tap a guide to expand official instructions
           </span>
         </div>
 
         {/* 4 Guide Accordion Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 3xl:gap-6 4k:gap-8">
           {TULSI_GUIDES.map((guide) => {
             const isOpen = activeGuideId === guide.id;
             const Icon = guide.icon;

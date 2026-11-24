@@ -249,7 +249,7 @@ export default function OrdersPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#122E46]">
         <Navbar />
 
-        <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-10 pb-20 lg:pb-10 font-sans space-y-6">
+        <main className="flex-1 w-full max-w-7xl 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-3.5 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 py-6 sm:py-10 3xl:py-14 4k:py-18 pb-20 lg:pb-10 font-sans space-y-6 4k:space-y-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-1.5 text-xs text-[#7A6242]">
             <Link href="/account" className="hover:text-[#122E46] hover:underline cursor-pointer transition-colors">
@@ -295,7 +295,7 @@ export default function OrdersPage() {
               </div>
               <button
                 type="button"
-                onClick={() => {}}
+                onClick={() => { }}
                 className="px-4 py-2 text-xs font-sans font-semibold tracking-wider uppercase rounded-xl bg-[#122E46] hover:bg-[#1D4263] text-[#ECEADE] transition-all duration-200 cursor-pointer shadow-xs whitespace-nowrap"
               >
                 Search Orders
@@ -320,11 +320,10 @@ export default function OrdersPage() {
                   key={subTab.id}
                   type="button"
                   onClick={() => setOrderSubTab(subTab.id as OrderSubTab)}
-                  className={`pb-2.5 font-sans uppercase tracking-wider text-xs whitespace-nowrap cursor-pointer transition-colors ${
-                    isSelected
-                      ? "text-[#122E46] border-b-2 border-[#122E46] font-bold -mb-[1px]"
-                      : "text-[#5C6773] hover:text-[#122E46]"
-                  }`}
+                  className={`pb-2.5 font-sans uppercase tracking-wider text-xs whitespace-nowrap cursor-pointer transition-colors ${isSelected
+                    ? "text-[#122E46] border-b-2 border-[#122E46] font-bold -mb-[1px]"
+                    : "text-[#5C6773] hover:text-[#122E46]"
+                    }`}
                 >
                   {subTab.label}
                 </button>
@@ -972,9 +971,8 @@ export default function OrdersPage() {
                         className="p-1 hover:scale-110 transition-transform cursor-pointer"
                       >
                         <Star
-                          className={`w-6 h-6 ${
-                            star <= reviewRating ? "fill-[#C5A880] text-[#C5A880]" : "text-stone-300"
-                          }`}
+                          className={`w-6 h-6 ${star <= reviewRating ? "fill-[#C5A880] text-[#C5A880]" : "text-stone-300"
+                            }`}
                         />
                       </button>
                     ))}

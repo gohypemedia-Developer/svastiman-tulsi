@@ -55,7 +55,7 @@ export function Footer() {
         }
       `}</style>
 
-      <div className="w-full max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12 pt-12 sm:pt-16 pb-8 relative z-10">
+      <div className="w-full max-w-[1380px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-5 sm:px-8 lg:px-12 3xl:px-14 4k:px-16 pt-12 sm:pt-16 3xl:pt-20 4k:pt-24 pb-8 relative z-10">
         
         {/* ========================================================================= */}
         {/* 1. TOP CENTER BRAND WORDMARK                                              */}
@@ -63,7 +63,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center text-center mb-6 sm:mb-10">
           <Link href="/" className="inline-block group select-none">
             <h3
-              className="text-2xl sm:text-4xl md:text-[44px] font-normal tracking-[0.18em] sm:tracking-[0.25em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
+              className="text-2xl sm:text-4xl md:text-[44px] 3xl:text-[52px] 4k:text-[60px] font-normal tracking-[0.18em] sm:tracking-[0.25em] 4k:tracking-[0.28em] text-[#122E46] uppercase leading-none transition-opacity group-hover:opacity-90"
               style={{ fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif" }}
             >
               SVASTIMĀN
@@ -73,7 +73,7 @@ export function Footer() {
           {/* Golden Tagline */}
           <div className="mt-2 sm:mt-3 px-2">
             <h2
-              className="font-serif text-sm sm:text-xl lg:text-[clamp(1.35rem,3.8vw,4.75rem)] font-normal tracking-wide sm:tracking-tight text-white select-none text-center animate-shine-travel break-words"
+              className="font-serif text-sm sm:text-xl lg:text-[clamp(1.35rem,3.8vw,4.75rem)] 4k:text-[clamp(2.5rem,3.2vw,5.5rem)] font-normal tracking-wide sm:tracking-tight text-white select-none text-center animate-shine-travel break-words"
               style={{
                 fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif",
                 filter:
@@ -88,14 +88,14 @@ export function Footer() {
         {/* ========================================================================= */}
         {/* 2. MAIN 2-COLUMN (MOBILE) / 4-COLUMN (DESKTOP) FOOTER CONTENT GRID       */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 sm:gap-x-8 lg:gap-x-10 gap-y-7 sm:gap-y-10 pt-4 sm:pt-8 pb-12 sm:pb-16 text-sm">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-5 sm:gap-x-8 lg:gap-x-10 3xl:gap-x-16 4k:gap-x-20 gap-y-7 sm:gap-y-10 3xl:gap-y-12 4k:gap-y-16 pt-4 sm:pt-8 4k:pt-12 pb-12 sm:pb-16 4k:pb-20 text-sm">
           
           {/* COLUMN 1: CUSTOMER SERVICE */}
           <div className="space-y-3 sm:space-y-3.5">
-            <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+            <h4 className="font-serif text-[14px] sm:text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46] tracking-tight">
               Customer Service
             </h4>
-            <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-[13px] text-stone-700">
+            <ul className="space-y-2 sm:space-y-2.5 4k:space-y-3.5 text-xs sm:text-[13px] 3xl:text-sm 4k:text-base text-stone-700">
               <li>
                 <a href="mailto:concierge@svastiman.com" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
                   Contact
@@ -133,10 +133,10 @@ export function Footer() {
           {/* COLUMN 2: COMPANY & SECURE PAYMENT */}
           <div className="space-y-5 sm:space-y-6">
             <div className="space-y-3 sm:space-y-3.5">
-              <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+              <h4 className="font-serif text-[14px] sm:text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46] tracking-tight">
                 Company
               </h4>
-              <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-[13px] text-stone-700">
+              <ul className="space-y-2 sm:space-y-2.5 4k:space-y-3.5 text-xs sm:text-[13px] 3xl:text-sm 4k:text-base text-stone-700">
                 <li>
                   <Link href="/about" className="hover:text-[#7A6242] hover:translate-x-0.5 transition-all inline-block">
                     About Us
@@ -208,7 +208,7 @@ export function Footer() {
           <div className="space-y-5 sm:space-y-6">
             {/* FOLLOW US */}
             <div className="space-y-2.5 sm:space-y-3">
-              <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+              <h4 className="font-serif text-[14px] sm:text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46] tracking-tight">
                 Follow Us
               </h4>
               {/* Circular Social Buttons Matching Image 2 */}
@@ -218,7 +218,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
+                  className="w-8 h-8 3xl:w-9 3xl:h-9 4k:w-11 4k:h-11 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
@@ -233,7 +233,7 @@ export function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
+                  className="w-8 h-8 3xl:w-9 3xl:h-9 4k:w-11 4k:h-11 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -246,7 +246,7 @@ export function Footer() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
+                  className="w-8 h-8 3xl:w-9 3xl:h-9 4k:w-11 4k:h-11 rounded-full bg-[#122E46] text-[#FAF8F5] flex items-center justify-center hover:bg-[#7A6242] transition-colors shadow-xs"
                   aria-label="YouTube"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -278,7 +278,7 @@ export function Footer() {
 
           {/* COLUMN 4: JOIN OUR NEWSLETTER */}
           <div className="space-y-3 sm:space-y-3.5">
-            <h4 className="font-serif text-[14px] sm:text-base font-semibold text-[#122E46] tracking-tight">
+            <h4 className="font-serif text-[14px] sm:text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46] tracking-tight">
               Join Our Newsletter
             </h4>
             <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed font-light">
@@ -299,11 +299,11 @@ export function Footer() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="e.g. name@example.com"
-                    className="w-full bg-white border border-[#D5CDBF] rounded-lg px-3 py-2 text-xs text-[#122E46] placeholder:text-stone-400 focus:outline-none focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46]/10 transition-colors shadow-xs"
+                    className="w-full bg-white border border-[#D5CDBF] rounded-lg px-3 py-2 4k:px-4 4k:py-3 text-xs 4k:text-base text-[#122E46] placeholder:text-stone-400 focus:outline-none focus:border-[#122E46] focus:ring-1 focus:ring-[#122E46]/10 transition-colors shadow-xs"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs font-semibold py-2.5 rounded-lg transition-colors cursor-pointer shadow-xs text-center"
+                    className="w-full bg-[#122E46] hover:bg-[#7A6242] text-[#FAF8F5] text-xs 4k:text-base font-semibold py-2.5 4k:py-3.5 rounded-lg transition-colors cursor-pointer shadow-xs text-center"
                   >
                     Subscribe
                   </button>
@@ -337,7 +337,7 @@ export function Footer() {
       {/* 4. BOTTOM SUB-FOOTER BAR DIVIDED BY LINE                                  */}
       {/* ========================================================================= */}
       <div className="w-full bg-[#F4F1EA] border-t border-[#E0D8CB] relative z-10 pb-20 sm:pb-20 lg:pb-0">
-        <div className="w-full max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-stone-600">
+        <div className="w-full max-w-[1380px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-5 sm:px-8 lg:px-12 3xl:px-14 4k:px-16 py-4 4k:py-6 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs 4k:text-sm text-stone-600">
           <p className="tracking-tight text-center sm:text-left font-serif text-[11px] sm:text-xs">
             &copy; 2026 <strong className="font-semibold text-[#122E46]">Svastimān</strong>. All Rights Reserved.
           </p>

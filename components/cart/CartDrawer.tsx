@@ -15,10 +15,10 @@ export function CartDrawer() {
       {/* Overlay click to close */}
       <div className="absolute inset-0" onClick={closeCart} />
 
-      <div className="relative w-full max-w-[400px] bg-white text-[#1A1815] h-full shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300 border-l border-[#E2DEC9]">
+      <div className="relative w-full max-w-[400px] 3xl:max-w-[480px] 4k:max-w-[560px] bg-white text-[#1A1815] h-full shadow-2xl flex flex-col z-10 animate-in slide-in-from-right duration-300 border-l border-[#E2DEC9]">
         {/* Header */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-[#EAE6DF] bg-white">
-          <h2 className="text-xs sm:text-sm font-semibold tracking-wider text-[#1A1815] uppercase font-sans">
+        <div className="flex items-center justify-between px-4 sm:px-6 4k:px-8 py-4 4k:py-6 border-b border-[#EAE6DF] bg-white">
+          <h2 className="text-xs sm:text-sm 4k:text-base font-semibold tracking-wider text-[#1A1815] uppercase font-sans">
             YOUR CART
           </h2>
           <button
@@ -50,7 +50,7 @@ export function CartDrawer() {
             <div className="divide-y divide-[#EAE6DF] px-4 sm:px-6 py-2">
               {items.map((item) => (
                 <div key={item.id} className="py-4 flex gap-3 sm:gap-4 items-start">
-                  <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-lg overflow-hidden bg-[#FAF8F5] shrink-0 border border-[#E2DEC9] p-1">
+                  <div className="relative w-16 h-16 sm:w-18 sm:h-18 4k:w-22 4k:h-22 rounded-lg overflow-hidden bg-[#FAF8F5] shrink-0 border border-[#E2DEC9] p-1">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -114,16 +114,16 @@ export function CartDrawer() {
         </div>
 
         {/* Footer */}
-        <div className="p-4 sm:p-6 bg-white border-t border-[#EAE6DF] mt-auto pb-[max(1.25rem,env(safe-area-inset-bottom,0px))]">
+        <div className="p-4 sm:p-6 4k:p-8 bg-white border-t border-[#EAE6DF] mt-auto pb-[max(1.25rem,env(safe-area-inset-bottom,0px))]">
           <div className="flex justify-between items-center mb-1">
-            <span className="text-xs font-medium tracking-wider text-stone-500 uppercase">
+            <span className="text-xs 4k:text-sm font-medium tracking-wider text-stone-500 uppercase">
               SUBTOTAL
             </span>
-            <span className="text-sm font-semibold text-[#1A1815]">
+            <span className="text-sm 4k:text-base font-semibold text-[#1A1815]">
               ₹{subtotal.toLocaleString("en-IN")}
             </span>
           </div>
-          <p className="text-[11px] text-stone-400 mb-4">
+          <p className="text-[11px] 4k:text-xs text-stone-400 mb-4">
             Taxes and shipping calculated at checkout.
           </p>
 
@@ -134,13 +134,13 @@ export function CartDrawer() {
                 alert("Proceeding to secure checkout...");
               }
             }}
-            className={`w-full py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold tracking-wider uppercase transition-colors ${
+            className={`w-full py-3.5 4k:py-4.5 px-4 rounded-lg flex items-center justify-center gap-2 text-xs 4k:text-sm font-semibold tracking-wider uppercase transition-colors ${
               items.length === 0
                 ? "bg-[#1A1815]/40 text-white/80 cursor-not-allowed"
                 : "bg-[#1A1815] hover:bg-[#2C2723] text-white active:scale-[0.99] shadow-sm cursor-pointer"
             }`}
           >
-            <Lock className="w-3.5 h-3.5 stroke-[2] text-[#C5A880]" />
+            <Lock className="w-3.5 h-3.5 4k:w-4 4k:h-4 stroke-[2] text-[#C5A880]" />
             <span>CHECKOUT</span>
           </button>
         </div>

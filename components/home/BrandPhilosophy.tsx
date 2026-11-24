@@ -34,10 +34,10 @@ export function BrandPhilosophy() {
         </div>
 
         {/* Hero Content Overlaid Directly on Top of the Banner */}
-        <div className="relative z-20 w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center pt-6 pb-8 sm:pb-12">
+        <div className="relative z-20 w-full max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 text-center flex flex-col items-center justify-center pt-6 pb-8 sm:pb-12">
           {/* Main Headline */}
           <h1
-            className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[76px] font-normal text-white leading-[1.12] sm:leading-[1.08] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] max-w-4xl mb-4 sm:mb-6"
+            className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] xl:text-[76px] 3xl:text-[84px] 4k:text-[96px] font-normal text-white leading-[1.12] sm:leading-[1.08] tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)] max-w-4xl 4k:max-w-6xl mb-4 sm:mb-6"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
           >
             Rooted in Tradition. <br className="hidden sm:inline" />
@@ -45,7 +45,7 @@ export function BrandPhilosophy() {
           </h1>
 
           {/* Subtitle / Brand Description */}
-          <p className="text-xs sm:text-sm md:text-base lg:text-[17px] text-white/95 font-sans font-light tracking-wide leading-relaxed max-w-xl sm:max-w-2xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <p className="text-xs sm:text-sm md:text-base lg:text-[17px] 3xl:text-xl 4k:text-2xl text-white/95 font-sans font-light tracking-wide leading-relaxed max-w-xl sm:max-w-2xl 3xl:max-w-3xl 4k:max-w-4xl mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             Reviving the sacred heritage of ancient Indian devotions. Crafted with authentic materials, sanctified wood, and deep devotion.
           </p>
         </div>
@@ -55,7 +55,7 @@ export function BrandPhilosophy() {
       {/* SECTION 2: A STORY ROOTED IN HERITAGE (2-COLUMN EDITORIAL)                 */}
       {/* ========================================================================= */}
       <section id="story" className="py-12 sm:py-16 lg:py-20">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
 
             {/* Left Column: Portrait Model Wear Photo */}
@@ -75,7 +75,7 @@ export function BrandPhilosophy() {
             <div className="md:col-span-7 space-y-4 sm:space-y-5">
               <div>
                 <h2
-                  className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-normal text-[#122E46] leading-tight tracking-tight"
+                  className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   A Story Rooted <span className="italic font-normal">in Sacred Heritage.</span>
@@ -138,12 +138,12 @@ export function BrandPhilosophy() {
       {/* SECTION 3: WHERE ANCIENT WISDOM MEETS MODERN LIVING                       */}
       {/* ========================================================================= */}
       <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5] bg-[#F7F5F0]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Section Header */}
           <div className="mb-6 sm:mb-10">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Where Ancient Wisdom <span className="italic font-normal">Meets Modern Living.</span>
@@ -209,12 +209,12 @@ export function BrandPhilosophy() {
       {/* SECTION 4: MADE WITH MEANING, CRAFTED WITH CARE (3 PROCESS CARDS)         */}
       {/* ========================================================================= */}
       <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Header Row */}
           <div className="mb-6 sm:mb-10">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Made with Meaning. <span className="italic font-normal">Crafted with Care.</span>
@@ -296,12 +296,12 @@ export function BrandPhilosophy() {
       {/* SECTION 5: THE FOUR PILLARS OF REVERENCE                                  */}
       {/* ========================================================================= */}
       <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5] bg-[#F7F5F0]">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Header Row */}
           <div className="mb-6 sm:mb-10">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               The Four Pillars <span className="italic font-normal">of Reverence.</span>
@@ -375,7 +375,7 @@ export function BrandPhilosophy() {
         {/* Subtle radial ambient highlight */}
         <div className="absolute inset-0 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
 
-        <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-5 sm:space-y-6">
+        <div className="relative z-10 max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 space-y-5 sm:space-y-6">
           <blockquote
             className="font-serif text-lg sm:text-2xl md:text-[28px] lg:text-[32px] font-normal leading-relaxed text-white max-w-2xl mx-auto"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}

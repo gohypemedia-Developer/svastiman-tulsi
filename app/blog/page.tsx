@@ -160,7 +160,7 @@ export default function BlogPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#111111]">
         <Navbar />
 
-        <main className="flex-1 pt-6 sm:pt-8 pb-20 sm:pb-24 px-3.5 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full">
+        <main className="flex-1 pt-6 sm:pt-8 pb-20 sm:pb-24 px-3.5 sm:px-8 lg:px-12 3xl:px-14 4k:px-16 max-w-7xl 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto w-full">
           {/* Category Filter Pills & Search */}
           <div className="border-b border-[#E8E2D5] pb-6 mb-8 sm:mb-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

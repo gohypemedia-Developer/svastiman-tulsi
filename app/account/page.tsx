@@ -396,7 +396,7 @@ export default function AccountPage() {
       <div className="min-h-screen flex flex-col bg-[#F9F8F5] text-[#111111]">
         <Navbar />
 
-        <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-12 pb-20 lg:pb-12">
+        <main className="flex-1 w-full max-w-7xl 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-3.5 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 py-6 sm:py-12 3xl:py-16 4k:py-20 pb-20 lg:pb-12">
           {!isSignedIn ? (
             /* Direct redirect to Login page */
             <div className="py-20 text-center space-y-4">

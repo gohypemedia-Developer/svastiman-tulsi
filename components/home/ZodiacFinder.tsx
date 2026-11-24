@@ -210,7 +210,7 @@ export function ZodiacFinder() {
   return (
     <section id="zodiac-finder" className="py-12 sm:py-20 bg-[#122E46] text-[#ECEADE] relative overflow-hidden">
       <div className="absolute inset-0 bg-celestial-pattern opacity-20 pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECEADE]/10 border border-[#C5A880]/30 text-xs uppercase tracking-widest text-[#C5A880]">

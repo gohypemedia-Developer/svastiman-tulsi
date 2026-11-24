@@ -473,7 +473,7 @@ export function CrystalCalculator() {
 
   return (
     <div className="w-full bg-[#F9F8F5] text-[#122E46] py-8 sm:py-12 px-3 sm:px-6 lg:px-8 selection:bg-[#122E46] selection:text-[#FFF6E7]">
-      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10">
+      <div className="max-w-6xl 3xl:max-w-7xl 4k:max-w-[1800px] mx-auto space-y-8 sm:space-y-10 4k:space-y-14">
         {/* Hero Header */}
         <div className="text-center space-y-3">
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-[#122E46] font-medium tracking-tight">
@@ -592,7 +592,7 @@ export function CrystalCalculator() {
                     PROFESSION
                   </label>
                   <input type="hidden" id="jwf-profession" name="profession" value={profession} />
-                  
+
                   <div className="relative flex items-center">
                     <input
                       id="jwf-profession-input"
@@ -619,9 +619,8 @@ export function CrystalCalculator() {
                           setGoalOpen(false);
                         }
                       }}
-                      className={`w-full bg-[#FAF8F5] border ${
-                        professionOpen ? "border-[#C5A880] ring-1 ring-[#C5A880]" : "border-[#D5CDBC]"
-                      } hover:border-[#C5A880] rounded-lg pl-3 pr-14 py-2 text-stone-900 focus:outline-none font-medium text-xs transition-colors cursor-text shadow-xs placeholder:text-stone-400`}
+                      className={`w-full bg-[#FAF8F5] border ${professionOpen ? "border-[#C5A880] ring-1 ring-[#C5A880]" : "border-[#D5CDBC]"
+                        } hover:border-[#C5A880] rounded-lg pl-3 pr-14 py-2 text-stone-900 focus:outline-none font-medium text-xs transition-colors cursor-text shadow-xs placeholder:text-stone-400`}
                     />
                     <div className="absolute right-2.5 flex items-center gap-1">
                       {(profession || professionSearch) && (
@@ -655,9 +654,8 @@ export function CrystalCalculator() {
                         aria-label="Toggle profession dropdown"
                       >
                         <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            professionOpen ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 transition-transform duration-200 ${professionOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
                     </div>
@@ -682,11 +680,10 @@ export function CrystalCalculator() {
                                     setProfessionSearch(opt);
                                     setProfessionOpen(false);
                                   }}
-                                  className={`w-full text-left px-3 py-1.5 text-xs flex items-center justify-between transition-colors cursor-pointer ${
-                                    isSelected
-                                      ? "bg-[#DFCAAB]/25 text-[#122E46] font-semibold"
-                                      : "text-stone-700 hover:bg-[#FAF8F5] hover:text-[#122E46]"
-                                  }`}
+                                  className={`w-full text-left px-3 py-1.5 text-xs flex items-center justify-between transition-colors cursor-pointer ${isSelected
+                                    ? "bg-[#DFCAAB]/25 text-[#122E46] font-semibold"
+                                    : "text-stone-700 hover:bg-[#FAF8F5] hover:text-[#122E46]"
+                                    }`}
                                 >
                                   <span className="truncate pr-2">{opt}</span>
                                   {isSelected && <Check className="w-3.5 h-3.5 text-[#8C6D3B] shrink-0" />}
@@ -717,9 +714,8 @@ export function CrystalCalculator() {
                       setGoalOpen((prev) => !prev);
                       setProfessionOpen(false);
                     }}
-                    className={`w-full bg-[#FAF8F5] border ${
-                      goalOpen ? "border-[#C5A880] ring-1 ring-[#C5A880]" : "border-[#D5CDBC]"
-                    } hover:border-[#C5A880] rounded-lg px-3 py-2 text-stone-900 focus:outline-none font-medium flex items-center justify-between text-left text-xs transition-colors cursor-pointer shadow-xs`}
+                    className={`w-full bg-[#FAF8F5] border ${goalOpen ? "border-[#C5A880] ring-1 ring-[#C5A880]" : "border-[#D5CDBC]"
+                      } hover:border-[#C5A880] rounded-lg px-3 py-2 text-stone-900 focus:outline-none font-medium flex items-center justify-between text-left text-xs transition-colors cursor-pointer shadow-xs`}
                     aria-haspopup="listbox"
                     aria-expanded={goalOpen}
                   >
@@ -727,9 +723,8 @@ export function CrystalCalculator() {
                       {GOAL_OPTIONS.find((g) => g.value === goal)?.label || "Select primary goal"}
                     </span>
                     <ChevronDown
-                      className={`w-4 h-4 text-stone-500 shrink-0 ml-2 transition-transform duration-200 ${
-                        goalOpen ? "rotate-180" : ""
-                      }`}
+                      className={`w-4 h-4 text-stone-500 shrink-0 ml-2 transition-transform duration-200 ${goalOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
@@ -745,11 +740,10 @@ export function CrystalCalculator() {
                               setGoal(opt.value);
                               setGoalOpen(false);
                             }}
-                            className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between transition-colors cursor-pointer ${
-                              isSelected
-                                ? "bg-[#DFCAAB]/25 text-[#122E46] font-semibold"
-                                : "text-stone-700 hover:bg-[#FAF8F5] hover:text-[#122E46]"
-                            }`}
+                            className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between transition-colors cursor-pointer ${isSelected
+                              ? "bg-[#DFCAAB]/25 text-[#122E46] font-semibold"
+                              : "text-stone-700 hover:bg-[#FAF8F5] hover:text-[#122E46]"
+                              }`}
                           >
                             <span>{opt.label}</span>
                             {isSelected && <Check className="w-3.5 h-3.5 text-[#8C6D3B] shrink-0" />}
@@ -871,11 +865,11 @@ export function CrystalCalculator() {
                 <a
                   href={`https://wa.me/919220900591?text=${encodeURIComponent(
                     `Hello Svastimān, I completed my Crystal Numerology Report!\n\n` +
-                      `• Life Path: ${results.lifePath}\n` +
-                      `• Kua: ${results.kua}\n` +
-                      `• Primary Element: ${results.primaryElement}\n` +
-                      `• Recommended Crystal: ${results.primaryCrystal.name}\n\n` +
-                      `Please guide me with the authentic energized bracelet!`
+                    `• Life Path: ${results.lifePath}\n` +
+                    `• Kua: ${results.kua}\n` +
+                    `• Primary Element: ${results.primaryElement}\n` +
+                    `• Recommended Crystal: ${results.primaryCrystal.name}\n\n` +
+                    `Please guide me with the authentic energized bracelet!`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -952,11 +946,10 @@ export function CrystalCalculator() {
                     return (
                       <div
                         key={num}
-                        className={`h-16 sm:h-20 rounded-xl flex flex-col items-center justify-center border transition-all ${
-                          isPresent
-                            ? "bg-[#DFCAAB]/25 border-[#C5A880] text-[#122E46] font-bold shadow-inner"
-                            : "bg-[#FAF8F5] border-[#E2DEC9] text-stone-400"
-                        }`}
+                        className={`h-16 sm:h-20 rounded-xl flex flex-col items-center justify-center border transition-all ${isPresent
+                          ? "bg-[#DFCAAB]/25 border-[#C5A880] text-[#122E46] font-bold shadow-inner"
+                          : "bg-[#FAF8F5] border-[#E2DEC9] text-stone-400"
+                          }`}
                       >
                         <span className="text-xl sm:text-2xl font-serif font-bold">{num}</span>
                         <span className="text-[9.5px] sm:text-[10px] tracking-wide font-medium mt-0.5">
@@ -1009,13 +1002,12 @@ export function CrystalCalculator() {
                             <span>{elementName}</span>
                           </span>
                           <span
-                            className={`px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-wider ${
-                              val.status === "Missing"
-                                ? "bg-red-50 text-red-700 border border-red-200"
-                                : val.status === "Light"
+                            className={`px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-wider ${val.status === "Missing"
+                              ? "bg-red-50 text-red-700 border border-red-200"
+                              : val.status === "Light"
                                 ? "bg-amber-50 text-amber-700 border border-amber-200"
                                 : "bg-emerald-50 text-emerald-700 border border-emerald-200"
-                            }`}
+                              }`}
                           >
                             {val.status} ({val.count.toFixed(1)})
                           </span>

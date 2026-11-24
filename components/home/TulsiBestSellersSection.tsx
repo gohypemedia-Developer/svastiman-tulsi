@@ -245,8 +245,8 @@ export function TulsiBestSellersSection() {
   };
 
   return (
-    <section id="best-sellers" className="w-full bg-[#FFFFFF] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10">
+    <section id="best-sellers" className="w-full bg-[#FFFFFF] pt-12 sm:pt-16 lg:pt-20 3xl:pt-24 4k:pt-28 pb-16 sm:pb-24 3xl:pb-28 4k:pb-36">
+      <div className="max-w-[1360px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-10 3xl:px-14 4k:px-16">
 
         {/* ========================================================================= */}
         {/* ROW 1: 5 VERTICAL EDITORIAL CARDS (Mobile Carousel Slider / Desktop Grid) */}
@@ -276,7 +276,7 @@ export function TulsiBestSellersSection() {
           <div
             ref={sliderRef}
             onScroll={handleScroll}
-            className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none gap-3.5 sm:gap-4 lg:gap-5 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar scroll-smooth sm:grid-cols-3 md:grid-cols-5 py-1"
+            className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none gap-3.5 sm:gap-4 lg:gap-5 3xl:gap-6 4k:gap-8 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar scroll-smooth sm:grid-cols-3 md:grid-cols-5 py-1"
           >
             {EDITORIAL_STORIES.map((story) => (
               <Link
@@ -302,13 +302,13 @@ export function TulsiBestSellersSection() {
 
                 {/* Minimalist gradient vignette with title - visible on hover/tap */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 flex flex-col justify-end p-3.5 sm:p-4 pointer-events-none ${
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 flex flex-col justify-end p-3.5 sm:p-4 4k:p-6 pointer-events-none ${
                     activeStoryId === story.id
                       ? "opacity-100"
                       : "opacity-0 group-hover:opacity-100"
                   }`}
                 >
-                  <h4 className="text-xs sm:text-[13px] font-sans font-medium text-white tracking-wide drop-shadow-sm">
+                  <h4 className="text-xs sm:text-[13px] 3xl:text-sm 4k:text-base font-sans font-medium text-white tracking-wide drop-shadow-sm">
                     {story.title}
                   </h4>
                 </div>
@@ -332,10 +332,10 @@ export function TulsiBestSellersSection() {
         {/* ========================================================================= */}
         {/* ROW 2: BEST SELLER PRODUCTS HEADER                                        */}
         {/* ========================================================================= */}
-        <div className="mt-12 sm:mt-18 lg:mt-24 mb-6 sm:mb-10 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 sm:gap-0">
+        <div className="mt-12 sm:mt-18 lg:mt-24 3xl:mt-28 4k:mt-32 mb-6 sm:mb-10 3xl:mb-12 4k:mb-14 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 sm:gap-0">
           <div>
             <h2
-              className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-[#122E46] tracking-tight leading-tight"
+              className="text-2xl sm:text-3xl lg:text-[38px] 3xl:text-[44px] 4k:text-[50px] font-normal text-[#122E46] tracking-tight leading-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Best Seller Products
@@ -344,17 +344,17 @@ export function TulsiBestSellersSection() {
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-sans font-medium text-stone-600 hover:text-[#122E46] transition-colors group self-start sm:self-auto"
+            className="inline-flex items-center gap-1.5 4k:gap-2 text-xs sm:text-[13px] 3xl:text-sm 4k:text-base font-sans font-medium text-stone-600 hover:text-[#122E46] transition-colors group self-start sm:self-auto"
           >
             <span>View All Best Seller</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 4k:w-4 4k:h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
         {/* ========================================================================= */}
         {/* ROW 3: PRODUCT CARDS (Clicking any card opens that Product's Page)        */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 3xl:gap-12 4k:gap-14">
           {BEST_SELLER_PRODUCTS.map((prod) => (
             <Link
               key={prod.id}
@@ -375,12 +375,12 @@ export function TulsiBestSellersSection() {
                 <button
                   type="button"
                   onClick={(e) => handleToggleSave(prod, e)}
-                  className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/95 backdrop-blur-xs border border-stone-200/80 flex items-center justify-center text-stone-700 hover:text-black transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
+                  className="absolute top-3 right-3 4k:top-5 4k:right-5 z-10 w-8 h-8 4k:w-11 4k:h-11 rounded-full bg-white/95 backdrop-blur-xs border border-stone-200/80 flex items-center justify-center text-stone-700 hover:text-black transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
                   aria-label="Save to Wishlist"
                   title="Save to Wishlist"
                 >
                   <Bookmark
-                    className={`w-4 h-4 transition-colors ${isInWishlist(prod.id)
+                    className={`w-4 h-4 4k:w-5 4k:h-5 transition-colors ${isInWishlist(prod.id)
                       ? "fill-[#122E46] text-[#122E46]"
                       : "stroke-[1.8]"
                       }`}
@@ -391,30 +391,30 @@ export function TulsiBestSellersSection() {
                 <button
                   type="button"
                   onClick={(e) => handleQuickAdd(prod, e)}
-                  className="absolute bottom-3 right-3 z-10 w-8 h-8 rounded-full bg-[#122E46] hover:bg-black text-white flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+                  className="absolute bottom-3 right-3 4k:bottom-5 4k:right-5 z-10 w-8 h-8 4k:w-11 4k:h-11 rounded-full bg-[#122E46] hover:bg-black text-white flex items-center justify-center transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
                   aria-label="Add product to cart"
                   title="Add to cart"
                 >
                   {addedSku === prod.sku ? (
-                    <Check className="w-4 h-4 text-emerald-400 stroke-[2.5]" />
+                    <Check className="w-4 h-4 4k:w-5 4k:h-5 text-emerald-400 stroke-[2.5]" />
                   ) : (
-                    <Plus className="w-4 h-4 stroke-[2.2]" />
+                    <Plus className="w-4 h-4 4k:w-5 4k:h-5 stroke-[2.2]" />
                   )}
                 </button>
               </div>
 
               {/* Minimalist Centered Content Matching Image 2 */}
-              <div className="pt-3.5 text-center flex flex-col items-center">
+              <div className="pt-3.5 4k:pt-5 text-center flex flex-col items-center">
                 {/* Product Name */}
-                <h3 className="text-xs sm:text-[13px] font-sans font-medium text-stone-800 tracking-wide text-center group-hover:text-[#122E46] transition-colors">
+                <h3 className="text-xs sm:text-[13px] 3xl:text-sm 4k:text-[16px] font-sans font-medium text-stone-800 tracking-wide text-center group-hover:text-[#122E46] transition-colors">
                   {prod.name}
                 </h3>
 
                 {/* Centered Price */}
-                <div className="mt-1 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-sans text-stone-500 font-normal">
+                <div className="mt-1 4k:mt-1.5 flex items-center justify-center gap-1.5 4k:gap-2 text-xs sm:text-[13px] 3xl:text-sm 4k:text-[15px] font-sans text-stone-500 font-normal">
                   <span>₹{prod.price}</span>
                   {prod.originalPrice && (
-                    <span className="line-through text-stone-400 text-xs font-normal">
+                    <span className="line-through text-stone-400 text-xs 4k:text-sm font-normal">
                       ₹{prod.originalPrice}
                     </span>
                   )}

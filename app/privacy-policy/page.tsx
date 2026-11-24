@@ -18,15 +18,15 @@ export default function PrivacyPolicyPage() {
         <main className="flex-1">
           {/* Top Banner - Warm Sand/Beige Header without any logo */}
           <section className="w-full bg-[#F2E6D4] border-b border-[#E3D6C1] py-10 sm:py-16 md:py-20 px-4 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="font-serif text-2xl sm:text-4xl md:text-[44px] text-[#1A1815] font-normal tracking-tight">
+            <div className="max-w-4xl 3xl:max-w-5xl 4k:max-w-6xl mx-auto">
+              <h1 className="font-serif text-2xl sm:text-4xl md:text-[44px] 3xl:text-5xl 4k:text-6xl text-[#1A1815] font-normal tracking-tight">
                 Privacy Policy
               </h1>
             </div>
           </section>
 
           {/* Main Content Area - Clean, focused reading column */}
-          <article className="max-w-3xl mx-auto px-4 sm:px-8 lg:px-10 py-10 sm:py-16 md:py-24 space-y-8 sm:space-y-12 pb-20 lg:pb-24">
+          <article className="max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto px-4 sm:px-8 lg:px-10 4k:px-12 py-10 sm:py-16 md:py-24 4k:py-28 space-y-8 sm:space-y-12 4k:space-y-16 pb-20 lg:pb-24">
             {/* Opening Statement */}
             <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
               Svastimān respects your privacy. We collect only the information

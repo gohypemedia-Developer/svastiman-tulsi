@@ -20,23 +20,23 @@ export default function PrinciplesToWearTulsiPage() {
         {/* Navigation Bar */}
         <Navbar />
 
-        <main className="flex-1 w-full py-10 sm:py-20 lg:py-24 pb-20 lg:pb-24">
-          <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="flex-1 w-full py-10 sm:py-20 lg:py-24 3xl:py-28 4k:py-36 pb-20 lg:pb-24">
+          <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
             {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+            <div className="text-center max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto mb-8 sm:mb-16 4k:mb-20">
               <h1
-                className="text-2xl sm:text-4xl lg:text-[42px] font-normal text-[#122E46] tracking-tight leading-tight"
+                className="text-2xl sm:text-4xl lg:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] tracking-tight leading-tight"
                 style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
               >
                 Principles to wear Tulsi
               </h1>
             </div>
 
-            <div className="space-y-8 sm:space-y-16">
+            <div className="space-y-8 sm:space-y-16 4k:space-y-20">
 
               {/* PRINCIPLE 1: Initial Purification & Sanctification */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center bg-white p-5 sm:p-8 lg:p-12 border border-[#E8E2D5] shadow-xs">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 3xl:gap-16 4k:gap-20 items-center bg-white p-5 sm:p-8 lg:p-12 3xl:p-14 4k:p-18 border border-[#E8E2D5] shadow-xs">
 
                 {/* Sacred Image: Temple Steps & Gangajal Kalash */}
                 <div className="lg:col-span-5 relative aspect-[16/10] sm:aspect-square lg:aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
@@ -105,7 +105,7 @@ export default function PrinciplesToWearTulsiPage() {
               </div>
 
               {/* PRINCIPLE 2: Proper Placement & Continuous Wear */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center bg-white p-5 sm:p-8 lg:p-12 border border-[#E8E2D5] shadow-xs">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 3xl:gap-16 4k:gap-20 items-center bg-white p-5 sm:p-8 lg:p-12 3xl:p-14 4k:p-18 border border-[#E8E2D5] shadow-xs">
 
                 {/* Text Content */}
                 <div className="lg:col-span-7 space-y-4 sm:space-y-5 order-2 lg:order-1">

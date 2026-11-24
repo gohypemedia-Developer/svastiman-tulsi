@@ -435,11 +435,11 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
       {/* ========================================================================= */}
       {/* SECTION 1: LUXURY PRODUCT SHOWCASE (Matching Image 1)                     */}
       {/* ========================================================================= */}
-      <section id="product-showcase" className="w-full pt-6 sm:pt-10 pb-16 sm:pb-24">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="product-showcase" className="w-full pt-6 sm:pt-10 3xl:pt-14 4k:pt-18 pb-16 sm:pb-24 3xl:pb-28 4k:pb-36">
+        <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* BVLGARI-STYLE 2-COLUMN LUXURY SHOWCASE (50/50 Balanced) */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-20 3xl:gap-24 4k:gap-28 items-start">
 
             {/* LEFT COLUMN: PRODUCT MEDIA GALLERY */}
             <div className="flex flex-col gap-4">
@@ -460,7 +460,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
               </div>
 
               {/* Exact 4 Square Thumbnails Row Directly Below */}
-              <div className="grid grid-cols-4 gap-2 sm:gap-3">
+              <div className="grid grid-cols-4 gap-2 sm:gap-3 3xl:gap-4 4k:gap-5">
                 {product.gallery.map((view, idx) => {
                   const isActive = selectedIdx === idx;
                   return (
@@ -493,7 +493,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
               {/* 1. TITLE & WISHLIST HEART */}
               <div className="flex items-start justify-between gap-3">
                 <h1
-                  className="text-xl sm:text-2xl lg:text-3xl font-normal tracking-[0.04em] sm:tracking-[0.06em] text-[#122E46] uppercase leading-snug"
+                  className="text-xl sm:text-2xl lg:text-3xl 3xl:text-4xl 4k:text-5xl font-normal tracking-[0.04em] sm:tracking-[0.06em] text-[#122E46] uppercase leading-snug"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   {product.name}
@@ -574,7 +574,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
 
               {/* 3. PRICE & TAXES */}
               <div className="pt-2 space-y-0.5">
-                <div className="text-2xl sm:text-[28px] font-normal font-sans text-[#122E46] tracking-tight">
+                <div className="text-2xl sm:text-[28px] 3xl:text-3xl 4k:text-4xl font-normal font-sans text-[#122E46] tracking-tight">
                   ₹{product.price.toLocaleString("en-IN")}.00
                 </div>
                 <div className="text-[11px] font-sans text-stone-500 font-normal">
@@ -587,7 +587,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Link
                     href="/principles-to-wear-tulsi"
-                    className="w-full py-3 px-4 border border-[#122E46] text-[#122E46] bg-transparent hover:bg-[#122E46] hover:text-[#FAF8F5] transition-all duration-200 text-xs font-mono uppercase tracking-[0.14em] text-center font-medium flex items-center justify-center cursor-pointer"
+                    className="w-full py-3 4k:py-4 px-4 4k:px-6 border border-[#122E46] text-[#122E46] bg-transparent hover:bg-[#122E46] hover:text-[#FAF8F5] transition-all duration-200 text-xs 4k:text-sm font-mono uppercase tracking-[0.14em] text-center font-medium flex items-center justify-center cursor-pointer"
                   >
                     Principles to Wear
                   </Link>
@@ -595,7 +595,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                   <button
                     type="button"
                     onClick={handleAddToCart}
-                    className="w-full py-3 px-4 bg-[#122E46] hover:bg-[#1B3C59] text-[#FAF8F5] border border-[#122E46] transition-all duration-200 text-xs font-mono uppercase tracking-[0.14em] text-center font-medium flex items-center justify-center cursor-pointer shadow-xs active:scale-[0.99]"
+                    className="w-full py-3 4k:py-4 px-4 4k:px-6 bg-[#122E46] hover:bg-[#1B3C59] text-[#FAF8F5] border border-[#122E46] transition-all duration-200 text-xs 4k:text-sm font-mono uppercase tracking-[0.14em] text-center font-medium flex items-center justify-center cursor-pointer shadow-xs active:scale-[0.99]"
                   >
                     {added ? "Added To Cart" : "Add To Cart"}
                   </button>
