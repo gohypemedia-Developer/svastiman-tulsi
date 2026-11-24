@@ -618,7 +618,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                 </button>
 
                 {descOpen && (
-                  <div className="pt-2 text-xs font-sans text-stone-600 leading-relaxed space-y-2">
+                  <div className="pt-2 4k:pt-3 text-xs 3xl:text-base 4k:text-lg font-sans text-stone-600 leading-relaxed 4k:leading-[1.75] space-y-2">
                     <p>{product.description}</p>
                   </div>
                 )}
@@ -629,7 +629,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                 <button
                   type="button"
                   onClick={() => setDetailsOpen((prev) => !prev)}
-                  className="w-full flex items-center justify-between text-left text-sm sm:text-base font-mono uppercase tracking-[0.16em] text-[#122E46] font-medium py-3 hover:text-[#7A6242] transition-colors cursor-pointer"
+                  className="w-full flex items-center justify-between text-left text-sm sm:text-base 3xl:text-lg 4k:text-xl font-mono uppercase tracking-[0.16em] text-[#122E46] font-medium py-3 hover:text-[#7A6242] transition-colors cursor-pointer"
                   aria-expanded={detailsOpen}
                 >
                   <span>Details</span>
@@ -640,7 +640,7 @@ export function TulsiT01Showcase({ productSku = "T01" }: { productSku?: string }
                 </button>
 
                 {detailsOpen && (
-                  <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-y-4 sm:gap-y-5 gap-x-3 sm:gap-x-4 text-xs font-sans">
+                  <div className="pt-4 4k:pt-6 grid grid-cols-2 sm:grid-cols-3 gap-y-4 sm:gap-y-5 4k:gap-y-7 gap-x-3 sm:gap-x-4 4k:gap-x-6 text-xs 3xl:text-base 4k:text-lg font-sans">
                     {/* Row 1 */}
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block mb-1 font-normal">

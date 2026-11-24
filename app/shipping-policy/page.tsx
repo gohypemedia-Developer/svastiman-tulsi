@@ -28,7 +28,7 @@ export default function ShippingPolicyPage() {
           {/* Main Content Area - Clean, focused reading column */}
           <article className="max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto px-4 sm:px-8 lg:px-10 4k:px-12 py-10 sm:py-16 md:py-24 4k:py-28 space-y-8 sm:space-y-12 4k:space-y-16 pb-20 lg:pb-24">
             {/* Opening Statement */}
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
               Every sacred acquisition from Svastimān — wild Himalayan Rudraksha,
               sacred Vrindavan Tulsi wood, unheated earth gemstones, and consecrated
               malas — is treated with deep reverence from our sanctuary to your
@@ -38,10 +38,10 @@ export default function ShippingPolicyPage() {
 
             {/* Order Processing and Ritual Consecration */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Order processing and ritual consecration
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Orders are typically processed and dispatched within 2 to 3
                   business days following order confirmation.
@@ -59,10 +59,10 @@ export default function ShippingPolicyPage() {
 
             {/* Delivery Timelines Across India */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Delivery timelines across India
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Once dispatched from our sanctuary, standard delivery across India
                   generally takes 4 to 7 business days, depending on your geographic
@@ -87,10 +87,10 @@ export default function ShippingPolicyPage() {
 
             {/* Shipping Charges and Free Delivery */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Shipping charges
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   We offer <strong className="font-medium text-[#1A1815]">complimentary insured shipping</strong> on all orders of ₹1999 and above across India.
                 </p>
@@ -104,10 +104,10 @@ export default function ShippingPolicyPage() {
 
             {/* Shipping Methods and Insured Packaging */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Shipping methods and insured packaging
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   We partner with India&apos;s most reliable, high-security courier
                   services, including BlueDart, Delhivery, and India Post Speed Post,
@@ -123,10 +123,10 @@ export default function ShippingPolicyPage() {
 
             {/* Tracking Your Order */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Order tracking
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   As soon as your order has been consecrated and handed over to our
                   logistics partner, you will receive an automated dispatch confirmation
@@ -149,10 +149,10 @@ export default function ShippingPolicyPage() {
 
             {/* Delays and Force Majeure */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Transit delays
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 While over 95% of our shipments arrive on or ahead of schedule, occasional
                 delays may occur due to severe weather disruptions, regional transport
                 strikes, national holidays, or peak festive logistics surges. Should your
@@ -164,10 +164,10 @@ export default function ShippingPolicyPage() {
 
             {/* Damaged, Tampered, or Missing Products */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Damaged, tampered, or missing products
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Due to the sacred and energized nature of our spiritual materials,
                   we accept returns or replacement requests solely for items damaged in
@@ -196,10 +196,10 @@ export default function ShippingPolicyPage() {
 
             {/* Address Accuracy and Delivery Attempts */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Delivery attempts and address accuracy
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Please ensure that your complete physical shipping address, postal
                   PIN code, and active telephone number are entered accurately during
@@ -217,10 +217,10 @@ export default function ShippingPolicyPage() {
 
             {/* Concierge Inquiries and Contact */}
             <section className="space-y-3 pt-4 border-t border-[#EAE3D5]">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Shipping concierge and support
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-1.5">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-1.5 4k:space-y-3">
                 <p className="font-medium text-[#1A1815]">
                   Svastimān Heritage Private Limited
                 </p>

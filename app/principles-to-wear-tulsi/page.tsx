@@ -56,46 +56,46 @@ export default function PrinciplesToWearTulsiPage() {
 
                 {/* Text Content */}
                 <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46] shrink-0">
+                  <div className="flex items-center gap-3 4k:gap-4">
+                    <span className="w-8 h-8 3xl:w-10 3xl:h-10 4k:w-12 4k:h-12 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs 3xl:text-sm 4k:text-base font-semibold text-[#122E46] shrink-0">
                       1
                     </span>
                     <h2
-                      className="font-serif text-xl sm:text-2xl lg:text-3xl text-[#122E46] font-normal leading-tight"
+                      className="font-serif text-xl sm:text-2xl lg:text-3xl 3xl:text-4xl 4k:text-5xl text-[#122E46] font-normal leading-tight"
                       style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                     >
                       Initial Purification & Sanctification
                     </h2>
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm font-sans text-stone-700 leading-relaxed divide-y divide-stone-100">
+                  <div className="space-y-4 4k:space-y-6 text-xs sm:text-sm font-sans text-stone-700 leading-relaxed divide-y divide-stone-100">
 
                     {/* Cleansing */}
-                    <div className="pt-2">
-                      <strong className="text-[#122E46] font-semibold block mb-1">
+                    <div className="pt-2 4k:pt-3">
+                      <strong className="text-[#122E46] font-semibold block mb-1 4k:mb-2 3xl:text-lg 4k:text-xl">
                         Cleansing the Mala:
                       </strong>
-                      <p className="text-stone-600">
+                      <p className="text-stone-600 3xl:text-base 4k:text-lg 4k:leading-[1.75]">
                         Before wearing a new Tulsi Mala, it must be purified by soaking it in or sprinkling it with Gangajal (holy Ganges water) or rose water to cleanse negative energies.
                       </p>
                     </div>
 
                     {/* Personal Purity */}
-                    <div className="pt-3">
-                      <strong className="text-[#122E46] font-semibold block mb-1">
+                    <div className="pt-3 4k:pt-4">
+                      <strong className="text-[#122E46] font-semibold block mb-1 4k:mb-2 3xl:text-lg 4k:text-xl">
                         Personal Purity:
                       </strong>
-                      <p className="text-stone-600">
+                      <p className="text-stone-600 3xl:text-base 4k:text-lg 4k:leading-[1.75]">
                         The wearer should take a bath, put on fresh clothes, and wear the mala with a pure heart and clear devotional intentions.
                       </p>
                     </div>
 
                     {/* Mantra Sanctification */}
-                    <div className="pt-3">
-                      <strong className="text-[#122E46] font-semibold block mb-1">
+                    <div className="pt-3 4k:pt-4">
+                      <strong className="text-[#122E46] font-semibold block mb-1 4k:mb-2 3xl:text-lg 4k:text-xl">
                         Mantra Sanctification:
                       </strong>
-                      <p className="text-stone-600">
+                      <p className="text-stone-600 3xl:text-base 4k:text-lg 4k:leading-[1.75]">
                         Hold the beads in your hands and chant a sacred mantra—such as the Tulsi Gayatri Mantra or &ldquo;Om Namo Bhagavate Vasudevaya&rdquo;—to sanctify the mala and invoke divine protection.
                       </p>
                     </div>
@@ -109,36 +109,36 @@ export default function PrinciplesToWearTulsiPage() {
 
                 {/* Text Content */}
                 <div className="lg:col-span-7 space-y-4 sm:space-y-5 order-2 lg:order-1">
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs font-semibold text-[#122E46] shrink-0">
+                  <div className="flex items-center gap-3 4k:gap-4">
+                    <span className="w-8 h-8 3xl:w-10 3xl:h-10 4k:w-12 4k:h-12 rounded-full bg-[#F5F2EB] border border-[#E8E2D5] flex items-center justify-center font-mono text-xs 3xl:text-sm 4k:text-base font-semibold text-[#122E46] shrink-0">
                       2
                     </span>
                     <h2
-                      className="font-serif text-xl sm:text-2xl lg:text-3xl text-[#122E46] font-normal leading-tight"
+                      className="font-serif text-xl sm:text-2xl lg:text-3xl 3xl:text-4xl 4k:text-5xl text-[#122E46] font-normal leading-tight"
                       style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                     >
                       Proper Placement & Continuous Wear
                     </h2>
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm font-sans text-stone-700 leading-relaxed divide-y divide-stone-100">
+                  <div className="space-y-4 4k:space-y-6 text-xs sm:text-sm font-sans text-stone-700 leading-relaxed divide-y divide-stone-100">
 
                     {/* Placement on Body */}
-                    <div className="pt-2">
-                      <strong className="text-[#122E46] font-semibold block mb-1">
+                    <div className="pt-2 4k:pt-3">
+                      <strong className="text-[#122E46] font-semibold block mb-1 4k:mb-2 3xl:text-lg 4k:text-xl">
                         Placement on the Body:
                       </strong>
-                      <p className="text-stone-600">
+                      <p className="text-stone-600 3xl:text-base 4k:text-lg 4k:leading-[1.75]">
                         The mala is worn around the neck as a Kanthi Mala, positioning the bead closest to the face just below the throat while the rest drapes over the chest. It is recommended to keep the wood in direct contact with the skin to receive continuous sattvic and dosha-balancing benefits.
                       </p>
                     </div>
 
                     {/* Continuous Companion */}
-                    <div className="pt-3">
-                      <strong className="text-[#122E46] font-semibold block mb-1">
+                    <div className="pt-3 4k:pt-4">
+                      <strong className="text-[#122E46] font-semibold block mb-1 4k:mb-2 3xl:text-lg 4k:text-xl">
                         Continuous Companion:
                       </strong>
-                      <p className="text-stone-600">
+                      <p className="text-stone-600 3xl:text-base 4k:text-lg 4k:leading-[1.75]">
                         Once put on, the mala should be worn continuously as a sign of alignment with the will of Lord Hari. It should not be taken off frequently or casually.
                       </p>
                     </div>

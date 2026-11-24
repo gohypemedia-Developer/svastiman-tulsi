@@ -383,35 +383,35 @@ export function TulsiCategoryView({
           </div>
 
           {/* Exact Client Description from PDF */}
-          <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl leading-relaxed text-stone-700 font-sans max-w-4xl 4k:max-w-6xl border-l-2 border-[#C5A880] pl-4 py-2 italic bg-[#F2EDE2]/40 rounded-r-lg">
+          <p className="text-sm sm:text-base 3xl:text-xl 4k:text-[24px] leading-relaxed 4k:leading-[1.8] text-stone-700 font-sans max-w-4xl 4k:max-w-6xl border-l-2 4k:border-l-4 border-[#C5A880] pl-4 4k:pl-6 py-2 4k:py-4 italic bg-[#F2EDE2]/40 rounded-r-lg">
             &ldquo;Revered as Vrinda Devi, Tulsi Ji holds a special place in Vaishnava tradition and is deeply cherished by devotees of Lord Krishna. Wearing a Tulsi Mala is a symbol of devotion, purity, humility and surrender. More than a sacred ornament, it serves as a gentle reminder to stay connected with Krishna and walk the path of Bhakti in everyday life.&rdquo;
           </p>
 
           {/* Provenance Key Attributes Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 pt-2 text-xs">
-            <div className="p-4 rounded-xl bg-white border border-[#E8E2D5] space-y-1">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 3xl:gap-6 4k:gap-8 pt-2 4k:pt-4 text-xs">
+            <div className="p-4 4k:p-6 rounded-xl bg-white border border-[#E8E2D5] space-y-1 4k:space-y-2">
+              <span className="text-[10px] 3xl:text-xs 4k:text-sm font-mono uppercase tracking-wider text-stone-500 block">
                 Source & Soil
               </span>
-              <p className="font-medium text-[#1A1815] text-sm truncate">Vrindavan, Braj</p>
+              <p className="font-medium text-[#1A1815] text-sm 3xl:text-base 4k:text-lg truncate">Vrindavan, Braj</p>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-[#E8E2D5] space-y-1">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block">
+            <div className="p-4 4k:p-6 rounded-xl bg-white border border-[#E8E2D5] space-y-1 4k:space-y-2">
+              <span className="text-[10px] 3xl:text-xs 4k:text-sm font-mono uppercase tracking-wider text-stone-500 block">
                 Material Authenticity
               </span>
-              <p className="font-medium text-[#1A1815] text-sm truncate">100% Natural Tulsi</p>
+              <p className="font-medium text-[#1A1815] text-sm 3xl:text-base 4k:text-lg truncate">100% Natural Tulsi</p>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-[#E8E2D5] space-y-1">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block">
+            <div className="p-4 4k:p-6 rounded-xl bg-white border border-[#E8E2D5] space-y-1 4k:space-y-2">
+              <span className="text-[10px] 3xl:text-xs 4k:text-sm font-mono uppercase tracking-wider text-stone-500 block">
                 Associated Deities
               </span>
-              <p className="font-medium text-[#1A1815] text-sm truncate">Shri Krishna & Radha</p>
+              <p className="font-medium text-[#1A1815] text-sm 3xl:text-base 4k:text-lg truncate">Shri Krishna & Radha</p>
             </div>
-            <div className="p-4 rounded-xl bg-white border border-[#E8E2D5] space-y-1">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block">
+            <div className="p-4 4k:p-6 rounded-xl bg-white border border-[#E8E2D5] space-y-1 4k:space-y-2">
+              <span className="text-[10px] 3xl:text-xs 4k:text-sm font-mono uppercase tracking-wider text-stone-500 block">
                 Beads Hue
               </span>
-              <p className="font-medium text-[#1A1815] text-sm truncate">Natural Beige Core</p>
+              <p className="font-medium text-[#1A1815] text-sm 3xl:text-base 4k:text-lg truncate">Natural Beige Core</p>
             </div>
           </div>
         </div>
@@ -456,10 +456,10 @@ export function TulsiCategoryView({
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-base font-medium text-[#1A1815]">
+                      <h4 className="font-serif text-base 3xl:text-lg 4k:text-xl font-medium text-[#1A1815]">
                         {guide.title}
                       </h4>
-                      <p className="text-xs text-stone-500 font-sans mt-0.5">
+                      <p className="text-xs 3xl:text-sm 4k:text-base text-stone-500 font-sans mt-0.5 4k:mt-1">
                         {guide.subtitle}
                       </p>
                     </div>

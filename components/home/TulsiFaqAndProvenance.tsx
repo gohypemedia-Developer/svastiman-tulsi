@@ -116,55 +116,55 @@ export function TulsiFaqAndProvenance({
       {/* ========================================================================= */}
       <section id="authenticity" className="w-full py-12 sm:py-24 3xl:py-28 4k:py-36 bg-[#FAF8F5]">
         <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
-          <div className="text-center max-w-2xl 3xl:max-w-3xl 4k:max-w-4xl mx-auto space-y-2 4k:space-y-3.5 mb-8 sm:mb-10 4k:mb-14">
+          <div className="text-center max-w-2xl 3xl:max-w-3xl 4k:max-w-4xl mx-auto space-y-2 4k:space-y-4 mb-8 sm:mb-10 4k:mb-16">
             <h2
-              className="text-2xl sm:text-3xl 3xl:text-4xl 4k:text-5xl font-normal text-[#122E46]"
+              className="text-2xl sm:text-3xl 3xl:text-4xl 4k:text-[52px] font-normal text-[#122E46] 4k:leading-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               The Four Pillars of Tulsi Sacred Origin
             </h2>
-            <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-600 font-sans">
+            <p className="text-xs sm:text-sm 3xl:text-lg 4k:text-xl text-stone-600 font-sans 4k:leading-relaxed">
               Commitment to botanical purity, sacred lineage, and certification.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 3xl:gap-8 4k:gap-10">
             {/* Pillar 1 */}
-            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-4 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-xl 4k:text-2xl font-semibold text-[#122E46]">
                 100% Natural Tulsi Wood
               </h3>
-              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 4k:leading-[1.7]">
                 Carved from sacred holy basil heartwood. 100% pure and untreated.
               </p>
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-4 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-xl 4k:text-2xl font-semibold text-[#122E46]">
                 Origin: Vrindavan, Braj
               </h3>
-              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 4k:leading-[1.7]">
                 Sourced from holy Braj Dham, hand-turned by generational artisans.
               </p>
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-4 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-xl 4k:text-2xl font-semibold text-[#122E46]">
                 Associated Deity: Shri Krishna
               </h3>
-              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 4k:leading-[1.7]">
                 Consecrated with devotion to Shri Krishna for daily sadhana.
               </p>
             </div>
 
             {/* Pillar 4 */}
-            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-3.5 shadow-2xs hover:border-[#C5A880] transition-colors">
-              <h3 className="font-serif text-base 3xl:text-lg 4k:text-xl font-semibold text-[#122E46]">
+            <div className="p-5 sm:p-6 3xl:p-8 4k:p-10 bg-white border border-[#E8E2D5] space-y-2.5 4k:space-y-4 shadow-2xs hover:border-[#C5A880] transition-colors">
+              <h3 className="font-serif text-base 3xl:text-xl 4k:text-2xl font-semibold text-[#122E46]">
                 Authenticity Lab Certificate
               </h3>
-              <p className="text-xs 3xl:text-sm 4k:text-base text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 4k:leading-[1.7]">
                 Includes physical lab certificate verifying wood density and purity.
               </p>
             </div>
@@ -207,7 +207,7 @@ export function TulsiFaqAndProvenance({
                   <br />
                   Honored by Hand.
                 </h3>
-                <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-200/90 font-sans leading-relaxed">
+                <p className="text-xs sm:text-sm 3xl:text-lg 4k:text-[22px] text-stone-200/90 font-sans leading-relaxed 4k:leading-[1.75]">
                   Handcrafted genuine Vrindavan Tulsi, preserving sacred purity and daily devotional grace.
                 </p>
                 <div className="pt-2 sm:pt-3">
@@ -248,7 +248,7 @@ export function TulsiFaqAndProvenance({
                     <br />
                     Honored by Hand.
                   </h3>
-                  <p className="text-xs sm:text-sm 3xl:text-base 4k:text-lg text-stone-200/90 font-sans leading-relaxed">
+                  <p className="text-xs sm:text-sm 3xl:text-lg 4k:text-[22px] text-stone-200/90 font-sans leading-relaxed 4k:leading-[1.75]">
                     Handcrafted genuine Vrindavan Tulsi, preserving sacred purity and daily devotional grace.
                   </p>
                   <div className="pt-2 sm:pt-3">

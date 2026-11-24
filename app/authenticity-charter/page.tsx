@@ -28,7 +28,7 @@ export default function AuthenticityCharterPage() {
           {/* Main Content Area - Clean, focused reading column */}
           <article className="max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto px-4 sm:px-8 lg:px-10 4k:px-12 py-10 sm:py-16 md:py-24 4k:py-28 space-y-8 sm:space-y-12 4k:space-y-16 pb-20 lg:pb-24">
             {/* Opening Manifesto */}
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
               At Svastimān, authenticity is not a marketing term — it is our primary
               duty to Indian heritage. Before it was a mala, it was a fruit: nature
               precedes ritual. We stand as a dedicated house of unadulterated sacred
@@ -39,10 +39,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Our Philosophy and What We Stand Against */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 What we honor and what we stand against
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Too much of today&apos;s spiritual marketplace relies on fear,
                   fabricated astrological guarantees of &ldquo;instant luck&rdquo;, and
@@ -66,10 +66,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Wild Himalayan Rudraksha */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Wild Himalayan Rudraksha provenance
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Botanically, the sacred Rudraksha bead is not wood — it is the stone-like
                   endocarp of the fruit of the <span className="italic">Elaeocarpus ganitrus</span> tree,
@@ -97,10 +97,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Sacred Vrindavan Tulsi Wood */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Sacred Vrindavan Tulsi wood
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Our sacred Tulsi (<span className="italic">Ocimum sanctum</span>) beads are turned
                   solely from seasoned, naturally fallen holy basil heartwood sourced ethically from
@@ -124,10 +124,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Untreated Earth Gemstones */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Untreated earth gemstones
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   In ancient lapidary tradition, gemstones are crystallographic records of the earth.
                   We work exclusively with unheated, untreated natural earth stones cut by generational
@@ -151,10 +151,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Traditional Brahmagranthi Knotting and Sacred Consecration */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Brahmagranthi knotting and ritual consecration
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   True sacred malas require time-honored artisanal precision. Every Japa Mala and
                   sacred bracelet is hand-strung and individually knotted with traditional
@@ -172,10 +172,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Individual Laboratory Documentation */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Visible provenance and laboratory certificates
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Trust should be visible, not assumed. Every sacred piece you receive is accompanied
                 by physical laboratory documentation and an individual provenance certificate card
                 detailing its botanical or mineralogical origin, radiographic chamber verification,
@@ -185,10 +185,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Living Care and Lifetime Guidance */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Living care commitment
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Our covenant does not end at delivery. Natural sacred materials breathe and evolve
                 with touch and time. We provide lifetime care monographs, sandalwood oil replenishment
                 guidance, and traditional re-knotting counsel to ensure your piece remains an unbroken
@@ -198,10 +198,10 @@ export default function AuthenticityCharterPage() {
 
             {/* Concierge and Inquiries */}
             <section className="space-y-3 pt-4 border-t border-[#EAE3D5]">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Provenance inquiries and contact
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-1.5">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-1.5 4k:space-y-3">
                 <p className="font-medium text-[#1A1815]">
                   Svastimān Heritage Private Limited
                 </p>

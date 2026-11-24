@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
           {/* Main Content Area - Clean, focused reading column */}
           <article className="max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto px-4 sm:px-8 lg:px-10 4k:px-12 py-10 sm:py-16 md:py-24 4k:py-28 space-y-8 sm:space-y-12 4k:space-y-16 pb-20 lg:pb-24">
             {/* Opening Statement */}
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
               Svastimān respects your privacy. We collect only the information
               needed to process orders — name, address, contact, payment method —
               and never sell or share it with third parties beyond shipping,
@@ -37,10 +37,10 @@ export default function PrivacyPolicyPage() {
 
             {/* What we collect */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 What we collect
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Contact details, shipping address, order history, and basic
                   analytics on how you use our website.
@@ -56,10 +56,10 @@ export default function PrivacyPolicyPage() {
 
             {/* How we use it */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 How we use it
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   To fulfill your orders, generate certified laboratory
                   provenance records for sacred materials, improve our service,
@@ -76,10 +76,10 @@ export default function PrivacyPolicyPage() {
 
             {/* Payment security */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Payment security
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 All transactions are encrypted through RBI-compliant, PCI-DSS
                 certified payment gateway partners. Svastimān never stores or
                 has direct access to your credit card numbers, debit card numbers,
@@ -89,10 +89,10 @@ export default function PrivacyPolicyPage() {
 
             {/* Information sharing */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Information sharing
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 We strictly do not sell, rent, or trade your personal
                 information. Information is disclosed solely to trusted partners
                 essential to order completion: insured courier carriers for
@@ -104,10 +104,10 @@ export default function PrivacyPolicyPage() {
 
             {/* Cookies and preferences */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Cookies and preferences
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 We use essential session cookies to remember your sacred selections
                 and shopping cart across visits, along with lightweight analytics
                 to ensure reliable site performance. You may disable cookies in
@@ -117,10 +117,10 @@ export default function PrivacyPolicyPage() {
 
             {/* Your rights */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Your rights
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 You may request access, correction, or deletion of your data
                 anytime by writing to{" "}
                 <a
@@ -143,10 +143,10 @@ export default function PrivacyPolicyPage() {
 
             {/* Grievance and Office Address */}
             <section className="space-y-3 pt-4 border-t border-[#EAE3D5]">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Grievance redressal
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-1.5">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-1.5 4k:space-y-3">
                 <p className="font-medium text-[#1A1815]">
                   Svastimān Heritage Private Limited
                 </p>

@@ -28,7 +28,7 @@ export default function TermsOfReverencePage() {
           {/* Main Content Area - Clean, focused reading column */}
           <article className="max-w-3xl 3xl:max-w-4xl 4k:max-w-5xl mx-auto px-4 sm:px-8 lg:px-10 4k:px-12 py-10 sm:py-16 md:py-24 4k:py-28 space-y-8 sm:space-y-12 4k:space-y-16 pb-20 lg:pb-24">
             {/* Opening Statement */}
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
               By accessing svastiman.com, you agree to these Terms of Reverence.
               Svastimān is a house of authentic Indian sacred materials, unheated
               earth gemstones, wild Himalayan Rudraksha, and Vrindavan Tulsi wood.
@@ -39,10 +39,10 @@ export default function TermsOfReverencePage() {
 
             {/* Brand Philosophy and Zero Fear-Based Claims */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Our philosophy and zero fear-based claims
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Before it was a mala, it was a fruit — nature precedes ritual. Svastimān
                   stands firmly against fear-based marketing, commercial exploitation of faith,
@@ -59,10 +59,10 @@ export default function TermsOfReverencePage() {
 
             {/* Sacred Materials and Authenticity Charter */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Authenticity charter and sacred provenance
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   We guarantee the absolute physical, botanical, and mineral authenticity of
                   every creation. We source directly from traceable sacred geographies:
@@ -95,10 +95,10 @@ export default function TermsOfReverencePage() {
 
             {/* Orders and Seasonal Harvest Allocation */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Orders and seasonal harvest allocation
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   Because our sacred materials depend on natural botanical harvest cycles and artisan
                   hand-turning capacity rather than industrial assembly lines, seasonal availability
@@ -114,10 +114,10 @@ export default function TermsOfReverencePage() {
 
             {/* Natural Variations and Craft */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Natural variations and craft
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Because no two seeds, heartwood burls, or earth crystals formed by nature are
                 identical, subtle variations in seed contours, locule ridges, wood grain depth,
                 color tonality, and microscopic internal mineral inclusions are natural hallmarks
@@ -127,10 +127,10 @@ export default function TermsOfReverencePage() {
 
             {/* Educational Calculators and Traditional Tools */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Educational calculators and knowledge tools
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Interactive features on our website — including the Profession Crystal Mapping Calculator,
                 Energy Finder, and botanical research monographs — are offered exclusively for cultural
                 education, contemplative inquiry, and personal alignment. They are not intended as, and
@@ -140,10 +140,10 @@ export default function TermsOfReverencePage() {
 
             {/* Intellectual Property and Archival Content */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Intellectual property
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 All intellectual property on svastiman.com — including botanical research monographs,
                 radiographic locule imagery, macro photography, artisan film documentation, proprietary
                 calculator logic, typography, and brand marks — is the exclusive property of Svastimān
@@ -154,10 +154,10 @@ export default function TermsOfReverencePage() {
 
             {/* User Responsibilities and Website Usage */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 User responsibilities and website usage
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-2">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-2 4k:space-y-4">
                 <p>
                   You agree to use svastiman.com only for lawful, personal, and respectful purposes.
                   Automated crawling, unauthorized API access, scraping of pricing or provenance registries,
@@ -172,10 +172,10 @@ export default function TermsOfReverencePage() {
 
             {/* Pricing and Secure Payment Terms */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Payment and pricing
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 All prices are denominated in Indian Rupees (INR) and are inclusive of applicable statutory
                 taxes (GST). Transactions are processed through encrypted, RBI-compliant payment gateways.
                 Svastimān never stores or accesses your complete card credentials, CVVs, or banking credentials.
@@ -186,10 +186,10 @@ export default function TermsOfReverencePage() {
 
             {/* Insured Transit and Doorstep Deliveries */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Insured transit and deliveries
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Every sacred acquisition is dispatched via insured, premier courier partners in sealed,
                 tamper-evident packaging accompanied by its authenticity credentials. Responsibility for
                 transit passes to the recipient upon delivery verification. If a parcel appears damaged
@@ -200,10 +200,10 @@ export default function TermsOfReverencePage() {
 
             {/* Living Care Commitment */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Living care commitment
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Sacred botanical endocarps and natural woods are living materials that breathe. We provide
                 each patron with traditional care monographs and pure sandalwood oil guidance. To preserve
                 your piece, avoid boiling in water, chemical detergents, petroleum sprays, or synthetic dyes.
@@ -214,10 +214,10 @@ export default function TermsOfReverencePage() {
 
             {/* Governing Law and Limitation of Liability */}
             <section className="space-y-3">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Governing law and limitation of liability
               </h2>
-              <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+              <p className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                 Svastimān Heritage Private Limited shall not be liable for any indirect, incidental, or
                 consequential damages arising from the use or handling of our materials. These Terms of
                 Reverence are governed by the laws of India, and any legal disputes shall be subject to the
@@ -227,10 +227,10 @@ export default function TermsOfReverencePage() {
 
             {/* Reverence and Inquiries */}
             <section className="space-y-3 pt-4 border-t border-[#EAE3D5]">
-              <h2 className="font-serif text-xl sm:text-2xl text-[#1A1815] font-normal tracking-normal">
+              <h2 className="font-serif text-xl sm:text-2xl 3xl:text-3xl 4k:text-4xl text-[#1A1815] font-normal tracking-normal">
                 Reverence and inquiries
               </h2>
-              <div className="text-sm sm:text-base text-stone-700 leading-relaxed font-light space-y-1.5">
+              <div className="text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light space-y-1.5 4k:space-y-3">
                 <p className="font-medium text-[#1A1815]">
                   Svastimān Heritage Private Limited
                 </p>

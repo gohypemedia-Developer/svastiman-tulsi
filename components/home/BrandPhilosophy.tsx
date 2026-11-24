@@ -54,9 +54,9 @@ export function BrandPhilosophy() {
       {/* ========================================================================= */}
       {/* SECTION 2: A STORY ROOTED IN HERITAGE (2-COLUMN EDITORIAL)                 */}
       {/* ========================================================================= */}
-      <section id="story" className="py-12 sm:py-16 lg:py-20">
+      <section id="story" className="py-12 sm:py-16 lg:py-20 3xl:py-24 4k:py-32">
         <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 3xl:gap-20 4k:gap-24 items-center">
 
             {/* Left Column: Portrait Model Wear Photo */}
             <div className="md:col-span-5 flex justify-center md:justify-start">
@@ -72,17 +72,17 @@ export function BrandPhilosophy() {
             </div>
 
             {/* Right Column: Story Narrative & Monograph Quote */}
-            <div className="md:col-span-7 space-y-4 sm:space-y-5">
+            <div className="md:col-span-7 space-y-4 sm:space-y-5 3xl:space-y-8 4k:space-y-10">
               <div>
                 <h2
-                  className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
+                  className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-[60px] font-normal text-[#122E46] leading-tight 4k:leading-[1.18] tracking-tight"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   A Story Rooted <span className="italic font-normal">in Sacred Heritage.</span>
                 </h2>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-[13px] text-stone-600 font-sans leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 3xl:space-y-5 4k:space-y-6 text-xs sm:text-[13px] 3xl:text-lg 4k:text-[22px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.75] 4k:leading-[1.8]">
                 <p>
                   Svastimān began with a humble vision: to rekindle our connection with the living traditions of sacred Indian devotion in a modern, distracted world.
                 </p>
@@ -92,9 +92,9 @@ export function BrandPhilosophy() {
               </div>
 
               {/* Monograph Quote Callout Box */}
-              <div className="p-4 sm:p-5 bg-[#F5F2EB]/70 border border-[#E2DEC9] rounded-none">
+              <div className="p-4 sm:p-5 3xl:p-6 4k:p-8 bg-[#F5F2EB]/70 border border-[#E2DEC9] rounded-none">
                 <p
-                  className="font-serif text-xs sm:text-sm text-[#122E46] italic font-normal leading-relaxed"
+                  className="font-serif text-xs sm:text-sm 3xl:text-lg 4k:text-[22px] text-[#122E46] italic font-normal leading-relaxed 3xl:leading-[1.7] 4k:leading-[1.75]"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                 >
                   &ldquo;Tulsi is not just a sacred wood—it is the divine presence of holy devotion.&rdquo;
@@ -102,27 +102,27 @@ export function BrandPhilosophy() {
               </div>
 
               {/* Two Key Metrics */}
-              <div className="grid grid-cols-2 gap-4 sm:gap-8 pt-2 border-t border-[#E8E2D5]">
+              <div className="grid grid-cols-2 gap-4 sm:gap-8 3xl:gap-12 4k:gap-16 pt-2 3xl:pt-4 4k:pt-6 border-t border-[#E8E2D5]">
                 <div>
                   <span
-                    className="block font-serif text-xl sm:text-2xl text-[#122E46] font-normal"
+                    className="block font-serif text-xl sm:text-2xl 3xl:text-4xl 4k:text-5xl text-[#122E46] font-normal 4k:mb-2"
                     style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                   >
                     100%
                   </span>
-                  <span className="text-[11px] sm:text-xs text-stone-600 font-sans">
+                  <span className="text-[11px] sm:text-xs 3xl:text-base 4k:text-lg text-stone-600 font-sans 4k:leading-normal">
                     Pure Braj Vrindavan Wood
                   </span>
                 </div>
 
                 <div>
                   <span
-                    className="block font-serif text-xl sm:text-2xl text-[#122E46] font-normal"
+                    className="block font-serif text-xl sm:text-2xl 3xl:text-4xl 4k:text-5xl text-[#122E46] font-normal 4k:mb-2"
                     style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
                   >
                     0%
                   </span>
-                  <span className="text-[11px] sm:text-xs text-stone-600 font-sans">
+                  <span className="text-[11px] sm:text-xs 3xl:text-base 4k:text-lg text-stone-600 font-sans 4k:leading-normal">
                     Artificial Wax or Dyes
                   </span>
                 </div>
@@ -137,50 +137,50 @@ export function BrandPhilosophy() {
       {/* ========================================================================= */}
       {/* SECTION 3: WHERE ANCIENT WISDOM MEETS MODERN LIVING                       */}
       {/* ========================================================================= */}
-      <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5] bg-[#F7F5F0]">
+      <section className="py-12 sm:py-16 lg:py-20 3xl:py-24 4k:py-32 border-t border-[#E8E2D5] bg-[#F7F5F0]">
         <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Section Header */}
-          <div className="mb-6 sm:mb-10">
+          <div className="mb-6 sm:mb-10 3xl:mb-14 4k:mb-16">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-[60px] font-normal text-[#122E46] leading-tight 4k:leading-[1.18] tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Where Ancient Wisdom <span className="italic font-normal">Meets Modern Living.</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 3xl:gap-20 4k:gap-24 items-center">
 
             {/* Left Column: 3 Pillars */}
-            <div className="md:col-span-7 space-y-4 sm:space-y-6">
+            <div className="md:col-span-7 space-y-4 sm:space-y-6 3xl:space-y-8 4k:space-y-10">
 
               {/* Pillar 1 */}
-              <div className="space-y-1 pb-4 border-b border-[#E8E2D5]">
-                <h3 className="font-serif text-base sm:text-lg font-medium text-[#122E46]">
+              <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3 pb-4 3xl:pb-6 4k:pb-8 border-b border-[#E8E2D5]">
+                <h3 className="font-serif text-base sm:text-lg 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Botanical Purity
                 </h3>
-                <p className="text-xs sm:text-[13px] text-stone-600 font-sans leading-relaxed">
+                <p className="text-xs sm:text-[13px] 3xl:text-base 4k:text-[19px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.75] 4k:leading-[1.8]">
                   100% naturally seasoned Vrindavan Tulsi heartwood without synthetic varnishes, chemical lacquers, or non-traditional processing. Tested for natural wood density.
                 </p>
               </div>
 
               {/* Pillar 2 */}
-              <div className="space-y-1 pb-4 border-b border-[#E8E2D5]">
-                <h3 className="font-serif text-base sm:text-lg font-medium text-[#122E46]">
+              <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3 pb-4 3xl:pb-6 4k:pb-8 border-b border-[#E8E2D5]">
+                <h3 className="font-serif text-base sm:text-lg 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Generational Craft
                 </h3>
-                <p className="text-xs sm:text-[13px] text-stone-600 font-sans leading-relaxed">
+                <p className="text-xs sm:text-[13px] 3xl:text-base 4k:text-[19px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.75] 4k:leading-[1.8]">
                   Crafted by master Braj artisans whose families have sanctified sacred beads for centuries with traditional brass clasps and devotional cotton thread.
                 </p>
               </div>
 
               {/* Pillar 3 */}
-              <div className="space-y-1">
-                <h3 className="font-serif text-base sm:text-lg font-medium text-[#122E46]">
+              <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3">
+                <h3 className="font-serif text-base sm:text-lg 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Timeless Presence
                 </h3>
-                <p className="text-xs sm:text-[13px] text-stone-600 font-sans leading-relaxed">
+                <p className="text-xs sm:text-[13px] 3xl:text-base 4k:text-[19px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.75] 4k:leading-[1.8]">
                   Created with weight and balance designed for effortless daily wear, serving as a quiet reminder of bhakti throughout modern day-to-day life.
                 </p>
               </div>
@@ -208,13 +208,13 @@ export function BrandPhilosophy() {
       {/* ========================================================================= */}
       {/* SECTION 4: MADE WITH MEANING, CRAFTED WITH CARE (3 PROCESS CARDS)         */}
       {/* ========================================================================= */}
-      <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5]">
+      <section className="py-12 sm:py-16 lg:py-20 3xl:py-24 4k:py-32 border-t border-[#E8E2D5]">
         <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Header Row */}
-          <div className="mb-6 sm:mb-10">
+          <div className="mb-6 sm:mb-10 3xl:mb-14 4k:mb-16">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-[60px] font-normal text-[#122E46] leading-tight 4k:leading-[1.18] tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               Made with Meaning. <span className="italic font-normal">Crafted with Care.</span>
@@ -222,10 +222,10 @@ export function BrandPhilosophy() {
           </div>
 
           {/* 3 Process Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 3xl:gap-10 4k:gap-14">
 
             {/* Card 1 */}
-            <div className="group flex flex-col space-y-2.5">
+            <div className="group flex flex-col space-y-2.5 3xl:space-y-4 4k:space-y-5">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
                 <Image
                   src="/images/editorial/editorial_4_knot.jpg"
@@ -236,17 +236,17 @@ export function BrandPhilosophy() {
                 />
               </div>
               <div>
-                <h3 className="font-serif text-base sm:text-[17px] font-medium text-[#122E46]">
+                <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Hand-Knotting &amp; Threading
                 </h3>
-                <p className="text-xs text-stone-600 font-sans leading-relaxed mt-0.5">
+                <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7] mt-0.5 3xl:mt-1.5 4k:mt-2">
                   Generational knots and master brass screw barrel clasp.
                 </p>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="group flex flex-col space-y-2.5">
+            <div className="group flex flex-col space-y-2.5 3xl:space-y-4 4k:space-y-5">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
                 <Image
                   src="/images/editorial/editorial_2_beads.jpg"
@@ -257,17 +257,17 @@ export function BrandPhilosophy() {
                 />
               </div>
               <div>
-                <h3 className="font-serif text-base sm:text-[17px] font-medium text-[#122E46]">
+                <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Naturally Seasoned Heartwood
                 </h3>
-                <p className="text-xs text-stone-600 font-sans leading-relaxed mt-0.5">
+                <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7] mt-0.5 3xl:mt-1.5 4k:mt-2">
                   Smooth cylindrical beads cured in cold-pressed sandalwood oil.
                 </p>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="group flex flex-col space-y-2.5 sm:col-span-2 md:col-span-1">
+            <div className="group flex flex-col space-y-2.5 3xl:space-y-4 4k:space-y-5 sm:col-span-2 md:col-span-1">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FAF8F5] border border-[#E8E2D5]">
                 <Image
                   src="/images/editorial/editorial_5_japa_mala.jpg"
@@ -278,10 +278,10 @@ export function BrandPhilosophy() {
                 />
               </div>
               <div>
-                <h3 className="font-serif text-base sm:text-[17px] font-medium text-[#122E46]">
+                <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] font-medium text-[#122E46]">
                   Sacred Consecration
                 </h3>
-                <p className="text-xs text-stone-600 font-sans leading-relaxed mt-0.5">
+                <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7] mt-0.5 3xl:mt-1.5 4k:mt-2">
                   Sanctified in Braj Dham with physical authenticity certificate.
                 </p>
               </div>
@@ -295,13 +295,13 @@ export function BrandPhilosophy() {
       {/* ========================================================================= */}
       {/* SECTION 5: THE FOUR PILLARS OF REVERENCE                                  */}
       {/* ========================================================================= */}
-      <section className="py-12 sm:py-16 lg:py-20 border-t border-[#E8E2D5] bg-[#F7F5F0]">
+      <section className="py-12 sm:py-16 lg:py-20 3xl:py-24 4k:py-32 border-t border-[#E8E2D5] bg-[#F7F5F0]">
         <div className="max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16">
 
           {/* Header Row */}
-          <div className="mb-6 sm:mb-10">
+          <div className="mb-6 sm:mb-10 3xl:mb-14 4k:mb-16">
             <h2
-              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-6xl font-normal text-[#122E46] leading-tight tracking-tight"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] 3xl:text-5xl 4k:text-[60px] font-normal text-[#122E46] leading-tight 4k:leading-[1.18] tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
             >
               The Four Pillars <span className="italic font-normal">of Reverence.</span>
@@ -309,56 +309,56 @@ export function BrandPhilosophy() {
           </div>
 
           {/* 4 Pillars Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-6 border-t border-[#E8E2D5]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 3xl:gap-10 4k:gap-14 pt-6 3xl:pt-8 4k:pt-10 border-t border-[#E8E2D5]">
 
             {/* Pillar I */}
-            <div className="space-y-1">
-              <span className="font-serif text-sm font-semibold text-[#7A6242] block">
+            <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3">
+              <span className="font-serif text-sm 3xl:text-lg 4k:text-2xl font-semibold text-[#7A6242] block">
                 I
               </span>
-              <h3 className="font-serif text-base sm:text-[17px] text-[#122E46] font-medium">
+              <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] text-[#122E46] font-medium">
                 Authenticity
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7]">
                 100% natural holy wood. Physical lab deed for origin and internal density.
               </p>
             </div>
 
             {/* Pillar II */}
-            <div className="space-y-1">
-              <span className="font-serif text-sm font-semibold text-[#7A6242] block">
+            <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3">
+              <span className="font-serif text-sm 3xl:text-lg 4k:text-2xl font-semibold text-[#7A6242] block">
                 II
               </span>
-              <h3 className="font-serif text-base sm:text-[17px] text-[#122E46] font-medium">
+              <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] text-[#122E46] font-medium">
                 Quality
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7]">
                 Precision brass fittings, master thread knotting, zero artificial chemicals.
               </p>
             </div>
 
             {/* Pillar III */}
-            <div className="space-y-1">
-              <span className="font-serif text-sm font-semibold text-[#7A6242] block">
+            <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3">
+              <span className="font-serif text-sm 3xl:text-lg 4k:text-2xl font-semibold text-[#7A6242] block">
                 III
               </span>
-              <h3 className="font-serif text-base sm:text-[17px] text-[#122E46] font-medium">
+              <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] text-[#122E46] font-medium">
                 Heritage
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7]">
                 Generational Braj artisans preserving centuries of devotional craftsmanship.
               </p>
             </div>
 
             {/* Pillar IV */}
-            <div className="space-y-1">
-              <span className="font-serif text-sm font-semibold text-[#7A6242] block">
+            <div className="space-y-1 3xl:space-y-2.5 4k:space-y-3">
+              <span className="font-serif text-sm 3xl:text-lg 4k:text-2xl font-semibold text-[#7A6242] block">
                 IV
               </span>
-              <h3 className="font-serif text-base sm:text-[17px] text-[#122E46] font-medium">
+              <h3 className="font-serif text-base sm:text-[17px] 3xl:text-2xl 4k:text-[26px] text-[#122E46] font-medium">
                 Reverence
               </h3>
-              <p className="text-xs text-stone-600 font-sans leading-relaxed">
+              <p className="text-xs 3xl:text-base 4k:text-[18px] text-stone-600 font-sans leading-relaxed 3xl:leading-[1.65] 4k:leading-[1.7]">
                 Made for devotional wear, reminding the seeker of bhakti in everyday moments.
               </p>
             </div>
@@ -371,22 +371,22 @@ export function BrandPhilosophy() {
       {/* ========================================================================= */}
       {/* SECTION 6: STATEMENT QUOTE CALLOUT BANNER (Dark Obsidian Navy Finish)     */}
       {/* ========================================================================= */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-[#0D1C27] text-white text-center relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 3xl:py-28 4k:py-36 bg-[#0D1C27] text-white text-center relative overflow-hidden">
         {/* Subtle radial ambient highlight */}
         <div className="absolute inset-0 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
 
-        <div className="relative z-10 max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 space-y-5 sm:space-y-6">
+        <div className="relative z-10 max-w-[1240px] 3xl:max-w-[1720px] 4k:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-14 4k:px-16 space-y-5 sm:space-y-6 3xl:space-y-8 4k:space-y-10">
           <blockquote
-            className="font-serif text-lg sm:text-2xl md:text-[28px] lg:text-[32px] font-normal leading-relaxed text-white max-w-2xl mx-auto"
+            className="font-serif text-lg sm:text-2xl md:text-[28px] lg:text-[32px] 3xl:text-[40px] 4k:text-[50px] font-normal leading-relaxed 4k:leading-[1.45] text-white max-w-2xl 3xl:max-w-4xl 4k:max-w-6xl mx-auto"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', Georgia, serif" }}
           >
             &ldquo;Sacred materials do not belong only in antiquity. When crafted with reverence, they become our anchor in the modern world.&rdquo;
           </blockquote>
 
-          <div className="pt-2">
+          <div className="pt-2 3xl:pt-4 4k:pt-6">
             <Link
               href="/products"
-              className="inline-block px-7 py-3 bg-white hover:bg-[#FAF8F5] text-[#122E46] hover:text-black text-[11px] font-mono tracking-[0.22em] uppercase transition-all duration-300 shadow-md"
+              className="inline-block px-7 py-3 3xl:px-10 3xl:py-4.5 4k:px-12 4k:py-5 bg-white hover:bg-[#FAF8F5] text-[#122E46] hover:text-black text-[11px] 3xl:text-sm 4k:text-base font-mono tracking-[0.22em] uppercase transition-all duration-300 shadow-md"
             >
               EXPLORE THE COLLECTION
             </Link>

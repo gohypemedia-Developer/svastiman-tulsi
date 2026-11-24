@@ -418,15 +418,15 @@ export default function BlogPage() {
                 </div>
 
                 {readingArticle.reference && (
-                  <div className="p-4 rounded-xl bg-[#EFECE6] border-l-4 border-[#C5A880] text-xs sm:text-sm text-[#1A1815]">
-                    <span className="font-semibold block font-mono text-[11px] text-[#7A6242] uppercase tracking-wider mb-0.5">
+                  <div className="p-4 4k:p-6 rounded-xl bg-[#EFECE6] border-l-4 border-[#C5A880] text-xs sm:text-sm 3xl:text-base 4k:text-lg text-[#1A1815]">
+                    <span className="font-semibold block font-mono text-[11px] 3xl:text-xs 4k:text-sm text-[#7A6242] uppercase tracking-wider mb-0.5 4k:mb-1">
                       Scriptural / Scientific Reference
                     </span>
                     {readingArticle.reference}
                   </div>
                 )}
 
-                <div className="space-y-4 text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+                <div className="space-y-4 4k:space-y-6 text-sm sm:text-base 3xl:text-lg 4k:text-xl text-stone-700 leading-relaxed 4k:leading-[1.8] font-light">
                   {readingArticle.fullContent.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
