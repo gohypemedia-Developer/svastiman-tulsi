@@ -15,13 +15,32 @@ export function BottomNav() {
     setMounted(true);
   }, []);
 
-  const navItems = [
-    { label: "Home", href: "/", icon: Home },
-    { label: "Shop", href: "/products", icon: LayoutGrid },
-    { label: "Wishlist", href: "/wishlist", icon: Heart, badge: wishlistCount },
-    { label: "Cart", onClick: openCart, icon: ShoppingBag, badge: totalCount },
-    { label: "Account", href: "/login", icon: User },
-  ];
+  const isMuktiPage = pathname.startsWith("/mukti");
+  const isBraceletPage = pathname.startsWith("/bracelet");
+
+  const navItems = isMuktiPage
+    ? [
+        { label: "Home", href: "/", icon: Home },
+        { label: "About", href: "/mukti/about", icon: User },
+        { label: "Shop", href: "/mukti#mukti-best-sellers", icon: LayoutGrid },
+        { label: "Pillars", href: "/mukti#authenticity", icon: Heart },
+        { label: "Cart", onClick: openCart, icon: ShoppingBag, badge: totalCount },
+      ]
+    : isBraceletPage
+    ? [
+        { label: "Home", href: "/", icon: Home },
+        { label: "Best Sellers", href: "/bracelet#bracelet-best-sellers", icon: LayoutGrid },
+        { label: "Discover", href: "/bracelet#discover-bracelet-products", icon: Heart },
+        { label: "Pillars", href: "/bracelet#authenticity", icon: User },
+        { label: "Cart", onClick: openCart, icon: ShoppingBag, badge: totalCount },
+      ]
+    : [
+        { label: "Home", href: "/", icon: Home },
+        { label: "Shop", href: "/products", icon: LayoutGrid },
+        { label: "Wishlist", href: "/wishlist", icon: Heart, badge: wishlistCount },
+        { label: "Cart", onClick: openCart, icon: ShoppingBag, badge: totalCount },
+        { label: "Account", href: "/login", icon: User },
+      ];
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[#FAF8F5]/98 backdrop-blur-md border-t border-[#E0D8CB] flex items-center justify-around pt-1.5 pb-[max(0.375rem,env(safe-area-inset-bottom,0px))] px-1 sm:px-2 lg:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.06)] select-none">

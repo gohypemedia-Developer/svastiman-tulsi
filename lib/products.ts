@@ -94,6 +94,60 @@ export const PRODUCT_CATEGORIES: ProductCategoryMeta[] = [
 
 export const PRODUCTS: Product[] = [
   {
+    "sku": "MKT01",
+    "id": "prod-mukti-01",
+    "code": "mkt-01",
+    "category": "malas",
+    "categoryName": "Mukti Collection",
+    "secondaryCategories": [
+      "tulsi",
+      "rudraksha"
+    ],
+    "name": "MUKTI CONSECRATED MAHAMALA",
+    "subtitle": "108 Beads • Consecrated Himalayan Rudraksha & Aged Tulsi • Sterling Yantra",
+    "rawCategoryTitle": "MUKTI SACRED LIBERATION MAHAMALA",
+    "beadsColor": "NATURAL DARK BEIGE & SACRED SEED",
+    "beadSize": "8mm",
+    "beadShape": "ROUND",
+    "weight": "68 GM",
+    "length": "86 CM",
+    "round": "108 JAPA",
+    "knot": "BRAHMAGRANTHI",
+    "pendant": "CONSECRATED YANTRA FINIAL",
+    "inventory": 15,
+    "purchaseCost": 1200,
+    "material": "Authentic High-Altitude 5-Mukhi Rudraksha, Sanctified Vrindavan Tulsi Heartwood & Consecrated Solid Silver Yantra. Physical Authenticity Lab Certificate Included.",
+    "origin": "Eastern Nepal Himalayas (2,400m) & Vrindavan Dham",
+    "associatedDeities": "Shri Shiva & Shri Krishna",
+    "price": 4899,
+    "originalPrice": 5999,
+    "image": "/images/products/tulsi/tulsi_09_japa_beads.jpg",
+    "images": [
+      "/images/products/tulsi/tulsi_09_japa_beads.jpg",
+      "/images/editorial/editorial_5_japa_mala.jpg",
+      "/images/editorial/editorial_3_medallion.jpg",
+      "/images/editorial/editorial_1_wear.jpg"
+    ],
+    "badge": "Sacred Liberation Edition",
+    "specs": [
+      "108 Vedic Contemplation Beads",
+      "Individual Brahmagranthi Cotton Knots",
+      "Untreated Himalayan Rudraksha & Sacred Tulsi",
+      "Digital Radiography Tested & Lab Certified"
+    ],
+    "rating": 5.0,
+    "reviews": 32,
+    "description": "The Mukti Consecrated Mahamala embodies the sacred equilibrium of pure devotion and transcendental freedom. Handcrafted by master generational artisans combining rare alpine Himalayan seeds with aged Vrindavan holy basil, each bead is separated with unbleached cotton knots and consecrated for deep meditation, inner composure, and liberation from mental anxiety.",
+    "details": [
+      "108 Sacred Contemplation Beads (8mm) + Consecrated Meru Finial",
+      "Individual Brahmagranthi knots for smooth rhythmic Japa meditation",
+      "Consecrated with ancient Mahamrityunjaya and Gayatri Vedic mantras",
+      "Accompanied by a physical laboratory certificate of authenticity and wood density deed"
+    ],
+    "intention": "Inner Liberation, Mental Composure & Spiritual Awakening",
+    "href": "/mukti"
+  },
+  {
     "sku": "T01",
     "id": "prod-tulsi-01",
     "code": "t-01",
@@ -2205,3 +2259,46 @@ export function getCategoryMeta(category: ProductCategory): ProductCategoryMeta 
 
 // Client Demo: Single Product Focus on Tulsi Mala T01
 export const DEMO_PRODUCT_T01 = PRODUCTS.find((p) => p.sku === "T01") || PRODUCTS[0];
+
+// Dedicated Mukti Consecrated Mahamala Product Definition
+export const DEMO_PRODUCT_MUKTI: Product = {
+  id: "prod-mukti-01",
+  code: "mkt-01",
+  sku: "MKT01",
+  category: "malas",
+  categoryName: "Mukti Consecrated Mahamala",
+  name: "Mukti Consecrated Mahamala",
+  subtitle: "High-Altitude Himalayan Rudraksha & Vrindavan Tulsi Wood",
+  material: "Wild Himalayan 5-Mukhi Rudraksha & Aged Vrindavan Tulsi Heartwood",
+  origin: "Himalayas (Nepal 2,400m+) & Vrindavan, India",
+  price: 4899,
+  originalPrice: 5999,
+  image: "/images/products/tulsi/tulsi_09_japa_beads.jpg",
+  images: [
+    "/images/products/tulsi/tulsi_09_japa_beads.jpg",
+    "/images/editorial/editorial_5_japa_mala.jpg",
+    "/images/editorial/editorial_4_knot.jpg",
+    "/images/origin/stage9_svastiman.jpg",
+  ],
+  badge: "Consecrated Edition",
+  specs: [
+    "108 Beads + 925 Silver Meru Finial",
+    "Hand-Knot Brahmagranthi Cotton",
+    "Flotation Density Certified",
+  ],
+  rating: 5.0,
+  reviews: 48,
+  description:
+    "The Mukti Mahamala unites the fiery, protective stillness of wild Himalayan Panchmukhi Rudraksha with the cooling devotional surrender of aged Vrindavan Tulsi. Hand-knotted with Brahmagranthi unbleached cotton threads and consecrated in our Vedic sanctuary.",
+  details: [
+    "100% natural, unlacquered botanical materials",
+    "Physical digital X-ray laboratory authenticity deed included",
+    "Consecrated with Mahamrityunjaya mantras in Vedic temple",
+    "Insured sacred packaging with ceremonial brass lock",
+  ],
+  intention: "Chitta Shuddhi, Inner Liberation & Deep Japa Meditation",
+  href: "/mukti#mukti-showcase",
+  beadSize: "8.0mm",
+  length: "86 CM",
+  weight: "68 GM",
+};

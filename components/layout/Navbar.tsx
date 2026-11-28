@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
-import { PRODUCTS, DEMO_PRODUCT_T01 } from "@/lib/products";
+import { PRODUCTS, DEMO_PRODUCT_T01, DEMO_PRODUCT_MUKTI } from "@/lib/products";
 import {
   ShoppingBag,
   Search,
@@ -25,11 +25,34 @@ const POPULAR_SUGGESTIONS = [
   "AUTHENTICITY LAB CERTIFIED",
 ];
 
+const MUKTI_POPULAR_SUGGESTIONS = [
+  "MUKTI CONSECRATED MAHAMALA",
+  "108 JAPA MEDITATION MALA",
+  "54 BEADS SADHANA HALF-MALA",
+  "HIMALAYAN PANCHMUKHI RUDRAKSHA",
+  "VRINDAVAN TULSI HEARTWOOD",
+  "AUTHENTICITY LAB CERTIFIED",
+];
+
 const ANNOUNCEMENTS = [
   "🌿 Tulsi Kanthi Mala 1 Round (SKU: T01) • 100% Natural Vrindavan Tulsi Wood 🌿",
   "✨ Authenticity Lab Certificate Included With Every Acquisition ✨",
   "🪔 Associated Deities: Shri Krishna • Single Round 2.5mm Beige Beads 🪔",
   "🕊️ Free Sacred Insured Delivery Across India • Vrindavan Sourced 🕊️",
+];
+
+const MUKTI_ANNOUNCEMENTS = [
+  "✨ Mukti Consecrated Mahamala • Himalayan 5-Mukhi Rudraksha & Vrindavan Tulsi ✨",
+  "🕊️ Chitta Shuddhi & Inner Liberation • Unbroken Brahmagranthi Knotting 🕊️",
+  "🪔 Temple Consecrated with Mahamrityunjaya Mantras • Vedic Prana Pratishtha 🪔",
+  "📜 Physical X-Ray Laboratory Density Authenticity Certificate Included 📜",
+];
+
+const BRACELET_ANNOUNCEMENTS = [
+  "💎 Grade-AAA Natural Healing Gemstone Bracelets • 100% Untreated Earth Crystals 💎",
+  "✨ Certified Mineral Purity & Geological Authenticity Guaranteed ✨",
+  "🌸 Strung with Resilient 4-Strand High-Tensile Japanese Elastic Cord 🌸",
+  "🕊️ Insured Express Doorstep Delivery Across India 🕊️",
 ];
 
 export function Navbar() {
@@ -57,7 +80,7 @@ export function Navbar() {
       // On homepage, keep navbar visible throughout the Hero section scroll
       // preventing the navbar from hiding and exposing a blank whitish spacer gap
       const isHeroActive =
-        pathname === "/"
+        pathname === "/" || pathname === "/mukti" || pathname === "/bracelet"
           ? currentScrollY <= (typeof window !== "undefined" ? window.innerHeight - 60 : 700)
           : currentScrollY <= 30;
 
@@ -127,16 +150,28 @@ export function Navbar() {
     }
   }, [searchOpen]);
 
-  // Demo restriction: Surface only Tulsi Mala T01 in search overlay
-  const demoProductList = [DEMO_PRODUCT_T01];
+  const isMuktiPage = pathname.startsWith("/mukti");
+  const isBraceletPage = pathname.startsWith("/bracelet");
+  const isHomePage = pathname === "/" || pathname === "/mukti" || pathname === "/bracelet";
+  const isTransparent = isHomePage && !isScrolled && !mobileMenuOpen;
+
+  const currentAnnouncements = isMuktiPage
+    ? MUKTI_ANNOUNCEMENTS
+    : isBraceletPage
+    ? BRACELET_ANNOUNCEMENTS
+    : ANNOUNCEMENTS;
+  const currentPopularSuggestions = isMuktiPage ? MUKTI_POPULAR_SUGGESTIONS : POPULAR_SUGGESTIONS;
+
+  // Surface appropriate product in search overlay
+  const demoProductList = isMuktiPage ? [DEMO_PRODUCT_MUKTI, DEMO_PRODUCT_T01] : [DEMO_PRODUCT_T01];
   const filteredProducts = demoProductList;
 
-  // Dynamic suggestions matching T01 sacred terms
+  // Dynamic suggestions matching sacred terms
   const suggestions = searchQuery.trim()
-    ? POPULAR_SUGGESTIONS.filter((s) =>
-        s.toLowerCase().includes(searchQuery.toLowerCase().trim())
-      ).slice(0, 4)
-    : POPULAR_SUGGESTIONS.slice(0, 4);
+    ? currentPopularSuggestions.filter((s) =>
+      s.toLowerCase().includes(searchQuery.toLowerCase().trim())
+    ).slice(0, 4)
+    : currentPopularSuggestions.slice(0, 4);
 
   // Client Presentation Demo: Navigation focused exclusively on Tulsi Mala T01
   const shopCategories = [
@@ -144,6 +179,29 @@ export function Navbar() {
     { name: "Discover Product (T01)", href: "/#discover-product" },
     { name: "Principles to wear Tulsi", href: "/principles-to-wear-tulsi" },
     { name: "Authenticity & Certificate", href: "/#authenticity" },
+  ];
+
+  // Dedicated Mukti Page Navigation Categories
+  const muktiCategories = [
+    { name: "1 Mukhi Nepali Rudraksha (MKT01)", href: "/mukti#mukti-best-sellers" },
+    { name: "Mukti Consecrated Mahamala (MKT02)", href: "/mukti#mukti-best-sellers" },
+    { name: "Amazonite Sacred Bracelet", href: "/mukti#mukti-best-sellers" },
+    { name: "Natural Amazonite 108 Japa Mala", href: "/mukti#mukti-best-sellers" },
+    { name: "Discover All Mukti Products (9 Items)", href: "/mukti#discover-our-products" },
+    { name: "The Four Pillars of Origin", href: "/mukti#authenticity" },
+    { name: "Frequently Asked Questions", href: "/mukti#faq-section" },
+  ];
+
+  // Dedicated Bracelet Page Navigation Categories
+  const braceletCategories = [
+    { name: "Grade-AAA Natural Amazonite", href: "/bracelet#bracelet-best-sellers" },
+    { name: "Celestial Lapis Lazuli", href: "/bracelet#bracelet-best-sellers" },
+    { name: "Meditative Purple Amethyst", href: "/bracelet#bracelet-best-sellers" },
+    { name: "Golden Tiger Eye Protection", href: "/bracelet#bracelet-best-sellers" },
+    { name: "7 Chakra Multi-Stone Energy", href: "/bracelet#bracelet-best-sellers" },
+    { name: "Discover All 9 Healing Bracelets", href: "/bracelet#discover-bracelet-products" },
+    { name: "The Four Pillars of Origin", href: "/bracelet#authenticity" },
+    { name: "Frequently Asked Questions", href: "/bracelet#faq-section" },
   ];
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -154,9 +212,6 @@ export function Navbar() {
     }
   };
 
-  const isHomePage = pathname === "/";
-  const isTransparent = isHomePage && !isScrolled && !mobileMenuOpen;
-
   return (
     <>
       {/* Spacer to preserve document layout height on non-home pages */}
@@ -166,15 +221,14 @@ export function Navbar() {
 
       {/* Main Fixed Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         {/* Top Announcement Bar (Shown on non-home pages, or hidden on home hero to match AXELS reference) */}
         {!isHomePage && (
           <div className="w-full bg-[#FFEDE2] border-b border-[#E8DEC8]/60 text-[#122E46] h-7 sm:h-[28px] 4k:h-9 flex items-center overflow-hidden select-none">
             <div className="animate-marquee flex items-center gap-12 text-[11px] sm:text-xs 4k:text-sm font-medium tracking-wide">
-              {[...ANNOUNCEMENTS, ...ANNOUNCEMENTS].map((item, idx) => (
+              {[...currentAnnouncements, ...currentAnnouncements].map((item, idx) => (
                 <span key={idx} className="flex items-center gap-2 whitespace-nowrap">
                   <span>{item}</span>
                 </span>
@@ -185,82 +239,194 @@ export function Navbar() {
 
         {/* Main Navbar: Transparent overlay on home hero, solid white when scrolled or on other pages */}
         <div
-          className={`w-full transition-all duration-300 ${
-            isTransparent
-              ? "bg-transparent text-white border-b border-transparent shadow-none"
-              : "bg-white/95 backdrop-blur-md text-[#122E46] border-b border-[#EBE7DE] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.08)]"
-          }`}
+          className={`w-full transition-all duration-300 ${isTransparent
+            ? "bg-transparent text-white border-b border-transparent shadow-none"
+            : "bg-white/95 backdrop-blur-md text-[#122E46] border-b border-[#EBE7DE] shadow-[0_4px_25px_-5px_rgba(0,0,0,0.08)]"
+            }`}
         >
           <div className="w-full px-3.5 sm:px-6 lg:px-12 xl:px-16 3xl:px-20 4k:px-28 h-[72px] sm:h-[80px] 3xl:h-[90px] 4k:h-[100px] flex items-center justify-between">
-            {/* Left: Navigation Links matching AXELS reference layout */}
+            {/* Left: Navigation Links */}
             <div className="flex-1 flex items-center justify-start gap-2 sm:gap-6">
               {/* Mobile Menu Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`lg:hidden p-2 -ml-1 transition-colors focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer ${
-                  isTransparent
-                    ? "text-white hover:text-white/80"
-                    : "text-[#122E46] hover:text-[#C5A880]"
-                }`}
+                className={`lg:hidden p-2 -ml-1 transition-colors focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer ${isTransparent
+                  ? "text-white hover:text-white/80"
+                  : "text-[#122E46] hover:text-[#C5A880]"
+                  }`}
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
 
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center gap-8 xl:gap-10 3xl:gap-12 4k:gap-14">
-                <Link
-                  href="/"
-                  className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${
-                    isTransparent
+              {isMuktiPage ? (
+                /* Mukti Page Specific Navigation (Matching suastiman.vercel.app Layout) */
+                <nav className="hidden lg:flex items-center gap-8 xl:gap-10 3xl:gap-12 4k:gap-14">
+                  <Link
+                    href="/"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
                       ? "text-white hover:text-white/80"
                       : "text-[#122E46] hover:text-[#C5A880]"
-                  }`}
-                >
-                  Home
-                </Link>
-
-                {/* Shop Dropdown */}
-                <div className="relative group">
-                  <Link
-                    href="/products"
-                    className={`flex items-center gap-1.5 text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors py-2 ${
-                      isTransparent
-                        ? "text-white hover:text-white/80"
-                        : "text-[#122E46] hover:text-[#C5A880]"
-                    }`}
+                      }`}
                   >
-                    <span>Shop</span>
-                    <ChevronDown className="w-3.5 h-3.5 4k:w-4 4k:h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
+                    Home
                   </Link>
 
-                  {/* Dropdown Menu */}
-                  <div className="absolute top-full left-0 mt-0.5 w-64 4k:w-80 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
-                    <div className="py-2 4k:py-3">
-                      {shopCategories.map((cat) => (
-                        <Link
-                          key={cat.name}
-                          href={cat.href}
-                          className="block px-4 4k:px-6 py-2.5 4k:py-3.5 text-[13px] 4k:text-base font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
-                        >
-                          {cat.name}
-                        </Link>
-                      ))}
+                  {/* Shop Dropdown */}
+                  <div className="relative group">
+                    <Link
+                      href="/mukti#mukti-best-sellers"
+                      className={`flex items-center gap-1.5 text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors py-2 ${isTransparent
+                        ? "text-white hover:text-white/80"
+                        : "text-[#122E46] hover:text-[#C5A880]"
+                        }`}
+                    >
+                      <span>Shop</span>
+                      <ChevronDown className="w-3.5 h-3.5 4k:w-4 4k:h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
+                    </Link>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-0.5 w-72 4k:w-84 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
+                      <div className="py-2 4k:py-3">
+                        {muktiCategories.map((cat) => (
+                          <Link
+                            key={cat.name}
+                            href={cat.href}
+                            className="block px-4 4k:px-6 py-2.5 4k:py-3.5 text-[13px] 4k:text-base font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
+                          >
+                            {cat.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <Link
-                  href="/about"
-                  className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${
-                    isTransparent
+                  <Link
+                    href="/mukti/about"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
                       ? "text-white hover:text-white/80"
                       : "text-[#122E46] hover:text-[#C5A880]"
-                  }`}
-                >
-                  About Us
-                </Link>
-              </nav>
+                      }`}
+                  >
+                    About Us
+                  </Link>
+                </nav>
+              ) : isBraceletPage ? (
+                /* Bracelet Page Specific Navigation */
+                <nav className="hidden lg:flex items-center gap-8 xl:gap-10 3xl:gap-12 4k:gap-14">
+                  <Link
+                    href="/"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-[#122E46] hover:text-[#C5A880]"
+                      }`}
+                  >
+                    Home
+                  </Link>
+
+                  {/* Shop Dropdown */}
+                  <div className="relative group">
+                    <Link
+                      href="/bracelet#bracelet-best-sellers"
+                      className={`flex items-center gap-1.5 text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors py-2 ${isTransparent
+                        ? "text-white hover:text-white/80"
+                        : "text-[#122E46] hover:text-[#C5A880]"
+                        }`}
+                    >
+                      <span>Shop Bracelets</span>
+                      <ChevronDown className="w-3.5 h-3.5 4k:w-4 4k:h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
+                    </Link>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-0.5 w-72 4k:w-84 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
+                      <div className="py-2 4k:py-3">
+                        {braceletCategories.map((cat) => (
+                          <Link
+                            key={cat.name}
+                            href={cat.href}
+                            className="block px-4 4k:px-6 py-2.5 4k:py-3.5 text-[13px] 4k:text-base font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
+                          >
+                            {cat.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/bracelet#authenticity"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-[#122E46] hover:text-[#C5A880]"
+                      }`}
+                  >
+                    Four Pillars
+                  </Link>
+
+                  <Link
+                    href="/bracelet#faq-section"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-[#122E46] hover:text-[#C5A880]"
+                      }`}
+                  >
+                    FAQ
+                  </Link>
+                </nav>
+              ) : (
+                /* Standard Tulsi Website Navigation */
+                <nav className="hidden lg:flex items-center gap-8 xl:gap-10 3xl:gap-12 4k:gap-14">
+                  <Link
+                    href="/"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-[#122E46] hover:text-[#C5A880]"
+                      }`}
+                  >
+                    Home
+                  </Link>
+
+                  {/* Shop Dropdown */}
+                  <div className="relative group">
+                    <Link
+                      href="/products"
+                      className={`flex items-center gap-1.5 text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors py-2 ${isTransparent
+                        ? "text-white hover:text-white/80"
+                        : "text-[#122E46] hover:text-[#C5A880]"
+                        }`}
+                    >
+                      <span>Shop</span>
+                      <ChevronDown className="w-3.5 h-3.5 4k:w-4 4k:h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
+                    </Link>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-0.5 w-64 4k:w-80 bg-white text-[#122E46] shadow-xl rounded-xl border border-[#E2DEC9] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-1 group-hover:translate-y-0 overflow-hidden z-50">
+                      <div className="py-2 4k:py-3">
+                        {shopCategories.map((cat) => (
+                          <Link
+                            key={cat.name}
+                            href={cat.href}
+                            className="block px-4 4k:px-6 py-2.5 4k:py-3.5 text-[13px] 4k:text-base font-medium text-stone-700 hover:text-[#122E46] hover:bg-[#F9F8F5] transition-colors"
+                          >
+                            {cat.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/about"
+                    className={`text-[14px] 3xl:text-[15px] 4k:text-[17px] font-sans font-medium tracking-wide transition-colors ${isTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-[#122E46] hover:text-[#C5A880]"
+                      }`}
+                  >
+                    About Us
+                  </Link>
+                </nav>
+              )}
             </div>
 
             {/* Center: Brand Logo in Svastiman's signature Playfair Display font */}
@@ -271,9 +437,8 @@ export function Navbar() {
                 aria-label="Svastimān Home"
               >
                 <span
-                  className={`font-serif text-xl sm:text-2xl lg:text-[28px] 3xl:text-[32px] 4k:text-[38px] font-normal tracking-[0.16em] sm:tracking-[0.22em] 4k:tracking-[0.24em] uppercase transition-colors ${
-                    isTransparent ? "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]" : "text-[#122E46]"
-                  }`}
+                  className={`font-serif text-xl sm:text-2xl lg:text-[28px] 3xl:text-[32px] 4k:text-[38px] font-normal tracking-[0.16em] sm:tracking-[0.22em] 4k:tracking-[0.24em] uppercase transition-colors ${isTransparent ? "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]" : "text-[#122E46]"
+                    }`}
                 >
                   Svastimān
                 </span>
@@ -282,18 +447,16 @@ export function Navbar() {
 
             {/* Right: Actions (Search, Account, Cart) matching AXELS reference typography & icons */}
             <div
-              className={`flex-1 flex items-center justify-end gap-1.5 sm:gap-6 lg:gap-8 xl:gap-9 3xl:gap-11 4k:gap-12 transition-colors ${
-                isTransparent ? "text-white" : "text-[#122E46]"
-              }`}
+              className={`flex-1 flex items-center justify-end gap-1.5 sm:gap-6 lg:gap-8 xl:gap-9 3xl:gap-11 4k:gap-12 transition-colors ${isTransparent ? "text-white" : "text-[#122E46]"
+                }`}
             >
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
-                  isTransparent
-                    ? "text-white hover:text-white/80"
-                    : "text-[#122E46] hover:text-[#C5A880]"
-                }`}
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${isTransparent
+                  ? "text-white hover:text-white/80"
+                  : "text-[#122E46] hover:text-[#C5A880]"
+                  }`}
                 title="Search sacred collections"
                 aria-label="Search"
               >
@@ -306,11 +469,10 @@ export function Navbar() {
               {/* Account */}
               <Link
                 href="/login"
-                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${
-                  isTransparent
-                    ? "text-white hover:text-white/80"
-                    : "text-[#122E46] hover:text-[#C5A880]"
-                }`}
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors group ${isTransparent
+                  ? "text-white hover:text-white/80"
+                  : "text-[#122E46] hover:text-[#C5A880]"
+                  }`}
                 title="Account"
                 aria-label="Account"
               >
@@ -323,11 +485,10 @@ export function Navbar() {
               {/* Cart */}
               <button
                 onClick={openCart}
-                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${
-                  isTransparent
-                    ? "text-white hover:text-white/80"
-                    : "text-[#122E46] hover:text-[#C5A880]"
-                }`}
+                className={`flex items-center gap-1.5 4k:gap-2 p-2 min-h-[44px] min-w-[44px] justify-center transition-colors focus:outline-none cursor-pointer group ${isTransparent
+                  ? "text-white hover:text-white/80"
+                  : "text-[#122E46] hover:text-[#C5A880]"
+                  }`}
                 title="Shopping Bag"
                 aria-label="Shopping Bag"
               >
@@ -335,9 +496,8 @@ export function Navbar() {
                   <ShoppingBag className="w-[18px] h-[18px] 3xl:w-5 3xl:h-5 4k:w-6 4k:h-6 stroke-[1.8] group-hover:scale-105 transition-transform" />
                   {mounted && totalCount > 0 && (
                     <span
-                      className={`sm:hidden absolute -top-1.5 -right-2 text-[10px] font-bold leading-none w-3.5 h-3.5 rounded-full flex items-center justify-center ${
-                        isTransparent ? "bg-white text-[#122E46]" : "bg-[#122E46] text-white"
-                      }`}
+                      className={`sm:hidden absolute -top-1.5 -right-2 text-[10px] font-bold leading-none w-3.5 h-3.5 rounded-full flex items-center justify-center ${isTransparent ? "bg-white text-[#122E46]" : "bg-[#122E46] text-white"
+                        }`}
                     >
                       {totalCount}
                     </span>
@@ -347,9 +507,8 @@ export function Navbar() {
                   Cart
                   {mounted && totalCount > 0 && (
                     <span
-                      className={`ml-1 text-[12px] 4k:text-sm font-semibold ${
-                        isTransparent ? "text-white" : "text-[#122E46]"
-                      }`}
+                      className={`ml-1 text-[12px] 4k:text-sm font-semibold ${isTransparent ? "text-white" : "text-[#122E46]"
+                        }`}
                     >
                       ({totalCount})
                     </span>
@@ -363,46 +522,140 @@ export function Navbar() {
         {/* Mobile Slide-down Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-[#E2DEC9] bg-[#F9F8F5] px-6 py-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto animate-in slide-in-from-top duration-200" data-lenis-prevent>
-            <div className="space-y-1">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
-              >
-                Home
-              </Link>
-              <div className="py-2.5 border-b border-[#E2DEC9]/40">
-                <span className="block text-xs uppercase tracking-widest text-[#122E46] font-semibold mb-2">
-                  Shop Collections
-                </span>
-                <div className="pl-3 space-y-2 border-l-2 border-[#122E46]/30">
-                  {shopCategories.map((cat) => (
-                    <Link
-                      key={cat.name}
-                      href={cat.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block text-sm py-1 text-stone-600 hover:text-[#122E46]"
-                    >
-                      {cat.name}
-                    </Link>
-                  ))}
+            {isMuktiPage ? (
+              /* Mukti Dedicated Mobile Links */
+              <div className="space-y-1">
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Home
+                </Link>
+                <div className="py-2.5 border-b border-[#E2DEC9]/40">
+                  <span className="block text-xs uppercase tracking-widest text-[#122E46] font-semibold mb-2">
+                    Shop Mukti Collection
+                  </span>
+                  <div className="pl-3 space-y-2 border-l-2 border-[#122E46]/30">
+                    {muktiCategories.map((cat) => (
+                      <Link
+                        key={cat.name}
+                        href={cat.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-sm py-1 text-stone-600 hover:text-[#122E46]"
+                      >
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
+                <Link
+                  href="/mukti/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/mukti#authenticity"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  The Four Pillars &amp; Authenticity
+                </Link>
+                <Link
+                  href="/mukti#faq-section"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Frequently Asked Questions
+                </Link>
               </div>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/authenticity-charter"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
-              >
-                Authenticity Charter
-              </Link>
-            </div>
+            ) : isBraceletPage ? (
+              /* Bracelet Dedicated Mobile Links */
+              <div className="space-y-1">
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Home
+                </Link>
+                <div className="py-2.5 border-b border-[#E2DEC9]/40">
+                  <span className="block text-xs uppercase tracking-widest text-[#122E46] font-semibold mb-2">
+                    Shop Gemstone Bracelets
+                  </span>
+                  <div className="pl-3 space-y-2 border-l-2 border-[#122E46]/30">
+                    {braceletCategories.map((cat) => (
+                      <Link
+                        key={cat.name}
+                        href={cat.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-sm py-1 text-stone-600 hover:text-[#122E46]"
+                      >
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <Link
+                  href="/bracelet#authenticity"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  The Four Pillars of Origin
+                </Link>
+                <Link
+                  href="/bracelet#faq-section"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Frequently Asked Questions
+                </Link>
+              </div>
+            ) : (
+              /* Original Tulsi Mobile Links */
+              <div className="space-y-1">
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Home
+                </Link>
+                <div className="py-2.5 border-b border-[#E2DEC9]/40">
+                  <span className="block text-xs uppercase tracking-widest text-[#122E46] font-semibold mb-2">
+                    Shop Collections
+                  </span>
+                  <div className="pl-3 space-y-2 border-l-2 border-[#122E46]/30">
+                    {shopCategories.map((cat) => (
+                      <Link
+                        key={cat.name}
+                        href={cat.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-sm py-1 text-stone-600 hover:text-[#122E46]"
+                      >
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <Link
+                  href="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/authenticity-charter"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-base font-medium py-2.5 text-[#122E46] hover:text-[#C5A880] border-b border-[#E2DEC9]/40"
+                >
+                  Authenticity Charter
+                </Link>
+              </div>
+            )}
 
             <div className="pt-2 flex flex-col gap-2.5 border-t border-[#E2DEC9]/60">
               <Link
@@ -435,16 +688,14 @@ export function Navbar() {
 
       {/* Full-Page Overlay Search Modal matching reference image layout */}
       <div
-        className={`fixed inset-0 z-[100] flex flex-col justify-start transition-opacity duration-500 ease-out ${
-          searchOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-[100] flex flex-col justify-start transition-opacity duration-500 ease-out ${searchOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         aria-hidden={!searchOpen}
       >
         {/* Main Search White Panel (Smooth Slide-Down from Top) */}
         <div
-          className={`w-full bg-white border-b border-[#E8E2D5] shadow-2xl relative z-10 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
-            searchOpen ? "translate-y-0" : "-translate-y-full"
-          }`}
+          className={`w-full bg-white border-b border-[#E8E2D5] shadow-2xl relative z-10 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${searchOpen ? "translate-y-0" : "-translate-y-full"
+            }`}
         >
           <div className="max-w-6xl 3xl:max-w-7xl 4k:max-w-[1800px] mx-auto px-5 sm:px-10 lg:px-12 4k:px-16 pt-7 pb-10 sm:pb-12 4k:pt-10 4k:pb-16">
             {/* Header: Title and Close button */}
@@ -574,9 +825,8 @@ export function Navbar() {
         {/* Dimmed Blurred Backdrop (Click to Close) */}
         <div
           onClick={() => setSearchOpen(false)}
-          className={`flex-1 bg-black/45 backdrop-blur-sm cursor-pointer transition-opacity duration-500 ease-out ${
-            searchOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className={`flex-1 bg-black/45 backdrop-blur-sm cursor-pointer transition-opacity duration-500 ease-out ${searchOpen ? "opacity-100" : "opacity-0"
+            }`}
           aria-label="Close search"
         />
       </div>

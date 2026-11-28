@@ -50,9 +50,17 @@ function RouteAndAnchorHandler() {
       const href = anchor.getAttribute("href");
       if (!href) return;
 
-      // Handle in-page hash anchors (e.g. #know-your-tradition or /#know-your-tradition when on /)
-      if (href.startsWith("#") || (href.startsWith("/#") && pathname === "/")) {
-        const hash = href.startsWith("/#") ? href.slice(1) : href;
+      // Handle in-page hash anchors (e.g. #know-your-tradition, /#know-your-tradition on /, or /mukti#section on /mukti)
+      const isMuktiAnchor = pathname === "/mukti" && href.startsWith("/mukti#");
+      const isHomeAnchor = pathname === "/" && href.startsWith("/#");
+      const isInPageHash = href.startsWith("#");
+
+      if (isInPageHash || isHomeAnchor || isMuktiAnchor) {
+        const hash = isMuktiAnchor
+          ? href.slice("/mukti".length)
+          : isHomeAnchor
+          ? href.slice(1)
+          : href;
         if (hash === "#" || hash.length <= 1) return;
 
         try {
